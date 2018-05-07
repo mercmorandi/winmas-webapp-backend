@@ -1066,8 +1066,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
  .xt.lit        0x0000000000000000        0x8 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
  .xt.prop       0x0000000000000000      0x2d0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
- .literal       0x0000000000000000       0x14 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
- .text          0x0000000000000000       0x78 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
  .data          0x0000000000000000        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
  .bss           0x0000000000000000        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
  .xt.lit        0x0000000000000000        0x8 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
@@ -5460,7 +5458,7 @@ END GROUP
                 0x000000003ffb29a0                _bss_end = ABSOLUTE (.)
                 0x000000003ffb29a0                _heap_start = ABSOLUTE (.)
 
-.flash.rodata   0x000000003f400020     0x5394
+.flash.rodata   0x000000003f400020     0x53b8
                 0x000000003f400020                _rodata_start = ABSOLUTE (.)
  *(.rodata)
  .rodata        0x000000003f400020       0x14 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
@@ -5721,212 +5719,212 @@ END GROUP
  .rodata.__func__$4962
                 0x000000003f402964       0x18 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps.o)
  .rodata.str1.4
-                0x000000003f40297c        0xb /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
+                0x000000003f40297c       0x2f /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
  .rodata.str1.1
-                0x000000003f402987       0x3c /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+                0x000000003f4029ab       0x3c /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
                                          0x3d (size before relaxing)
  .rodata.str1.1
-                0x000000003f4029c3       0x34 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+                0x000000003f4029e7       0x34 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
  .rodata.str1.1
-                0x000000003f4029f7       0x22 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+                0x000000003f402a1b       0x22 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
  .rodata.str1.1
-                0x000000003f4029f7       0x34 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+                0x000000003f402a1b       0x34 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
  .rodata.str1.1
-                0x000000003f4029f7        0xd /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+                0x000000003f402a1b        0xd /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
                                           0xf (size before relaxing)
  .rodata.str1.1
-                0x000000003f402a04       0x22 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+                0x000000003f402a28       0x22 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
  .rodata.str1.4
-                0x000000003f402a04        0x2 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
- *fill*         0x000000003f402a06        0x2 
+                0x000000003f402a28        0x2 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
+ *fill*         0x000000003f402a2a        0x2 
  .rodata.str1.4
-                0x000000003f402a08       0x2e /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
+                0x000000003f402a2c       0x2e /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
                                          0x4c (size before relaxing)
- *fill*         0x000000003f402a36        0x2 
+ *fill*         0x000000003f402a5a        0x2 
  .rodata.__FUNCTION__$5144
-                0x000000003f402a38       0x15 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
- *fill*         0x000000003f402a4d        0x3 
+                0x000000003f402a5c       0x15 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
+ *fill*         0x000000003f402a71        0x3 
  .rodata.__FUNCTION__$5137
-                0x000000003f402a50        0xc /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
+                0x000000003f402a74        0xc /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
  .rodata.soc_reserved_region_count
-                0x000000003f402a5c        0x4 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
-                0x000000003f402a5c                soc_reserved_region_count
+                0x000000003f402a80        0x4 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+                0x000000003f402a80                soc_reserved_region_count
  .rodata.soc_reserved_regions
-                0x000000003f402a60       0x30 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
-                0x000000003f402a60                soc_reserved_regions
+                0x000000003f402a84       0x30 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+                0x000000003f402a84                soc_reserved_regions
  .rodata.soc_memory_region_count
-                0x000000003f402a90        0x4 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
-                0x000000003f402a90                soc_memory_region_count
+                0x000000003f402ab4        0x4 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+                0x000000003f402ab4                soc_memory_region_count
  .rodata.soc_memory_regions
-                0x000000003f402a94      0x2c0 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
-                0x000000003f402a94                soc_memory_regions
+                0x000000003f402ab8      0x2c0 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+                0x000000003f402ab8                soc_memory_regions
  .rodata.str1.4
-                0x000000003f402d54       0x9f /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+                0x000000003f402d78       0x9f /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
                                          0xaf (size before relaxing)
- *fill*         0x000000003f402df3        0x1 
+ *fill*         0x000000003f402e17        0x1 
  .rodata.soc_memory_types
-                0x000000003f402df4      0x140 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
-                0x000000003f402df4                soc_memory_types
+                0x000000003f402e18      0x140 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+                0x000000003f402e18                soc_memory_types
  .rodata.str1.4
-                0x000000003f402f34      0x10b /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
- *fill*         0x000000003f40303f        0x1 
+                0x000000003f402f58      0x10b /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+ *fill*         0x000000003f403063        0x1 
  .rodata.__func__$5603
-                0x000000003f403040       0x31 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
- *fill*         0x000000003f403071        0x3 
+                0x000000003f403064       0x31 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+ *fill*         0x000000003f403095        0x3 
  .rodata.__func__$5594
-                0x000000003f403074       0x32 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
- *fill*         0x000000003f4030a6        0x2 
+                0x000000003f403098       0x32 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+ *fill*         0x000000003f4030ca        0x2 
  .rodata.__func__$5578
-                0x000000003f4030a8       0x14 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x000000003f4030cc       0x14 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
  .rodata.str1.4
-                0x000000003f4030bc      0x141 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
- *fill*         0x000000003f4031fd        0x3 
+                0x000000003f4030e0      0x141 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ *fill*         0x000000003f403221        0x3 
  .rodata.__func__$5690
-                0x000000003f403200       0x11 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
- *fill*         0x000000003f403211        0x3 
+                0x000000003f403224       0x11 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ *fill*         0x000000003f403235        0x3 
  .rodata.__func__$5681
-                0x000000003f403214       0x15 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
- *fill*         0x000000003f403229        0x3 
+                0x000000003f403238       0x15 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ *fill*         0x000000003f40324d        0x3 
  .rodata.str1.4
-                0x000000003f40322c      0x2b8 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000003f403250      0x2b8 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .rodata.__func__$2511
-                0x000000003f4034e4       0x1b /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x000000003f4034ff        0x1 
+                0x000000003f403508       0x1b /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x000000003f403523        0x1 
  .rodata.__func__$2482
-                0x000000003f403500       0x27 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x000000003f403527        0x1 
+                0x000000003f403524       0x27 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x000000003f40354b        0x1 
  .rodata.str1.4
-                0x000000003f403528       0x9e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f4035c6        0x2 
+                0x000000003f40354c       0x9e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f4035ea        0x2 
  .rodata.__func__$6484
-                0x000000003f4035c8        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f4035d3        0x1 
+                0x000000003f4035ec        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f4035f7        0x1 
  .rodata.__func__$6500
-                0x000000003f4035d4       0x11 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f4035e5        0x3 
+                0x000000003f4035f8       0x11 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f403609        0x3 
  .rodata.__func__$6506
-                0x000000003f4035e8        0xa /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f4035f2        0x2 
+                0x000000003f40360c        0xa /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f403616        0x2 
  .rodata.__func__$6522
-                0x000000003f4035f4        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f4035ff        0x1 
+                0x000000003f403618        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f403623        0x1 
  .rodata.__func__$6518
-                0x000000003f403600        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f40360b        0x1 
+                0x000000003f403624        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f40362f        0x1 
  .rodata.__func__$6528
-                0x000000003f40360c        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f403617        0x1 
+                0x000000003f403630        0xb /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f40363b        0x1 
  .rodata.__func__$6535
-                0x000000003f403618       0x1a /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x000000003f403632        0x2 
+                0x000000003f40363c       0x1a /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x000000003f403656        0x2 
  .rodata.s_uarts
-                0x000000003f403634        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x000000003f403658        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
  .rodata.str1.4
-                0x000000003f403640       0x6d /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x000000003f403664       0x6d /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x71 (size before relaxing)
- *fill*         0x000000003f4036ad        0x3 
+ *fill*         0x000000003f4036d1        0x3 
  .rodata.__func__$3976
-                0x000000003f4036b0        0xf /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- *fill*         0x000000003f4036bf        0x1 
+                0x000000003f4036d4        0xf /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ *fill*         0x000000003f4036e3        0x1 
  .rodata.str1.4
-                0x000000003f4036c0      0x2b3 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
- *fill*         0x000000003f403973        0x1 
+                0x000000003f4036e4      0x2b3 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+ *fill*         0x000000003f403997        0x1 
  .rodata.__func__$5638
-                0x000000003f403974       0x1e /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
- *fill*         0x000000003f403992        0x2 
+                0x000000003f403998       0x1e /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+ *fill*         0x000000003f4039b6        0x2 
  .rodata.get_clk_en_mask
-                0x000000003f403994       0x78 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x000000003f4039b8       0x78 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
  .rodata.get_rst_en_mask
-                0x000000003f403a0c       0x78 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x000000003f403a30       0x78 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
  .rodata.str1.4
-                0x000000003f403a84      0xe23 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- *fill*         0x000000003f4048a7        0x1 
+                0x000000003f403aa8      0xe23 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ *fill*         0x000000003f4048cb        0x1 
  .rodata.__func__$4879
-                0x000000003f4048a8       0x14 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x000000003f4048cc       0x14 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
  .rodata.__FUNCTION__$4878
-                0x000000003f4048bc       0x14 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x000000003f4048e0       0x14 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
  .rodata.__FUNCTION__$4884
-                0x000000003f4048d0       0x13 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- *fill*         0x000000003f4048e3        0x1 
+                0x000000003f4048f4       0x13 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ *fill*         0x000000003f404907        0x1 
  .rodata.__func__$4911
-                0x000000003f4048e4       0x13 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- *fill*         0x000000003f4048f7        0x1 
- .rodata.__FUNCTION__$4909
-                0x000000003f4048f8       0x13 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- *fill*         0x000000003f40490b        0x1 
- .rodata.__FUNCTION__$4889
-                0x000000003f40490c        0xf /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x000000003f404908       0x13 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
  *fill*         0x000000003f40491b        0x1 
+ .rodata.__FUNCTION__$4909
+                0x000000003f40491c       0x13 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ *fill*         0x000000003f40492f        0x1 
+ .rodata.__FUNCTION__$4889
+                0x000000003f404930        0xf /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ *fill*         0x000000003f40493f        0x1 
  .rodata.GPIO_PIN_MUX_REG
-                0x000000003f40491c       0xa0 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
-                0x000000003f40491c                GPIO_PIN_MUX_REG
+                0x000000003f404940       0xa0 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x000000003f404940                GPIO_PIN_MUX_REG
  .rodata.str1.4
-                0x000000003f4049bc       0xd5 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+                0x000000003f4049e0       0xd5 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
                                          0xf9 (size before relaxing)
- *fill*         0x000000003f404a91        0x3 
+ *fill*         0x000000003f404ab5        0x3 
  .rodata.__FUNCTION__$5393
-                0x000000003f404a94       0x18 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
- .rodata.TG     0x000000003f404aac        0x8 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+                0x000000003f404ab8       0x18 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+ .rodata.TG     0x000000003f404ad0        0x8 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
  .rodata.rtc_gpio_desc
-                0x000000003f404ab4      0x820 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
-                0x000000003f404ab4                rtc_gpio_desc
+                0x000000003f404ad8      0x820 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x000000003f404ad8                rtc_gpio_desc
  .rodata.str1.4
-                0x000000003f4052d4       0x64 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x000000003f4052f8       0x64 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x62 (size before relaxing)
  .rodata.__func__$3509
-                0x000000003f405338       0x12 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
- *fill*         0x000000003f40534a        0x2 
+                0x000000003f40535c       0x12 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+ *fill*         0x000000003f40536e        0x2 
  .rodata.__func__$3472
-                0x000000003f40534c       0x13 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x000000003f405370       0x13 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
  *(.irom1.text)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003f40535f                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003f405383                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table .gcc_except_table.*)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
-                0x000000003f405360                . = ((. + 0x3) & 0xfffffffffffffffc)
- *fill*         0x000000003f40535f        0x1 
-                0x000000003f405360                __eh_frame = ABSOLUTE (.)
+                0x000000003f405384                . = ((. + 0x3) & 0xfffffffffffffffc)
+ *fill*         0x000000003f405383        0x1 
+                0x000000003f405384                __eh_frame = ABSOLUTE (.)
  *(.eh_frame)
- .eh_frame      0x000000003f405360       0x28 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .eh_frame      0x000000003f405388       0x28 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
-                0x000000003f4053b4                . = ((. + 0x7) & 0xfffffffffffffffc)
- *fill*         0x000000003f4053b0        0x4 
-                0x000000003f4053b4                __init_array_start = ABSOLUTE (.)
+ .eh_frame      0x000000003f405384       0x28 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .eh_frame      0x000000003f4053ac       0x28 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+                0x000000003f4053d8                . = ((. + 0x7) & 0xfffffffffffffffc)
+ *fill*         0x000000003f4053d4        0x4 
+                0x000000003f4053d8                __init_array_start = ABSOLUTE (.)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x000000003f4053b4                __init_array_end = ABSOLUTE (.)
+                0x000000003f4053d8                __init_array_end = ABSOLUTE (.)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x000000003f4053b4                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003f4053d8                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003f4053b4                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003f4053d8                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003f4053b4                _rodata_end = ABSOLUTE (.)
-                0x000000003f4053b4                _lit4_start = ABSOLUTE (.)
+                0x000000003f4053d8                _rodata_end = ABSOLUTE (.)
+                0x000000003f4053d8                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003f4053b4                _lit4_end = ABSOLUTE (.)
-                0x000000003f4053b4                . = ALIGN (0x4)
-                0x000000003f4053b4                _thread_local_start = ABSOLUTE (.)
+                0x000000003f4053d8                _lit4_end = ABSOLUTE (.)
+                0x000000003f4053d8                . = ALIGN (0x4)
+                0x000000003f4053d8                _thread_local_start = ABSOLUTE (.)
  *(.tdata)
  *(.tdata.*)
  *(.tbss)
  *(.tbss.*)
-                0x000000003f4053b4                _thread_local_end = ABSOLUTE (.)
-                0x000000003f4053b4                . = ALIGN (0x4)
+                0x000000003f4053d8                _thread_local_end = ABSOLUTE (.)
+                0x000000003f4053d8                . = ALIGN (0x4)
 
-.flash.text     0x00000000400d0018    0x1177c
+.flash.text     0x00000000400d0018    0x11810
                 0x00000000400d0018                _stext = .
                 0x00000000400d0018                _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -6071,1000 +6069,1005 @@ END GROUP
  .literal.heap_bubble_down
                 0x00000000400d02ec        0x4 /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
  .literal.blink_task
-                0x00000000400d02f0        0x4 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
-                                         0x18 (size before relaxing)
+                0x00000000400d02f0        0xc /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
+                                         0x28 (size before relaxing)
  .literal.app_main
-                0x00000000400d02f4        0x8 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
-                                         0x10 (size before relaxing)
- .literal       0x00000000400d02fc        0xc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+                0x00000000400d02fc        0xc /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
                                          0x18 (size before relaxing)
- .literal       0x00000000400d0308        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+ .literal       0x00000000400d0308        0xc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+                                         0x18 (size before relaxing)
+ .literal       0x00000000400d0314        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
                                           0xc (size before relaxing)
- .literal       0x00000000400d0308       0x24 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+ .literal       0x00000000400d0314       0x24 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
                                          0x38 (size before relaxing)
- .literal       0x00000000400d032c        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+ .literal       0x00000000400d0338        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
                                           0xc (size before relaxing)
- .literal       0x00000000400d032c       0x34 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+ .literal       0x00000000400d0338       0x34 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
                                          0x68 (size before relaxing)
- .literal       0x00000000400d0360        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+ .literal       0x00000000400d036c        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+                                         0x14 (size before relaxing)
+ .literal       0x00000000400d036c        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
                                          0x38 (size before relaxing)
- .literal       0x00000000400d0360        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+ .literal       0x00000000400d036c        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
                                          0x14 (size before relaxing)
- .literal       0x00000000400d0360       0x68 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ .literal       0x00000000400d036c       0x68 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
                                         0x188 (size before relaxing)
- .literal       0x00000000400d03c8       0x38 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .literal       0x00000000400d03d4       0x38 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
                                          0xa8 (size before relaxing)
- .literal       0x00000000400d0400       0x38 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+ .literal       0x00000000400d040c       0x38 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
                                         0x1c4 (size before relaxing)
- .literal       0x00000000400d0438        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+ .literal       0x00000000400d0444        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
                                          0x14 (size before relaxing)
- .literal       0x00000000400d0438       0x58 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+ .literal       0x00000000400d0444       0x58 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
                                         0x210 (size before relaxing)
- .literal       0x00000000400d0490        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+ .literal       0x00000000400d049c        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
                                           0x4 (size before relaxing)
- .literal       0x00000000400d0490       0x2c /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+ .literal       0x00000000400d049c       0x2c /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
                                          0x74 (size before relaxing)
- .literal       0x00000000400d04bc        0xc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+ .literal       0x00000000400d04c8        0xc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
                                          0x20 (size before relaxing)
- .literal       0x00000000400d04c8       0x28 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+ .literal       0x00000000400d04d4       0x28 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
                                          0x78 (size before relaxing)
  .literal.get_boot_time
-                0x00000000400d04f0        0xc /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d04fc        0xc /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x14 (size before relaxing)
  .literal.set_boot_time
-                0x00000000400d04fc        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d0508        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x14 (size before relaxing)
  .literal.get_time_since_boot
-                0x00000000400d04fc        0x4 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d0508        0x4 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                           0x8 (size before relaxing)
  .literal.esp_clk_slowclk_cal_set
-                0x00000000400d0500        0x8 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d050c        0x8 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x14 (size before relaxing)
  .literal.esp_clk_slowclk_cal_get
-                0x00000000400d0508        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d0514        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                           0x4 (size before relaxing)
  .literal.get_rtc_time_us
-                0x00000000400d0508        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d0514        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                           0x8 (size before relaxing)
  .literal.esp_set_time_from_rtc
-                0x00000000400d0508        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400d0514        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                           0xc (size before relaxing)
  .literal._raise_r
-                0x00000000400d0508        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400d0514        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
                                           0x4 (size before relaxing)
  .literal._sbrk_r
-                0x00000000400d0508        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400d0514        0x0 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
                                           0x4 (size before relaxing)
  .literal.esp_setup_syscall_table
-                0x00000000400d0508       0x18 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
+                0x00000000400d0514       0x18 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
                                          0x1c (size before relaxing)
  .literal.esp_pthread_cfg_key_destructor
-                0x00000000400d0520        0x0 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+                0x00000000400d052c        0x0 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
                                           0x4 (size before relaxing)
  .literal.esp_pthread_init
-                0x00000000400d0520        0xc /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+                0x00000000400d052c        0xc /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
                                          0x18 (size before relaxing)
  .literal.find_key
-                0x00000000400d052c        0x8 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400d0538        0x8 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x10 (size before relaxing)
  .literal.pthread_key_create
-                0x00000000400d0534        0x0 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400d0540        0x0 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x14 (size before relaxing)
  .literal.pthread_key_delete
-                0x00000000400d0534        0x0 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400d0540        0x0 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x18 (size before relaxing)
  .literal.spi_flash_init_lock
-                0x00000000400d0534       0x10 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400d0540       0x10 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
                                          0x18 (size before relaxing)
  .literal.spi_flash_op_lock
-                0x00000000400d0544        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400d0550        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_op_unlock
-                0x00000000400d0544        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400d0550        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
                                           0x8 (size before relaxing)
  .literal.is_safe_write_address
-                0x00000000400d0544        0x4 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+                0x00000000400d0550        0x4 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
                                          0x14 (size before relaxing)
  .literal.spi_flash_init
-                0x00000000400d0548        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+                0x00000000400d0554        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_cache2phys
-                0x00000000400d0548       0x14 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+                0x00000000400d0554       0x14 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
                                          0x20 (size before relaxing)
  .literal.uart_tx_char
-                0x00000000400d055c        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d0568        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
  .literal.uart_rx_char
-                0x00000000400d0560        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d056c        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                           0x4 (size before relaxing)
  .literal.uart_read_char
-                0x00000000400d0560        0x8 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d056c        0x8 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
  .literal.uart_fstat
-                0x00000000400d0568        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d0574        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x14 (size before relaxing)
  .literal.uart_close
-                0x00000000400d0574        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d0580        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x10 (size before relaxing)
  .literal.uart_return_char
-                0x00000000400d0578        0x8 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d0584        0x8 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x14 (size before relaxing)
  .literal.uart_fcntl
-                0x00000000400d0580        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d058c        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x1c (size before relaxing)
  .literal.uart_open
-                0x00000000400d058c       0x10 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d0598       0x10 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x24 (size before relaxing)
  .literal.uart_read
-                0x00000000400d059c        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d05a8        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x34 (size before relaxing)
  .literal.uart_write
-                0x00000000400d05a8       0x10 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d05b4       0x10 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x24 (size before relaxing)
  .literal.esp_vfs_dev_uart_register
-                0x00000000400d05b8       0x24 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400d05c4       0x24 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x34 (size before relaxing)
  .literal.get_vfs_for_fd
-                0x00000000400d05dc        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d05e8        0xc /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
  .literal.esp_vfs_register_common
-                0x00000000400d05e8        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d05f4        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x1c (size before relaxing)
  .literal.get_vfs_for_path
-                0x00000000400d05ec        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d05f8        0x4 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x10 (size before relaxing)
  .literal.translate_path
-                0x00000000400d05f0       0x14 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d05fc       0x14 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x1c (size before relaxing)
  .literal.esp_vfs_register
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_open
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_write
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_lseek
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_read
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_close
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_fstat
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_stat
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_link
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x10 (size before relaxing)
  .literal.esp_vfs_unlink
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                           0x8 (size before relaxing)
  .literal.esp_vfs_rename
-                0x00000000400d0604        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400d0610        0x0 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x10 (size before relaxing)
- .literal       0x00000000400d0604        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
+ .literal       0x00000000400d0610        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
                                           0xc (size before relaxing)
- .literal       0x00000000400d0604        0x4 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
+ .literal       0x00000000400d0610        0x4 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
                                          0x10 (size before relaxing)
- .literal       0x00000000400d0608        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
+ .literal       0x00000000400d0614        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
                                          0x10 (size before relaxing)
- .literal       0x00000000400d0608        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
+ .literal       0x00000000400d0614        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
                                          0x18 (size before relaxing)
- .literal       0x00000000400d0608        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
+ .literal       0x00000000400d0614        0x0 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
                                           0x4 (size before relaxing)
  .literal.esp_ota_get_running_partition
-                0x00000000400d0608       0x14 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+                0x00000000400d0614       0x14 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
                                          0x34 (size before relaxing)
  .literal.get_clk_en_mask
-                0x00000000400d061c       0x20 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400d0628       0x20 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                          0x44 (size before relaxing)
  .literal.get_rst_en_mask
-                0x00000000400d063c        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400d0648        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                          0x3c (size before relaxing)
  .literal.get_clk_en_reg
-                0x00000000400d0640        0x0 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400d064c        0x0 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                           0xc (size before relaxing)
  .literal.get_rst_en_reg
-                0x00000000400d0640        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400d064c        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                           0xc (size before relaxing)
  .literal.periph_module_enable
-                0x00000000400d0644        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400d0650        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                          0x2c (size before relaxing)
  .literal.gpio_output_disable
-                0x00000000400d0648       0x30 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400d0654       0x30 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0x3c (size before relaxing)
  .literal.gpio_output_enable
-                0x00000000400d0678        0xc /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400d0684        0xc /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0x24 (size before relaxing)
  .literal.gpio_set_level
-                0x00000000400d0684        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400d0690        0x4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0x20 (size before relaxing)
  .literal.gpio_set_direction
-                0x00000000400d0688       0x20 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400d0694       0x20 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0x6c (size before relaxing)
  .literal.timer_group_intr_enable
-                0x00000000400d06a8       0x18 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+                0x00000000400d06b4       0x18 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
                                          0x28 (size before relaxing)
  .literal.rtc_isr
-                0x00000000400d06c0        0xc /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400d06cc        0xc /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
                                          0x20 (size before relaxing)
  .literal.rtc_isr_ensure_installed
-                0x00000000400d06cc        0x8 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400d06d8        0x8 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
                                          0x20 (size before relaxing)
  .literal.rtc_gpio_force_hold_dis_all
-                0x00000000400d06d4        0x8 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400d06e0        0x8 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
  .literal.rtc_isr_register
-                0x00000000400d06dc        0x0 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400d06e8        0x0 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
                                          0x18 (size before relaxing)
- .literal       0x00000000400d06dc        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+ .literal       0x00000000400d06e8        0x0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
                                           0x4 (size before relaxing)
  .literal.iterator_create
-                0x00000000400d06dc        0x4 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400d06e8        0x4 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                           0x8 (size before relaxing)
  .literal.load_partitions
-                0x00000000400d06e0        0xc /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400d06ec        0xc /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x30 (size before relaxing)
  .literal.esp_partition_iterator_release
-                0x00000000400d06ec        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400d06f8        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                           0x4 (size before relaxing)
  .literal.esp_partition_next
-                0x00000000400d06ec       0x10 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400d06f8       0x10 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x28 (size before relaxing)
  .literal.esp_partition_find
-                0x00000000400d06fc        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400d0708        0x0 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x1c (size before relaxing)
  .literal.esp_partition_get
-                0x00000000400d06fc        0x8 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400d0708        0x8 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x10 (size before relaxing)
  .text.__cxx_fatal_exception
-                0x00000000400d0704        0x6 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_exception_stubs.o)
+                0x00000000400d0710        0x6 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_exception_stubs.o)
                                           0x9 (size before relaxing)
-                0x00000000400d0704                __cxa_free_exception
-                0x00000000400d0704                _ZSt18__throw_bad_typeidv
-                0x00000000400d0704                __cxa_rethrow
-                0x00000000400d0704                __cxa_free_dependent_exception
-                0x00000000400d0704                _ZSt18uncaught_exceptionv
-                0x00000000400d0704                __cxa_get_exception_ptr
-                0x00000000400d0704                __cxa_allocate_dependent_exception
-                0x00000000400d0704                __cxx_fatal_exception
-                0x00000000400d0704                _ZSt17__throw_bad_allocv
-                0x00000000400d0704                __cxa_end_catch
-                0x00000000400d0704                __cxa_throw
-                0x00000000400d0704                _ZSt21__throw_bad_exceptionv
-                0x00000000400d0704                _ZSt25__throw_bad_function_callv
-                0x00000000400d0704                __cxa_call_terminate
-                0x00000000400d0704                __cxa_begin_catch
-                0x00000000400d0704                _ZSt16__throw_bad_castv
-                0x00000000400d0704                __cxa_allocate_exception
- *fill*         0x00000000400d070a        0x2 
+                0x00000000400d0710                __cxa_free_exception
+                0x00000000400d0710                _ZSt18__throw_bad_typeidv
+                0x00000000400d0710                __cxa_rethrow
+                0x00000000400d0710                __cxa_free_dependent_exception
+                0x00000000400d0710                _ZSt18uncaught_exceptionv
+                0x00000000400d0710                __cxa_get_exception_ptr
+                0x00000000400d0710                __cxa_allocate_dependent_exception
+                0x00000000400d0710                __cxx_fatal_exception
+                0x00000000400d0710                _ZSt17__throw_bad_allocv
+                0x00000000400d0710                __cxa_end_catch
+                0x00000000400d0710                __cxa_throw
+                0x00000000400d0710                _ZSt21__throw_bad_exceptionv
+                0x00000000400d0710                _ZSt25__throw_bad_function_callv
+                0x00000000400d0710                __cxa_call_terminate
+                0x00000000400d0710                __cxa_begin_catch
+                0x00000000400d0710                _ZSt16__throw_bad_castv
+                0x00000000400d0710                __cxa_allocate_exception
+ *fill*         0x00000000400d0716        0x2 
  .text.cpu_configure_region_protection
-                0x00000000400d070c       0x40 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
+                0x00000000400d0718       0x40 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
  .text.do_global_ctors
-                0x00000000400d074c       0x19 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
- *fill*         0x00000000400d0765        0x3 
+                0x00000000400d0758       0x19 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
+ *fill*         0x00000000400d0771        0x3 
  .text.main_task
-                0x00000000400d0768       0x90 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
+                0x00000000400d0774       0x90 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
                                          0xb0 (size before relaxing)
  .text.intr_matrix_clear
-                0x00000000400d07f8       0x29 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
- *fill*         0x00000000400d0821        0x3 
+                0x00000000400d0804       0x29 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
+ *fill*         0x00000000400d082d        0x3 
  .text.wdt_reset_cpu1_info_enable
-                0x00000000400d0824       0x34 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
+                0x00000000400d0830       0x34 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
                                          0x40 (size before relaxing)
  .text.select_rtc_slow_clk
-                0x00000000400d0858       0x67 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(clk.o)
+                0x00000000400d0864       0x67 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(clk.o)
                                          0x7b (size before relaxing)
- *fill*         0x00000000400d08bf        0x1 
+ *fill*         0x00000000400d08cb        0x1 
  .text.esp_clk_init
-                0x00000000400d08c0       0x61 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(clk.o)
+                0x00000000400d08cc       0x61 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(clk.o)
                                          0x75 (size before relaxing)
-                0x00000000400d08c0                esp_clk_init
- *fill*         0x00000000400d0921        0x3 
+                0x00000000400d08cc                esp_clk_init
+ *fill*         0x00000000400d092d        0x3 
  .text.esp_perip_clk_init
-                0x00000000400d0924      0x116 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(clk.o)
+                0x00000000400d0930      0x116 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(clk.o)
                                         0x15e (size before relaxing)
-                0x00000000400d0924                esp_perip_clk_init
- *fill*         0x00000000400d0a3a        0x2 
+                0x00000000400d0930                esp_perip_clk_init
+ *fill*         0x00000000400d0a46        0x2 
  .text.esp_crosscore_isr_handle_yield
-                0x00000000400d0a3c        0x8 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(crosscore_int.o)
+                0x00000000400d0a48        0x8 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(crosscore_int.o)
                                           0xb (size before relaxing)
- *fill*         0x00000000400d0a44        0x0 
+ *fill*         0x00000000400d0a50        0x0 
  .text.esp_crosscore_int_init
-                0x00000000400d0a44       0x62 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(crosscore_int.o)
+                0x00000000400d0a50       0x62 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(crosscore_int.o)
                                          0x6e (size before relaxing)
-                0x00000000400d0a44                esp_crosscore_int_init
- *fill*         0x00000000400d0aa6        0x2 
+                0x00000000400d0a50                esp_crosscore_int_init
+ *fill*         0x00000000400d0ab2        0x2 
  .text.esp_cache_err_int_init
-                0x00000000400d0aa8       0x5e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cache_err_int.o)
+                0x00000000400d0ab4       0x5e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cache_err_int.o)
                                          0x6e (size before relaxing)
-                0x00000000400d0aa8                esp_cache_err_int_init
- *fill*         0x00000000400d0b06        0x2 
+                0x00000000400d0ab4                esp_cache_err_int_init
+ *fill*         0x00000000400d0b12        0x2 
  .text.esp_ipc_call_and_wait
-                0x00000000400d0b08       0x6e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(ipc.o)
+                0x00000000400d0b14       0x6e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(ipc.o)
                                          0x7e (size before relaxing)
- *fill*         0x00000000400d0b76        0x2 
+ *fill*         0x00000000400d0b82        0x2 
  .text.esp_ipc_init
-                0x00000000400d0b78       0x73 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(ipc.o)
+                0x00000000400d0b84       0x73 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(ipc.o)
                                          0x83 (size before relaxing)
-                0x00000000400d0b78                esp_ipc_init
- *fill*         0x00000000400d0beb        0x1 
+                0x00000000400d0b84                esp_ipc_init
+ *fill*         0x00000000400d0bf7        0x1 
  .text.esp_ipc_call
-                0x00000000400d0bec       0x15 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(ipc.o)
-                0x00000000400d0bec                esp_ipc_call
- *fill*         0x00000000400d0c01        0x3 
+                0x00000000400d0bf8       0x15 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(ipc.o)
+                0x00000000400d0bf8                esp_ipc_call
+ *fill*         0x00000000400d0c0d        0x3 
  .text.insert_vector_desc
-                0x00000000400d0c04       0x56 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
- *fill*         0x00000000400d0c5a        0x2 
+                0x00000000400d0c10       0x56 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+ *fill*         0x00000000400d0c66        0x2 
  .text.find_desc_for_int
-                0x00000000400d0c5c       0x25 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
- *fill*         0x00000000400d0c81        0x3 
+                0x00000000400d0c68       0x25 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+ *fill*         0x00000000400d0c8d        0x3 
  .text.int_has_handler
-                0x00000000400d0c84       0x1d /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
- *fill*         0x00000000400d0ca1        0x3 
+                0x00000000400d0c90       0x1d /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+ *fill*         0x00000000400d0cad        0x3 
  .text.get_desc_for_int
-                0x00000000400d0ca4       0x74 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+                0x00000000400d0cb0       0x74 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
                                          0x7c (size before relaxing)
  .text.find_desc_for_source
-                0x00000000400d0d18       0x69 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
- *fill*         0x00000000400d0d81        0x3 
+                0x00000000400d0d24       0x69 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+ *fill*         0x00000000400d0d8d        0x3 
  .text.is_vect_desc_usable
-                0x00000000400d0d84       0xdc /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+                0x00000000400d0d90       0xdc /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
  .text.get_available_int
-                0x00000000400d0e60      0x162 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+                0x00000000400d0e6c      0x162 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
                                         0x16a (size before relaxing)
- *fill*         0x00000000400d0fc2        0x2 
+ *fill*         0x00000000400d0fce        0x2 
  .text.esp_intr_alloc_intrstatus
-                0x00000000400d0fc4      0x296 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+                0x00000000400d0fd0      0x296 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
                                         0x2aa (size before relaxing)
-                0x00000000400d0fc4                esp_intr_alloc_intrstatus
- *fill*         0x00000000400d125a        0x2 
+                0x00000000400d0fd0                esp_intr_alloc_intrstatus
+ *fill*         0x00000000400d1266        0x2 
  .text.esp_intr_alloc
-                0x00000000400d125c       0x18 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
+                0x00000000400d1268       0x18 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(intr_alloc.o)
                                          0x1c (size before relaxing)
-                0x00000000400d125c                esp_intr_alloc
+                0x00000000400d1268                esp_intr_alloc
  .text.esp_int_wdt_init
-                0x00000000400d1274       0xd3 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(int_wdt.o)
+                0x00000000400d1280       0xd3 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(int_wdt.o)
                                          0xd7 (size before relaxing)
-                0x00000000400d1274                esp_int_wdt_init
- *fill*         0x00000000400d1347        0x1 
+                0x00000000400d1280                esp_int_wdt_init
+ *fill*         0x00000000400d1353        0x1 
  .text.esp_int_wdt_cpu_init
-                0x00000000400d1348       0x2e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(int_wdt.o)
+                0x00000000400d1354       0x2e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(int_wdt.o)
                                          0x36 (size before relaxing)
-                0x00000000400d1348                esp_int_wdt_cpu_init
- *fill*         0x00000000400d1376        0x2 
+                0x00000000400d1354                esp_int_wdt_cpu_init
+ *fill*         0x00000000400d1382        0x2 
  .text.timer_process_alarm
-                0x00000000400d1378       0x92 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer.o)
+                0x00000000400d1384       0x92 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer.o)
                                          0xa1 (size before relaxing)
- *fill*         0x00000000400d140a        0x2 
+ *fill*         0x00000000400d1416        0x2 
  .text.timer_task
-                0x00000000400d140c       0x2d /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer.o)
+                0x00000000400d1418       0x2d /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer.o)
                                          0x34 (size before relaxing)
- *fill*         0x00000000400d1439        0x3 
+ *fill*         0x00000000400d1445        0x3 
  .text.esp_timer_init
-                0x00000000400d143c       0x76 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer.o)
+                0x00000000400d1448       0x76 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer.o)
                                          0x8a (size before relaxing)
-                0x00000000400d143c                esp_timer_init
- *fill*         0x00000000400d14b2        0x2 
+                0x00000000400d1448                esp_timer_init
+ *fill*         0x00000000400d14be        0x2 
  .text.dport_access_init_core
-                0x00000000400d14b4       0x62 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(dport_access.o)
+                0x00000000400d14c0       0x62 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(dport_access.o)
                                          0x6a (size before relaxing)
- *fill*         0x00000000400d1516        0x2 
+ *fill*         0x00000000400d1522        0x2 
  .text.esp_dport_access_int_init
-                0x00000000400d1518       0x33 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(dport_access.o)
+                0x00000000400d1524       0x33 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(dport_access.o)
                                          0x37 (size before relaxing)
-                0x00000000400d1518                esp_dport_access_int_init
- *fill*         0x00000000400d154b        0x1 
+                0x00000000400d1524                esp_dport_access_int_init
+ *fill*         0x00000000400d1557        0x1 
  .text.rtc_brownout_isr_handler
-                0x00000000400d154c       0x2c /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(brownout.o)
+                0x00000000400d1558       0x2c /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(brownout.o)
                                          0x30 (size before relaxing)
  .text.esp_brownout_init
-                0x00000000400d1578       0x41 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(brownout.o)
+                0x00000000400d1584       0x41 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(brownout.o)
                                          0x45 (size before relaxing)
-                0x00000000400d1578                esp_brownout_init
- *fill*         0x00000000400d15b9        0x3 
+                0x00000000400d1584                esp_brownout_init
+ *fill*         0x00000000400d15c5        0x3 
  .text.find_task_in_twdt_list
-                0x00000000400d15bc       0x2f /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
- *fill*         0x00000000400d15eb        0x1 
+                0x00000000400d15c8       0x2f /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+ *fill*         0x00000000400d15f7        0x1 
  .text.reset_hw_timer
-                0x00000000400d15ec       0x35 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
- *fill*         0x00000000400d1621        0x3 
+                0x00000000400d15f8       0x35 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+ *fill*         0x00000000400d162d        0x3 
  .text.task_wdt_isr
-                0x00000000400d1624       0xea /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+                0x00000000400d1630       0xea /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
                                         0x102 (size before relaxing)
- *fill*         0x00000000400d170e        0x2 
+ *fill*         0x00000000400d171a        0x2 
  .text.esp_task_wdt_init
-                0x00000000400d1710      0x1a8 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+                0x00000000400d171c      0x1a8 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
                                         0x1b8 (size before relaxing)
-                0x00000000400d1710                esp_task_wdt_init
+                0x00000000400d171c                esp_task_wdt_init
  .text.esp_task_wdt_add
-                0x00000000400d18b8       0xb6 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+                0x00000000400d18c4       0xb6 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
                                          0xd5 (size before relaxing)
-                0x00000000400d18b8                esp_task_wdt_add
- *fill*         0x00000000400d196e        0x2 
+                0x00000000400d18c4                esp_task_wdt_add
+ *fill*         0x00000000400d197a        0x2 
  .text.esp_task_wdt_reset
-                0x00000000400d1970       0x4f /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+                0x00000000400d197c       0x4f /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
                                          0x5e (size before relaxing)
-                0x00000000400d1970                esp_task_wdt_reset
- *fill*         0x00000000400d19bf        0x1 
+                0x00000000400d197c                esp_task_wdt_reset
+ *fill*         0x00000000400d19cb        0x1 
  .text.idle_hook_cb
-                0x00000000400d19c0        0xa /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
+                0x00000000400d19cc        0xa /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(task_wdt.o)
                                           0xd (size before relaxing)
- *fill*         0x00000000400d19ca        0x2 
+ *fill*         0x00000000400d19d6        0x2 
  .text.esp_timer_impl_init
-                0x00000000400d19cc       0xb6 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer_esp32.o)
+                0x00000000400d19d8       0xb6 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(esp_timer_esp32.o)
                                          0xc2 (size before relaxing)
-                0x00000000400d19cc                esp_timer_impl_init
- *fill*         0x00000000400d1a82        0x2 
+                0x00000000400d19d8                esp_timer_impl_init
+ *fill*         0x00000000400d1a8e        0x2 
  .text.esp_vApplicationIdleHook
-                0x00000000400d1a84       0x30 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(freertos_hooks.o)
-                0x00000000400d1a84                esp_vApplicationIdleHook
+                0x00000000400d1a90       0x30 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(freertos_hooks.o)
+                0x00000000400d1a90                esp_vApplicationIdleHook
  .text.esp_register_freertos_idle_hook_for_cpu
-                0x00000000400d1ab4       0x4e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(freertos_hooks.o)
-                0x00000000400d1ab4                esp_register_freertos_idle_hook_for_cpu
- *fill*         0x00000000400d1b02        0x2 
+                0x00000000400d1ac0       0x4e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(freertos_hooks.o)
+                0x00000000400d1ac0                esp_register_freertos_idle_hook_for_cpu
+ *fill*         0x00000000400d1b0e        0x2 
  .text.esp_register_freertos_tick_hook_for_cpu
-                0x00000000400d1b04       0x4e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(freertos_hooks.o)
-                0x00000000400d1b04                esp_register_freertos_tick_hook_for_cpu
- *fill*         0x00000000400d1b52        0x2 
+                0x00000000400d1b10       0x4e /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(freertos_hooks.o)
+                0x00000000400d1b10                esp_register_freertos_tick_hook_for_cpu
+ *fill*         0x00000000400d1b5e        0x2 
  .text.register_heap
-                0x00000000400d1b54       0x14 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
+                0x00000000400d1b60       0x14 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
  .text.disable_mem_region
-                0x00000000400d1b68       0xb4 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
+                0x00000000400d1b74       0xb4 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
  .text.heap_caps_enable_nonos_stack_heaps
-                0x00000000400d1c1c       0x28 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
+                0x00000000400d1c28       0x28 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
                                          0x2c (size before relaxing)
-                0x00000000400d1c1c                heap_caps_enable_nonos_stack_heaps
+                0x00000000400d1c28                heap_caps_enable_nonos_stack_heaps
  .text.heap_caps_init
-                0x00000000400d1c44      0x2c6 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
+                0x00000000400d1c50      0x2c6 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps_init.o)
                                         0x2de (size before relaxing)
-                0x00000000400d1c44                heap_caps_init
- *fill*         0x00000000400d1f0a        0x2 
+                0x00000000400d1c50                heap_caps_init
+ *fill*         0x00000000400d1f16        0x2 
  .text.heap_bubble_down
-                0x00000000400d1f0c       0x4e /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
- *fill*         0x00000000400d1f5a        0x2 
+                0x00000000400d1f18       0x4e /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
+ *fill*         0x00000000400d1f66        0x2 
  .text.blink_task
-                0x00000000400d1f5c       0x30 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
-                                         0x40 (size before relaxing)
-                0x00000000400d1f5c                blink_task
- .text.app_main
-                0x00000000400d1f8c       0x1f /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
-                0x00000000400d1f8c                app_main
- *fill*         0x00000000400d1fab        0x1 
- .text          0x00000000400d1fac       0x38 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
-                                         0x40 (size before relaxing)
-                0x00000000400d1fac                __assert_func
-                0x00000000400d1fd4                __assert
- .text          0x00000000400d1fe4       0x54 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+                0x00000000400d1f68       0x40 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
                                          0x5c (size before relaxing)
-                0x00000000400d1fe4                _fiprintf_r
-                0x00000000400d2008                fiprintf
- .text          0x00000000400d2038       0xc0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+                0x00000000400d1f68                blink_task
+ .text.app_main
+                0x00000000400d1fa8       0x24 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
+                                         0x28 (size before relaxing)
+                0x00000000400d1fa8                app_main
+ .text          0x00000000400d1fcc       0x38 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+                                         0x40 (size before relaxing)
+                0x00000000400d1fcc                __assert_func
+                0x00000000400d1ff4                __assert
+ .text          0x00000000400d2004       0x54 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+                                         0x5c (size before relaxing)
+                0x00000000400d2004                _fiprintf_r
+                0x00000000400d2028                fiprintf
+ .text          0x00000000400d2058       0xc0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
                                          0xcc (size before relaxing)
-                0x00000000400d2038                _fopen_r
-                0x00000000400d20e4                fopen
- .text          0x00000000400d20f8       0x2d /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+                0x00000000400d2058                _fopen_r
+                0x00000000400d2104                fopen
+ .text          0x00000000400d2118       0x2d /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
                                          0x31 (size before relaxing)
-                0x00000000400d20f8                _fseek_r
-                0x00000000400d2110                fseek
- *fill*         0x00000000400d2125        0x3 
- .text          0x00000000400d2128      0x32e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+                0x00000000400d2118                _fseek_r
+                0x00000000400d2130                fseek
+ *fill*         0x00000000400d2145        0x3 
+ .text          0x00000000400d2148      0x32e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
                                         0x336 (size before relaxing)
-                0x00000000400d2128                _fseeko_r
-                0x00000000400d2440                fseeko
- *fill*         0x00000000400d2456        0x2 
- .text          0x00000000400d2458       0xe8 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+                0x00000000400d2148                _fseeko_r
+                0x00000000400d2460                fseeko
+ *fill*         0x00000000400d2476        0x2 
+ .text          0x00000000400d2478       0x74 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+                                         0x78 (size before relaxing)
+                0x00000000400d2478                _printf_r
+                0x00000000400d24b0                printf
+ .text          0x00000000400d24ec       0xe8 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
                                          0xfc (size before relaxing)
-                0x00000000400d2458                cleanup_glue
-                0x00000000400d2470                _reclaim_reent
- .text          0x00000000400d2540       0xa7 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+                0x00000000400d24ec                cleanup_glue
+                0x00000000400d2504                _reclaim_reent
+ .text          0x00000000400d25d4       0xa7 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
                                          0xaf (size before relaxing)
-                0x00000000400d2540                _sprintf_r
-                0x00000000400d258c                sprintf
- *fill*         0x00000000400d25e7        0x1 
- .text          0x00000000400d25e8     0x355e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+                0x00000000400d25d4                _sprintf_r
+                0x00000000400d2620                sprintf
+ *fill*         0x00000000400d267b        0x1 
+ .text          0x00000000400d267c     0x355e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
                                        0x35ca (size before relaxing)
-                0x00000000400d2a68                _svfprintf_r
- *fill*         0x00000000400d5b46        0x2 
- .text          0x00000000400d5b48     0x26a1 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+                0x00000000400d2afc                _svfprintf_r
+ *fill*         0x00000000400d5bda        0x2 
+ .text          0x00000000400d5bdc     0x26a1 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
                                        0x26ad (size before relaxing)
-                0x00000000400d5fc8                __sprint_r
-                0x00000000400d6034                _vfiprintf_r
-                0x00000000400d8134                vfiprintf
- *fill*         0x00000000400d81e9        0x3 
- .text          0x00000000400d81ec     0x3719 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+                0x00000000400d605c                __sprint_r
+                0x00000000400d60c8                _vfiprintf_r
+                0x00000000400d81c8                vfiprintf
+ *fill*         0x00000000400d827d        0x3 
+ .text          0x00000000400d8280     0x3719 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
                                        0x3785 (size before relaxing)
-                0x00000000400d866c                _vfprintf_r
-                0x00000000400db850                vfprintf
- *fill*         0x00000000400db905        0x3 
- .text          0x00000000400db908       0x5e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+                0x00000000400d8700                _vfprintf_r
+                0x00000000400db8e4                vfprintf
+ *fill*         0x00000000400db999        0x3 
+ .text          0x00000000400db99c       0x5e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
                                          0x62 (size before relaxing)
-                0x00000000400db908                vprintf
-                0x00000000400db938                _vprintf_r
- *fill*         0x00000000400db966        0x2 
- .text          0x00000000400db968      0xcae /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+                0x00000000400db99c                vprintf
+                0x00000000400db9cc                _vprintf_r
+ *fill*         0x00000000400db9fa        0x2 
+ .text          0x00000000400db9fc      0xcae /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
                                         0xdae (size before relaxing)
-                0x00000000400dba74                _dtoa_r
- *fill*         0x00000000400dc616        0x2 
- .text          0x00000000400dc618       0x7f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
-                0x00000000400dc618                __sflags
- *fill*         0x00000000400dc697        0x1 
- .text          0x00000000400dc698      0x82a /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+                0x00000000400dbb08                _dtoa_r
+ *fill*         0x00000000400dc6aa        0x2 
+ .text          0x00000000400dc6ac       0x7f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+                0x00000000400dc6ac                __sflags
+ *fill*         0x00000000400dc72b        0x1 
+ .text          0x00000000400dc72c      0x82a /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
                                         0x82e (size before relaxing)
-                0x00000000400dc698                _Balloc
-                0x00000000400dc70c                _Bfree
-                0x00000000400dc73c                __multadd
-                0x00000000400dc7b0                __s2b
-                0x00000000400dc830                __hi0bits
-                0x00000000400dc87c                __lo0bits
-                0x00000000400dc8e8                __i2b
-                0x00000000400dc8fc                __multiply
-                0x00000000400dca00                __pow5mult
-                0x00000000400dca90                __lshift
-                0x00000000400dcb2c                __mcmp
-                0x00000000400dcb68                __mdiff
-                0x00000000400dcc2c                __ulp
-                0x00000000400dcc74                __b2d
-                0x00000000400dcd18                __d2b
-                0x00000000400dcdb8                __ratio
-                0x00000000400dce0c                _mprec_log10
-                0x00000000400dce40                __copybits
-                0x00000000400dce74                __any_on
- *fill*         0x00000000400dcec2        0x2 
- .text          0x00000000400dcec4       0x62 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
-                0x00000000400dcec4                frexp
- *fill*         0x00000000400dcf26        0x2 
- .text          0x00000000400dcf28     0x2582 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+                0x00000000400dc72c                _Balloc
+                0x00000000400dc7a0                _Bfree
+                0x00000000400dc7d0                __multadd
+                0x00000000400dc844                __s2b
+                0x00000000400dc8c4                __hi0bits
+                0x00000000400dc910                __lo0bits
+                0x00000000400dc97c                __i2b
+                0x00000000400dc990                __multiply
+                0x00000000400dca94                __pow5mult
+                0x00000000400dcb24                __lshift
+                0x00000000400dcbc0                __mcmp
+                0x00000000400dcbfc                __mdiff
+                0x00000000400dccc0                __ulp
+                0x00000000400dcd08                __b2d
+                0x00000000400dcdac                __d2b
+                0x00000000400dce4c                __ratio
+                0x00000000400dcea0                _mprec_log10
+                0x00000000400dced4                __copybits
+                0x00000000400dcf08                __any_on
+ *fill*         0x00000000400dcf56        0x2 
+ .text          0x00000000400dcf58       0x62 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+                0x00000000400dcf58                frexp
+ *fill*         0x00000000400dcfba        0x2 
+ .text          0x00000000400dcfbc     0x2582 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
                                        0x2586 (size before relaxing)
-                0x00000000400dd3a8                __ssprint_r
-                0x00000000400dd4b0                _svfiprintf_r
- *fill*         0x00000000400df4aa        0x2 
+                0x00000000400dd43c                __ssprint_r
+                0x00000000400dd544                _svfiprintf_r
+ *fill*         0x00000000400df53e        0x2 
  .text.get_boot_time
-                0x00000000400df4ac       0x23 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400df540       0x23 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x27 (size before relaxing)
- *fill*         0x00000000400df4cf        0x1 
+ *fill*         0x00000000400df563        0x1 
  .text.set_boot_time
-                0x00000000400df4d0       0x24 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400df564       0x24 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x28 (size before relaxing)
  .text.get_time_since_boot
-                0x00000000400df4f4       0x1f /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
- *fill*         0x00000000400df513        0x1 
+                0x00000000400df588       0x1f /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+ *fill*         0x00000000400df5a7        0x1 
  .text.esp_clk_slowclk_cal_set
-                0x00000000400df514       0x6a /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400df5a8       0x6a /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x6e (size before relaxing)
-                0x00000000400df514                esp_clk_slowclk_cal_set
- *fill*         0x00000000400df57e        0x2 
+                0x00000000400df5a8                esp_clk_slowclk_cal_set
+ *fill*         0x00000000400df612        0x2 
  .text.esp_clk_slowclk_cal_get
-                0x00000000400df580        0xd /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
-                0x00000000400df580                esp_clk_slowclk_cal_get
- *fill*         0x00000000400df58d        0x3 
+                0x00000000400df614        0xd /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400df614                esp_clk_slowclk_cal_get
+ *fill*         0x00000000400df621        0x3 
  .text.get_rtc_time_us
-                0x00000000400df590       0x43 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400df624       0x43 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x47 (size before relaxing)
- *fill*         0x00000000400df5d3        0x1 
+ *fill*         0x00000000400df667        0x1 
  .text.esp_set_time_from_rtc
-                0x00000000400df5d4       0x27 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+                0x00000000400df668       0x27 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
                                          0x2f (size before relaxing)
-                0x00000000400df5d4                esp_set_time_from_rtc
- *fill*         0x00000000400df5fb        0x1 
+                0x00000000400df668                esp_set_time_from_rtc
+ *fill*         0x00000000400df68f        0x1 
  .text._raise_r
-                0x00000000400df5fc        0x6 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400df690        0x6 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
                                           0x9 (size before relaxing)
-                0x00000000400df5fc                _raise_r
- *fill*         0x00000000400df602        0x2 
- .text._sbrk_r  0x00000000400df604        0x6 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400df690                _raise_r
+ *fill*         0x00000000400df696        0x2 
+ .text._sbrk_r  0x00000000400df698        0x6 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
                                           0x9 (size before relaxing)
-                0x00000000400df604                _sbrk_r
- *fill*         0x00000000400df60a        0x2 
+                0x00000000400df698                _sbrk_r
+ *fill*         0x00000000400df69e        0x2 
  .text.esp_setup_syscall_table
-                0x00000000400df60c       0x2b /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
-                0x00000000400df60c                esp_setup_syscall_table
- *fill*         0x00000000400df637        0x1 
+                0x00000000400df6a0       0x2b /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
+                0x00000000400df6a0                esp_setup_syscall_table
+ *fill*         0x00000000400df6cb        0x1 
  .text.esp_pthread_cfg_key_destructor
-                0x00000000400df638        0xe /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
- *fill*         0x00000000400df646        0x2 
+                0x00000000400df6cc        0xe /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+ *fill*         0x00000000400df6da        0x2 
  .text.esp_pthread_init
-                0x00000000400df648       0x32 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+                0x00000000400df6dc       0x32 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
                                          0x3a (size before relaxing)
-                0x00000000400df648                esp_pthread_init
- *fill*         0x00000000400df67a        0x2 
+                0x00000000400df6dc                esp_pthread_init
+ *fill*         0x00000000400df70e        0x2 
  .text.find_key
-                0x00000000400df67c       0x28 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400df710       0x28 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x2b (size before relaxing)
- *fill*         0x00000000400df6a4        0x0 
+ *fill*         0x00000000400df738        0x0 
  .text.pthread_key_create
-                0x00000000400df6a4       0x46 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400df738       0x46 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x4a (size before relaxing)
-                0x00000000400df6a4                pthread_key_create
- *fill*         0x00000000400df6ea        0x2 
+                0x00000000400df738                pthread_key_create
+ *fill*         0x00000000400df77e        0x2 
  .text.pthread_key_delete
-                0x00000000400df6ec       0x3e /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+                0x00000000400df780       0x3e /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
                                          0x45 (size before relaxing)
-                0x00000000400df6ec                pthread_key_delete
- *fill*         0x00000000400df72a        0x2 
+                0x00000000400df780                pthread_key_delete
+ *fill*         0x00000000400df7be        0x2 
  .text.spi_flash_init_lock
-                0x00000000400df72c       0x22 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400df7c0       0x22 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
                                          0x26 (size before relaxing)
-                0x00000000400df72c                spi_flash_init_lock
- *fill*         0x00000000400df74e        0x2 
+                0x00000000400df7c0                spi_flash_init_lock
+ *fill*         0x00000000400df7e2        0x2 
  .text.spi_flash_op_lock
-                0x00000000400df750       0x12 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
-                0x00000000400df750                spi_flash_op_lock
- *fill*         0x00000000400df762        0x2 
+                0x00000000400df7e4       0x12 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400df7e4                spi_flash_op_lock
+ *fill*         0x00000000400df7f6        0x2 
  .text.spi_flash_op_unlock
-                0x00000000400df764        0xd /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+                0x00000000400df7f8        0xd /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
                                          0x10 (size before relaxing)
-                0x00000000400df764                spi_flash_op_unlock
- *fill*         0x00000000400df771        0x3 
+                0x00000000400df7f8                spi_flash_op_unlock
+ *fill*         0x00000000400df805        0x3 
  .text.is_safe_write_address
-                0x00000000400df774       0x32 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+                0x00000000400df808       0x32 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
                                          0x3a (size before relaxing)
- *fill*         0x00000000400df7a6        0x2 
+ *fill*         0x00000000400df83a        0x2 
  .text.spi_flash_init
-                0x00000000400df7a8        0x8 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+                0x00000000400df83c        0x8 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
                                           0xb (size before relaxing)
-                0x00000000400df7a8                spi_flash_init
- *fill*         0x00000000400df7b0        0x0 
+                0x00000000400df83c                spi_flash_init
+ *fill*         0x00000000400df844        0x0 
  .text.spi_flash_cache2phys
-                0x00000000400df7b0       0x70 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+                0x00000000400df844       0x70 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
                                          0x74 (size before relaxing)
-                0x00000000400df7b0                spi_flash_cache2phys
+                0x00000000400df844                spi_flash_cache2phys
  .text.uart_tx_char
-                0x00000000400df820       0x25 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x00000000400df845        0x3 
+                0x00000000400df8b4       0x25 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x00000000400df8d9        0x3 
  .text.uart_rx_char
-                0x00000000400df848       0x21 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- *fill*         0x00000000400df869        0x3 
+                0x00000000400df8dc       0x21 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ *fill*         0x00000000400df8fd        0x3 
  .text.uart_read_char
-                0x00000000400df86c       0x28 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400df900       0x28 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
  .text.uart_fstat
-                0x00000000400df894       0x1e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400df928       0x1e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x21 (size before relaxing)
- *fill*         0x00000000400df8b2        0x2 
+ *fill*         0x00000000400df946        0x2 
  .text.uart_close
-                0x00000000400df8b4       0x19 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400df948       0x19 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x1c (size before relaxing)
- *fill*         0x00000000400df8cd        0x3 
+ *fill*         0x00000000400df961        0x3 
  .text.uart_return_char
-                0x00000000400df8d0       0x27 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400df964       0x27 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x2a (size before relaxing)
- *fill*         0x00000000400df8f7        0x1 
+ *fill*         0x00000000400df98b        0x1 
  .text.uart_fcntl
-                0x00000000400df8f8       0x81 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400df98c       0x81 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x85 (size before relaxing)
- *fill*         0x00000000400df979        0x3 
+ *fill*         0x00000000400dfa0d        0x3 
  .text.uart_open
-                0x00000000400df97c       0x59 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400dfa10       0x59 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x5d (size before relaxing)
- *fill*         0x00000000400df9d5        0x3 
+ *fill*         0x00000000400dfa69        0x3 
  .text.uart_read
-                0x00000000400df9d8       0x9a /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400dfa6c       0x9a /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0xa6 (size before relaxing)
- *fill*         0x00000000400dfa72        0x2 
+ *fill*         0x00000000400dfb06        0x2 
  .text.uart_write
-                0x00000000400dfa74       0x6d /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400dfb08       0x6d /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x75 (size before relaxing)
- *fill*         0x00000000400dfae1        0x3 
+ *fill*         0x00000000400dfb75        0x3 
  .text.esp_vfs_dev_uart_register
-                0x00000000400dfae4       0x4e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+                0x00000000400dfb78       0x4e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
                                          0x52 (size before relaxing)
-                0x00000000400dfae4                esp_vfs_dev_uart_register
- *fill*         0x00000000400dfb32        0x2 
+                0x00000000400dfb78                esp_vfs_dev_uart_register
+ *fill*         0x00000000400dfbc6        0x2 
  .text.get_vfs_for_fd
-                0x00000000400dfb34       0x22 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- *fill*         0x00000000400dfb56        0x2 
+                0x00000000400dfbc8       0x22 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ *fill*         0x00000000400dfbea        0x2 
  .text.esp_vfs_register_common
-                0x00000000400dfb58       0xfe /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- *fill*         0x00000000400dfc56        0x2 
+                0x00000000400dfbec       0xfe /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ *fill*         0x00000000400dfcea        0x2 
  .text.get_vfs_for_path
-                0x00000000400dfc58       0x6c /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfcec       0x6c /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
  .text.translate_path
-                0x00000000400dfcc4       0x39 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfd58       0x39 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x3d (size before relaxing)
- *fill*         0x00000000400dfcfd        0x3 
+ *fill*         0x00000000400dfd91        0x3 
  .text.esp_vfs_register
-                0x00000000400dfd00       0x1e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfd94       0x1e /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x22 (size before relaxing)
-                0x00000000400dfd00                esp_vfs_register
- *fill*         0x00000000400dfd1e        0x2 
+                0x00000000400dfd94                esp_vfs_register
+ *fill*         0x00000000400dfdb2        0x2 
  .text.esp_vfs_open
-                0x00000000400dfd20       0x55 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfdb4       0x55 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x59 (size before relaxing)
-                0x00000000400dfd20                esp_vfs_open
- *fill*         0x00000000400dfd75        0x3 
+                0x00000000400dfdb4                esp_vfs_open
+ *fill*         0x00000000400dfe09        0x3 
  .text.esp_vfs_write
-                0x00000000400dfd78       0x48 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfe0c       0x48 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x4c (size before relaxing)
-                0x00000000400dfd78                esp_vfs_write
+                0x00000000400dfe0c                esp_vfs_write
  .text.esp_vfs_lseek
-                0x00000000400dfdc0       0x48 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfe54       0x48 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x4c (size before relaxing)
-                0x00000000400dfdc0                esp_vfs_lseek
+                0x00000000400dfe54                esp_vfs_lseek
  .text.esp_vfs_read
-                0x00000000400dfe08       0x48 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfe9c       0x48 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x4c (size before relaxing)
-                0x00000000400dfe08                esp_vfs_read
+                0x00000000400dfe9c                esp_vfs_read
  .text.esp_vfs_close
-                0x00000000400dfe50       0x40 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dfee4       0x40 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x44 (size before relaxing)
-                0x00000000400dfe50                esp_vfs_close
+                0x00000000400dfee4                esp_vfs_close
  .text.esp_vfs_fstat
-                0x00000000400dfe90       0x45 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dff24       0x45 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x49 (size before relaxing)
-                0x00000000400dfe90                esp_vfs_fstat
- *fill*         0x00000000400dfed5        0x3 
+                0x00000000400dff24                esp_vfs_fstat
+ *fill*         0x00000000400dff69        0x3 
  .text.esp_vfs_stat
-                0x00000000400dfed8       0x45 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dff6c       0x45 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x49 (size before relaxing)
-                0x00000000400dfed8                esp_vfs_stat
- *fill*         0x00000000400dff1d        0x3 
+                0x00000000400dff6c                esp_vfs_stat
+ *fill*         0x00000000400dffb1        0x3 
  .text.esp_vfs_link
-                0x00000000400dff20       0x64 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400dffb4       0x64 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x6c (size before relaxing)
-                0x00000000400dff20                esp_vfs_link
+                0x00000000400dffb4                esp_vfs_link
  .text.esp_vfs_unlink
-                0x00000000400dff84       0x40 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e0018       0x40 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x44 (size before relaxing)
-                0x00000000400dff84                esp_vfs_unlink
+                0x00000000400e0018                esp_vfs_unlink
  .text.esp_vfs_rename
-                0x00000000400dffc4       0x64 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+                0x00000000400e0058       0x64 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
                                          0x6c (size before relaxing)
-                0x00000000400dffc4                esp_vfs_rename
- .text          0x00000000400e0028      0x2fa /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
-                0x00000000400e0048                __adddf3
-                0x00000000400e019c                __subdf3
- *fill*         0x00000000400e0322        0x2 
- .text          0x00000000400e0324      0x1fb /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
-                0x00000000400e0404                __muldf3
- *fill*         0x00000000400e051f        0x1 
- .text          0x00000000400e0520      0x20b /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
-                0x00000000400e0608                __divdf3
- *fill*         0x00000000400e072b        0x1 
- .text          0x00000000400e072c      0x176 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
-                0x00000000400e072c                __eqdf2
-                0x00000000400e072c                __nedf2
-                0x00000000400e0760                __gtdf2
-                0x00000000400e0788                __ledf2
-                0x00000000400e07ec                __gedf2
-                0x00000000400e0814                __ltdf2
-                0x00000000400e0878                __unorddf2
- *fill*         0x00000000400e08a2        0x2 
- .text          0x00000000400e08a4       0x4c /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
-                0x00000000400e08a4                __fixdfsi
+                0x00000000400e0058                esp_vfs_rename
+ .text          0x00000000400e00bc      0x2fa /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
+                0x00000000400e00dc                __adddf3
+                0x00000000400e0230                __subdf3
+ *fill*         0x00000000400e03b6        0x2 
+ .text          0x00000000400e03b8      0x1fb /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
+                0x00000000400e0498                __muldf3
+ *fill*         0x00000000400e05b3        0x1 
+ .text          0x00000000400e05b4      0x20b /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
+                0x00000000400e069c                __divdf3
+ *fill*         0x00000000400e07bf        0x1 
+ .text          0x00000000400e07c0      0x176 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
+                0x00000000400e07c0                __eqdf2
+                0x00000000400e07c0                __nedf2
+                0x00000000400e07f4                __gtdf2
+                0x00000000400e081c                __ledf2
+                0x00000000400e0880                __gedf2
+                0x00000000400e08a8                __ltdf2
+                0x00000000400e090c                __unorddf2
+ *fill*         0x00000000400e0936        0x2 
+ .text          0x00000000400e0938       0x4c /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
+                0x00000000400e0938                __fixdfsi
  .text.esp_ota_get_running_partition
-                0x00000000400e08f0       0x67 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+                0x00000000400e0984       0x67 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
                                          0x7b (size before relaxing)
-                0x00000000400e08f0                esp_ota_get_running_partition
- *fill*         0x00000000400e0957        0x1 
+                0x00000000400e0984                esp_ota_get_running_partition
+ *fill*         0x00000000400e09eb        0x1 
  .text.get_clk_en_mask
-                0x00000000400e0958       0xaa /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
- *fill*         0x00000000400e0a02        0x2 
+                0x00000000400e09ec       0xaa /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+ *fill*         0x00000000400e0a96        0x2 
  .text.get_rst_en_mask
-                0x00000000400e0a04       0x99 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
- *fill*         0x00000000400e0a9d        0x3 
+                0x00000000400e0a98       0x99 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+ *fill*         0x00000000400e0b31        0x3 
  .text.get_clk_en_reg
-                0x00000000400e0aa0       0x15 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e0b34       0x15 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                          0x19 (size before relaxing)
- *fill*         0x00000000400e0ab5        0x3 
+ *fill*         0x00000000400e0b49        0x3 
  .text.get_rst_en_reg
-                0x00000000400e0ab8       0x14 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e0b4c       0x14 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                          0x18 (size before relaxing)
  .text.periph_module_enable
-                0x00000000400e0acc       0x57 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+                0x00000000400e0b60       0x57 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
                                          0x73 (size before relaxing)
-                0x00000000400e0acc                periph_module_enable
- *fill*         0x00000000400e0b23        0x1 
+                0x00000000400e0b60                periph_module_enable
+ *fill*         0x00000000400e0bb7        0x1 
  .text.gpio_output_disable
-                0x00000000400e0b24       0xa4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400e0bb8       0xa4 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0xac (size before relaxing)
  .text.gpio_output_enable
-                0x00000000400e0bc8       0x8a /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400e0c5c       0x8a /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0x8e (size before relaxing)
- *fill*         0x00000000400e0c52        0x2 
+ *fill*         0x00000000400e0ce6        0x2 
  .text.gpio_set_level
-                0x00000000400e0c54       0xbd /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400e0ce8       0xbd /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                          0xc1 (size before relaxing)
-                0x00000000400e0c54                gpio_set_level
- *fill*         0x00000000400e0d11        0x3 
+                0x00000000400e0ce8                gpio_set_level
+ *fill*         0x00000000400e0da5        0x3 
  .text.gpio_set_direction
-                0x00000000400e0d14      0x160 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+                0x00000000400e0da8      0x160 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
                                         0x178 (size before relaxing)
-                0x00000000400e0d14                gpio_set_direction
+                0x00000000400e0da8                gpio_set_direction
  .text.timer_group_intr_enable
-                0x00000000400e0e74       0x58 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+                0x00000000400e0f08       0x58 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
                                          0x64 (size before relaxing)
-                0x00000000400e0e74                timer_group_intr_enable
- .text.rtc_isr  0x00000000400e0ecc       0x4a /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e0f08                timer_group_intr_enable
+ .text.rtc_isr  0x00000000400e0f60       0x4a /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
                                          0x56 (size before relaxing)
- *fill*         0x00000000400e0f16        0x2 
+ *fill*         0x00000000400e0faa        0x2 
  .text.rtc_isr_ensure_installed
-                0x00000000400e0f18       0x43 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e0fac       0x43 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
                                          0x4a (size before relaxing)
- *fill*         0x00000000400e0f5b        0x1 
+ *fill*         0x00000000400e0fef        0x1 
  .text.rtc_gpio_force_hold_dis_all
-                0x00000000400e0f5c       0x39 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
-                0x00000000400e0f5c                rtc_gpio_force_hold_dis_all
- *fill*         0x00000000400e0f95        0x3 
+                0x00000000400e0ff0       0x39 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e0ff0                rtc_gpio_force_hold_dis_all
+ *fill*         0x00000000400e1029        0x3 
  .text.rtc_isr_register
-                0x00000000400e0f98       0x41 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+                0x00000000400e102c       0x41 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
                                          0x49 (size before relaxing)
-                0x00000000400e0f98                rtc_isr_register
- *fill*         0x00000000400e0fd9        0x3 
- .text          0x00000000400e0fdc        0xa /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+                0x00000000400e102c                rtc_isr_register
+ *fill*         0x00000000400e106d        0x3 
+ .text          0x00000000400e1070        0xa /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
                                           0xd (size before relaxing)
-                0x00000000400e0fdc                __errno
- *fill*         0x00000000400e0fe6        0x2 
+                0x00000000400e1070                __errno
+ *fill*         0x00000000400e107a        0x2 
  .text.iterator_create
-                0x00000000400e0fe8       0x21 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
- *fill*         0x00000000400e1009        0x3 
+                0x00000000400e107c       0x21 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+ *fill*         0x00000000400e109d        0x3 
  .text.load_partitions
-                0x00000000400e100c       0xd5 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
- *fill*         0x00000000400e10e1        0x3 
+                0x00000000400e10a0       0xd5 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+ *fill*         0x00000000400e1175        0x3 
  .text.esp_partition_iterator_release
-                0x00000000400e10e4        0xe /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
-                0x00000000400e10e4                esp_partition_iterator_release
- *fill*         0x00000000400e10f2        0x2 
+                0x00000000400e1178        0xe /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e1178                esp_partition_iterator_release
+ *fill*         0x00000000400e1186        0x2 
  .text.esp_partition_next
-                0x00000000400e10f4       0x7a /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e1188       0x7a /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x82 (size before relaxing)
-                0x00000000400e10f4                esp_partition_next
- *fill*         0x00000000400e116e        0x2 
+                0x00000000400e1188                esp_partition_next
+ *fill*         0x00000000400e1202        0x2 
  .text.esp_partition_find
-                0x00000000400e1170       0x42 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e1204       0x42 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x4e (size before relaxing)
-                0x00000000400e1170                esp_partition_find
- *fill*         0x00000000400e11b2        0x2 
+                0x00000000400e1204                esp_partition_find
+ *fill*         0x00000000400e1246        0x2 
  .text.esp_partition_get
-                0x00000000400e11b4       0x19 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+                0x00000000400e1248       0x19 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
                                          0x1c (size before relaxing)
-                0x00000000400e11b4                esp_partition_get
- *fill*         0x00000000400e11cd        0x3 
+                0x00000000400e1248                esp_partition_get
+ *fill*         0x00000000400e1261        0x3 
  .text.__cxa_guard_dummy
-                0x00000000400e11d0        0x5 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
-                0x00000000400e11d0                __cxa_guard_dummy
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x0 
- *fill*         0x00000000400e11d5        0x3 
+                0x00000000400e1264        0x5 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
+                0x00000000400e1264                __cxa_guard_dummy
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x0 
+ *fill*         0x00000000400e1269        0x3 
  .text.heap_caps_match
-                0x00000000400e11d8       0x34 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps.o)
-                0x00000000400e11d8                heap_caps_match
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
- *fill*         0x00000000400e120c        0x0 
+                0x00000000400e126c       0x34 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps.o)
+                0x00000000400e126c                heap_caps_match
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
+ *fill*         0x00000000400e12a0        0x0 
  .text._system_r
-                0x00000000400e120c        0xb /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
-                0x00000000400e120c                _system_r
- *fill*         0x00000000400e1217        0x0 
- *fill*         0x00000000400e1217        0x0 
- *fill*         0x00000000400e1217        0x1 
+                0x00000000400e12a0        0xb /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e12a0                _system_r
+ *fill*         0x00000000400e12ab        0x0 
+ *fill*         0x00000000400e12ab        0x0 
+ *fill*         0x00000000400e12ab        0x1 
  .text._getpid_r
-                0x00000000400e1218        0xb /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
-                0x00000000400e1218                _getpid_r
- *fill*         0x00000000400e1223        0x1 
- .text._kill_r  0x00000000400e1224        0xb /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
-                0x00000000400e1224                _kill_r
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x0 
- *fill*         0x00000000400e122f        0x1 
+                0x00000000400e12ac        0xb /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e12ac                _getpid_r
+ *fill*         0x00000000400e12b7        0x1 
+ .text._kill_r  0x00000000400e12b8        0xb /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+                0x00000000400e12b8                _kill_r
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x0 
+ *fill*         0x00000000400e12c3        0x1 
  .text.translate_fd
-                0x00000000400e1230       0x11 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x0 
- *fill*         0x00000000400e1241        0x3 
- .text          0x00000000400e1244       0x3d /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
-                0x00000000400e1244                __floatunsidf
-                0x00000000400e1250                __floatsidf
- *fill*         0x00000000400e1281        0x3 
- .text          0x00000000400e1284      0x281 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
-                0x00000000400e1284                __udivdi3
- *fill*         0x00000000400e1505        0x3 
- .text          0x00000000400e1508      0x26e /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
-                0x00000000400e1508                __umoddi3
- *fill*         0x00000000400e1776        0x0 
- *fill*         0x00000000400e1776        0x0 
- *fill*         0x00000000400e1776        0x0 
- *fill*         0x00000000400e1776        0x2 
+                0x00000000400e12c4       0x11 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x0 
+ *fill*         0x00000000400e12d5        0x3 
+ .text          0x00000000400e12d8       0x3d /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
+                0x00000000400e12d8                __floatunsidf
+                0x00000000400e12e4                __floatsidf
+ *fill*         0x00000000400e1315        0x3 
+ .text          0x00000000400e1318      0x281 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                0x00000000400e1318                __udivdi3
+ *fill*         0x00000000400e1599        0x3 
+ .text          0x00000000400e159c      0x26e /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+                0x00000000400e159c                __umoddi3
+ *fill*         0x00000000400e180a        0x0 
+ *fill*         0x00000000400e180a        0x0 
+ *fill*         0x00000000400e180a        0x0 
+ *fill*         0x00000000400e180a        0x2 
  .text.is_wifi_clk_peripheral
-                0x00000000400e1778       0x1c /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
- *fill*         0x00000000400e1794        0x0 
+                0x00000000400e180c       0x1c /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
+ *fill*         0x00000000400e1828        0x0 
  *(.irom0.text)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x00000000400e1794                _text_end = ABSOLUTE (.)
-                0x00000000400e1794                _etext = .
+                0x00000000400e1828                _text_end = ABSOLUTE (.)
+                0x00000000400e1828                _etext = .
                 0x0000000000000000                _flash_cache_start = 0x0
                 [!provide]                        PROVIDE (abort, 0x4000bba4)
                 [!provide]                        PROVIDE (__absvdi2, 0x4006387c)
@@ -8978,7 +8981,7 @@ OUTPUT(/home/z/esp/winmas/WROOM/blink/build/blink.elf elf32-xtensa-le)
  .debug_frame   0x0000000000005e30       0x40 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
  .debug_frame   0x0000000000005e70      0x130 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
 
-.debug_info     0x0000000000000000    0x63061
+.debug_info     0x0000000000000000    0x630bb
  .debug_info    0x0000000000000000     0x30a2 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
  .debug_info    0x00000000000030a2     0x11ad /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_exception_stubs.o)
  .debug_info    0x000000000000424f     0x1915 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
@@ -9015,77 +9018,77 @@ OUTPUT(/home/z/esp/winmas/WROOM/blink/build/blink.elf elf32-xtensa-le)
  .debug_info    0x000000000001c033     0x11e1 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps.o)
  .debug_info    0x000000000001d214     0x290f /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(multi_heap.o)
  .debug_info    0x000000000001fb23     0x1164 /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
- .debug_info    0x0000000000020c87      0x301 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
- .debug_info    0x0000000000020f88      0x19b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
- .debug_info    0x0000000000021123      0x946 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
- .debug_info    0x0000000000021a69      0xa0b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
- .debug_info    0x0000000000022474      0xa8e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
- .debug_info    0x0000000000022f02      0x93f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
- .debug_info    0x0000000000023841      0xd7f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
- .debug_info    0x00000000000245c0      0x95b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
- .debug_info    0x0000000000024f1b      0x9e3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
- .debug_info    0x00000000000258fe      0x9d7 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
- .debug_info    0x00000000000262d5      0x99f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
- .debug_info    0x0000000000026c74      0x973 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
- .debug_info    0x00000000000275e7     0x22fe /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
- .debug_info    0x00000000000298e5     0x1f4e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
- .debug_info    0x000000000002b833     0x2605 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
- .debug_info    0x000000000002de38      0x93d /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
- .debug_info    0x000000000002e775     0x11d3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
- .debug_info    0x000000000002f948      0x85e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
- .debug_info    0x00000000000301a6     0x161f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
- .debug_info    0x00000000000317c5      0x1b9 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
- .debug_info    0x000000000003197e     0x1c54 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
- .debug_info    0x00000000000335d2      0x142 /home/z/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
- .debug_info    0x0000000000033714      0xf26 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
- .debug_info    0x000000000003463a      0xab9 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
- .debug_info    0x00000000000350f3      0xf03 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
- .debug_info    0x0000000000035ff6      0x830 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
- .debug_info    0x0000000000036826      0x7a1 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
- .debug_info    0x0000000000036fc7     0x1994 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
- .debug_info    0x000000000003895b      0x74f /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
- .debug_info    0x00000000000390aa      0x17e /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(cpu_util.o)
- .debug_info    0x0000000000039228      0x225 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
- .debug_info    0x000000000003944d      0x4fa /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_init.o)
- .debug_info    0x0000000000039947      0x411 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_time.o)
- .debug_info    0x0000000000039d58     0x17d7 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x000000000003b52f      0xb96 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
- .debug_info    0x000000000003c0c5     0x1444 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
- .debug_info    0x000000000003d509      0xdf6 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
- .debug_info    0x000000000003e2ff      0xd72 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x000000000003f071     0x26d6 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- .debug_info    0x0000000000041747     0x25ff /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- .debug_info    0x0000000000043d46       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
- .debug_info    0x0000000000043e20       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
- .debug_info    0x0000000000043efa       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
- .debug_info    0x0000000000043fd4       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
- .debug_info    0x00000000000440ae       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
- .debug_info    0x0000000000044188       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
- .debug_info    0x0000000000044262      0x5c8 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .debug_info    0x000000000004482a      0x61d /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
- .debug_info    0x0000000000044e47     0x1574 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
- .debug_info    0x00000000000463bb     0x135e /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x0000000000047719      0x386 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_info    0x0000000000047a9f      0x498 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x0000000000047f37     0x6382 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(uart.o)
- .debug_info    0x000000000004e2b9      0x5fd /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
- .debug_info    0x000000000004e8b6     0x2c82 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- .debug_info    0x0000000000051538     0x24fe /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
- .debug_info    0x0000000000053a36     0xa9f2 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
- .debug_info    0x000000000005e428       0x53 /home/z/esp/esp-idf/components/esp32/libhal.a(clock.o)
- .debug_info    0x000000000005e47b       0x5d /home/z/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
- .debug_info    0x000000000005e4d8       0x55 /home/z/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
- .debug_info    0x000000000005e52d       0x7a /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
- .debug_info    0x000000000005e5a7       0x7a /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
- .debug_info    0x000000000005e621     0x1dc4 /home/z/esp/winmas/WROOM/blink/build/freertos/libfreertos.a(ringbuf.o)
- .debug_info    0x00000000000603e5      0x99a /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
- .debug_info    0x0000000000060d7f       0xb6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
- .debug_info    0x0000000000060e35      0x8d3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
- .debug_info    0x0000000000061708      0x9d2 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
- .debug_info    0x00000000000620da      0xead /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
- .debug_info    0x0000000000062f87       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
+ .debug_info    0x0000000000020c87      0x35b /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
+ .debug_info    0x0000000000020fe2      0x19b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+ .debug_info    0x000000000002117d      0x946 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+ .debug_info    0x0000000000021ac3      0xa0b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+ .debug_info    0x00000000000224ce      0xa8e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
+ .debug_info    0x0000000000022f5c      0x93f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+ .debug_info    0x000000000002389b      0xd7f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+ .debug_info    0x000000000002461a      0x95b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+ .debug_info    0x0000000000024f75      0x9e3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+ .debug_info    0x0000000000025958      0x9d7 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+ .debug_info    0x000000000002632f      0x99f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
+ .debug_info    0x0000000000026cce      0x973 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+ .debug_info    0x0000000000027641     0x22fe /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ .debug_info    0x000000000002993f     0x1f4e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_info    0x000000000002b88d     0x2605 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+ .debug_info    0x000000000002de92      0x93d /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+ .debug_info    0x000000000002e7cf     0x11d3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+ .debug_info    0x000000000002f9a2      0x85e /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+ .debug_info    0x0000000000030200     0x161f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+ .debug_info    0x000000000003181f      0x1b9 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+ .debug_info    0x00000000000319d8     0x1c54 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_info    0x000000000003362c      0x142 /home/z/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
+ .debug_info    0x000000000003376e      0xf26 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+ .debug_info    0x0000000000034694      0xab9 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+ .debug_info    0x000000000003514d      0xf03 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
+ .debug_info    0x0000000000036050      0x830 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
+ .debug_info    0x0000000000036880      0x7a1 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
+ .debug_info    0x0000000000037021     0x1994 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+ .debug_info    0x00000000000389b5      0x74f /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+ .debug_info    0x0000000000039104      0x17e /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(cpu_util.o)
+ .debug_info    0x0000000000039282      0x225 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+ .debug_info    0x00000000000394a7      0x4fa /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_init.o)
+ .debug_info    0x00000000000399a1      0x411 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x0000000000039db2     0x17d7 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x000000000003b589      0xb96 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+ .debug_info    0x000000000003c11f     0x1444 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+ .debug_info    0x000000000003d563      0xdf6 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ .debug_info    0x000000000003e359      0xd72 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x000000000003f0cb     0x26d6 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ .debug_info    0x00000000000417a1     0x25ff /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ .debug_info    0x0000000000043da0       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
+ .debug_info    0x0000000000043e7a       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
+ .debug_info    0x0000000000043f54       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
+ .debug_info    0x000000000004402e       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
+ .debug_info    0x0000000000044108       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
+ .debug_info    0x00000000000441e2       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
+ .debug_info    0x00000000000442bc      0x5c8 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_info    0x0000000000044884      0x61d /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+ .debug_info    0x0000000000044ea1     0x1574 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+ .debug_info    0x0000000000046415     0x135e /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x0000000000047773      0x386 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x0000000000047af9      0x498 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x0000000000047f91     0x6382 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(uart.o)
+ .debug_info    0x000000000004e313      0x5fd /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+ .debug_info    0x000000000004e910     0x2c82 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ .debug_info    0x0000000000051592     0x24fe /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+ .debug_info    0x0000000000053a90     0xa9f2 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+ .debug_info    0x000000000005e482       0x53 /home/z/esp/esp-idf/components/esp32/libhal.a(clock.o)
+ .debug_info    0x000000000005e4d5       0x5d /home/z/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
+ .debug_info    0x000000000005e532       0x55 /home/z/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
+ .debug_info    0x000000000005e587       0x7a /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
+ .debug_info    0x000000000005e601       0x7a /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
+ .debug_info    0x000000000005e67b     0x1dc4 /home/z/esp/winmas/WROOM/blink/build/freertos/libfreertos.a(ringbuf.o)
+ .debug_info    0x000000000006043f      0x99a /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
+ .debug_info    0x0000000000060dd9       0xb6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+ .debug_info    0x0000000000060e8f      0x8d3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
+ .debug_info    0x0000000000061762      0x9d2 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
+ .debug_info    0x0000000000062134      0xead /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+ .debug_info    0x0000000000062fe1       0xda /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
 
-.debug_abbrev   0x0000000000000000     0xd1b6
+.debug_abbrev   0x0000000000000000     0xd1b8
  .debug_abbrev  0x0000000000000000      0x613 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
  .debug_abbrev  0x0000000000000613      0x301 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_exception_stubs.o)
  .debug_abbrev  0x0000000000000914      0x3f9 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
@@ -9122,75 +9125,75 @@ OUTPUT(/home/z/esp/winmas/WROOM/blink/build/blink.elf elf32-xtensa-le)
  .debug_abbrev  0x0000000000004474      0x329 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps.o)
  .debug_abbrev  0x000000000000479d      0x3a2 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(multi_heap.o)
  .debug_abbrev  0x0000000000004b3f      0x3e5 /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
- .debug_abbrev  0x0000000000004f24      0x14a /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
- .debug_abbrev  0x000000000000506e       0xc6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
- .debug_abbrev  0x0000000000005134      0x1af /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
- .debug_abbrev  0x00000000000052e3      0x209 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
- .debug_abbrev  0x00000000000054ec      0x22a /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
- .debug_abbrev  0x0000000000005716      0x1ff /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
- .debug_abbrev  0x0000000000005915      0x272 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
- .debug_abbrev  0x0000000000005b87      0x1f0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
- .debug_abbrev  0x0000000000005d77      0x1f8 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
- .debug_abbrev  0x0000000000005f6f      0x1f5 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
- .debug_abbrev  0x0000000000006164      0x1e5 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
- .debug_abbrev  0x0000000000006349      0x1e3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
- .debug_abbrev  0x000000000000652c      0x396 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
- .debug_abbrev  0x00000000000068c2      0x3a6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
- .debug_abbrev  0x0000000000006c68      0x3db /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
- .debug_abbrev  0x0000000000007043      0x1eb /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
- .debug_abbrev  0x000000000000722e      0x29a /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
- .debug_abbrev  0x00000000000074c8      0x186 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
- .debug_abbrev  0x000000000000764e      0x2e9 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
- .debug_abbrev  0x0000000000007937      0x101 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
- .debug_abbrev  0x0000000000007a38      0x32b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
- .debug_abbrev  0x0000000000007d63       0xc8 /home/z/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
- .debug_abbrev  0x0000000000007e2b      0x338 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
- .debug_abbrev  0x0000000000008163      0x238 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
- .debug_abbrev  0x000000000000839b      0x1bf /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
- .debug_abbrev  0x000000000000855a      0x18a /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
- .debug_abbrev  0x00000000000086e4      0x198 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
- .debug_abbrev  0x000000000000887c      0x3fd /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
- .debug_abbrev  0x0000000000008c79      0x214 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
- .debug_abbrev  0x0000000000008e8d       0xba /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(cpu_util.o)
- .debug_abbrev  0x0000000000008f47       0x8f /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
- .debug_abbrev  0x0000000000008fd6      0x185 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_init.o)
- .debug_abbrev  0x000000000000915b      0x19e /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_time.o)
- .debug_abbrev  0x00000000000092f9      0x379 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_clk.o)
- .debug_abbrev  0x0000000000009672      0x278 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
- .debug_abbrev  0x00000000000098ea      0x402 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
- .debug_abbrev  0x0000000000009cec      0x32e /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
- .debug_abbrev  0x000000000000a01a      0x260 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_abbrev  0x000000000000a27a      0x3a3 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- .debug_abbrev  0x000000000000a61d      0x364 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- .debug_abbrev  0x000000000000a981       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
- .debug_abbrev  0x000000000000a995       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
- .debug_abbrev  0x000000000000a9a9       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
- .debug_abbrev  0x000000000000a9bd       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
- .debug_abbrev  0x000000000000a9d1       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
- .debug_abbrev  0x000000000000a9e5       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
- .debug_abbrev  0x000000000000a9f9      0x15f /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .debug_abbrev  0x000000000000ab58      0x167 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
- .debug_abbrev  0x000000000000acbf      0x307 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
- .debug_abbrev  0x000000000000afc6      0x2b3 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x000000000000b279      0x122 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_abbrev  0x000000000000b39b      0x1c2 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x000000000000b55d      0x363 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(uart.o)
- .debug_abbrev  0x000000000000b8c0      0x177 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
- .debug_abbrev  0x000000000000ba37      0x368 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- .debug_abbrev  0x000000000000bd9f      0x25d /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
- .debug_abbrev  0x000000000000bffc      0x50a /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
- .debug_abbrev  0x000000000000c506       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(clock.o)
- .debug_abbrev  0x000000000000c51a       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
- .debug_abbrev  0x000000000000c52e       0x43 /home/z/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
- .debug_abbrev  0x000000000000c571       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
- .debug_abbrev  0x000000000000c585       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
- .debug_abbrev  0x000000000000c599      0x2c9 /home/z/esp/winmas/WROOM/blink/build/freertos/libfreertos.a(ringbuf.o)
- .debug_abbrev  0x000000000000c862      0x21f /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
- .debug_abbrev  0x000000000000ca81       0x6b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
- .debug_abbrev  0x000000000000caec      0x1e4 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
- .debug_abbrev  0x000000000000ccd0      0x20f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
- .debug_abbrev  0x000000000000cedf      0x2c3 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
- .debug_abbrev  0x000000000000d1a2       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
+ .debug_abbrev  0x0000000000004f24      0x14c /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
+ .debug_abbrev  0x0000000000005070       0xc6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+ .debug_abbrev  0x0000000000005136      0x1af /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+ .debug_abbrev  0x00000000000052e5      0x209 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+ .debug_abbrev  0x00000000000054ee      0x22a /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
+ .debug_abbrev  0x0000000000005718      0x1ff /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+ .debug_abbrev  0x0000000000005917      0x272 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+ .debug_abbrev  0x0000000000005b89      0x1f0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+ .debug_abbrev  0x0000000000005d79      0x1f8 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+ .debug_abbrev  0x0000000000005f71      0x1f5 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+ .debug_abbrev  0x0000000000006166      0x1e5 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
+ .debug_abbrev  0x000000000000634b      0x1e3 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+ .debug_abbrev  0x000000000000652e      0x396 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ .debug_abbrev  0x00000000000068c4      0x3a6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_abbrev  0x0000000000006c6a      0x3db /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+ .debug_abbrev  0x0000000000007045      0x1eb /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+ .debug_abbrev  0x0000000000007230      0x29a /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+ .debug_abbrev  0x00000000000074ca      0x186 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+ .debug_abbrev  0x0000000000007650      0x2e9 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+ .debug_abbrev  0x0000000000007939      0x101 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+ .debug_abbrev  0x0000000000007a3a      0x32b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_abbrev  0x0000000000007d65       0xc8 /home/z/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
+ .debug_abbrev  0x0000000000007e2d      0x338 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+ .debug_abbrev  0x0000000000008165      0x238 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+ .debug_abbrev  0x000000000000839d      0x1bf /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
+ .debug_abbrev  0x000000000000855c      0x18a /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
+ .debug_abbrev  0x00000000000086e6      0x198 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
+ .debug_abbrev  0x000000000000887e      0x3fd /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+ .debug_abbrev  0x0000000000008c7b      0x214 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+ .debug_abbrev  0x0000000000008e8f       0xba /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(cpu_util.o)
+ .debug_abbrev  0x0000000000008f49       0x8f /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+ .debug_abbrev  0x0000000000008fd8      0x185 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_init.o)
+ .debug_abbrev  0x000000000000915d      0x19e /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x00000000000092fb      0x379 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x0000000000009674      0x278 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+ .debug_abbrev  0x00000000000098ec      0x402 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+ .debug_abbrev  0x0000000000009cee      0x32e /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ .debug_abbrev  0x000000000000a01c      0x260 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_abbrev  0x000000000000a27c      0x3a3 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ .debug_abbrev  0x000000000000a61f      0x364 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ .debug_abbrev  0x000000000000a983       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
+ .debug_abbrev  0x000000000000a997       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
+ .debug_abbrev  0x000000000000a9ab       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
+ .debug_abbrev  0x000000000000a9bf       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
+ .debug_abbrev  0x000000000000a9d3       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
+ .debug_abbrev  0x000000000000a9e7       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
+ .debug_abbrev  0x000000000000a9fb      0x15f /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000000000000ab5a      0x167 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+ .debug_abbrev  0x000000000000acc1      0x307 /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+ .debug_abbrev  0x000000000000afc8      0x2b3 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x000000000000b27b      0x122 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x000000000000b39d      0x1c2 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x000000000000b55f      0x363 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(uart.o)
+ .debug_abbrev  0x000000000000b8c2      0x177 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+ .debug_abbrev  0x000000000000ba39      0x368 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ .debug_abbrev  0x000000000000bda1      0x25d /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+ .debug_abbrev  0x000000000000bffe      0x50a /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+ .debug_abbrev  0x000000000000c508       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(clock.o)
+ .debug_abbrev  0x000000000000c51c       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
+ .debug_abbrev  0x000000000000c530       0x43 /home/z/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
+ .debug_abbrev  0x000000000000c573       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
+ .debug_abbrev  0x000000000000c587       0x14 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
+ .debug_abbrev  0x000000000000c59b      0x2c9 /home/z/esp/winmas/WROOM/blink/build/freertos/libfreertos.a(ringbuf.o)
+ .debug_abbrev  0x000000000000c864      0x21f /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
+ .debug_abbrev  0x000000000000ca83       0x6b /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+ .debug_abbrev  0x000000000000caee      0x1e4 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
+ .debug_abbrev  0x000000000000ccd2      0x20f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
+ .debug_abbrev  0x000000000000cee1      0x2c3 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+ .debug_abbrev  0x000000000000d1a4       0x14 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
 
 .debug_loc      0x0000000000000000    0x2bead
  .debug_loc     0x0000000000000000      0x234 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
@@ -9553,7 +9556,7 @@ OUTPUT(/home/z/esp/winmas/WROOM/blink/build/blink.elf elf32-xtensa-le)
  .debug_ranges  0x0000000000002510       0x58 /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
  .debug_ranges  0x0000000000002568       0x98 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
 
-.debug_line     0x0000000000000000    0x31acc
+.debug_line     0x0000000000000000    0x31af1
  .debug_line    0x0000000000000000      0x849 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
  .debug_line    0x0000000000000849      0x2b1 /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_exception_stubs.o)
  .debug_line    0x0000000000000afa      0x9c1 /home/z/esp/winmas/WROOM/blink/build/esp32/libesp32.a(cpu_start.o)
@@ -9590,75 +9593,75 @@ OUTPUT(/home/z/esp/winmas/WROOM/blink/build/blink.elf elf32-xtensa-le)
  .debug_line    0x000000000000cea3      0x9c3 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(heap_caps.o)
  .debug_line    0x000000000000d866     0x1222 /home/z/esp/winmas/WROOM/blink/build/heap/libheap.a(multi_heap.o)
  .debug_line    0x000000000000ea88      0x82e /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
- .debug_line    0x000000000000f2b6      0x207 /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
- .debug_line    0x000000000000f4bd      0x150 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
- .debug_line    0x000000000000f60d      0x25c /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
- .debug_line    0x000000000000f869      0x2d6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
- .debug_line    0x000000000000fb3f      0x301 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
- .debug_line    0x000000000000fe40      0x216 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
- .debug_line    0x0000000000010056      0x5e6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
- .debug_line    0x000000000001063c      0x2b0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
- .debug_line    0x00000000000108ec      0x2dc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
- .debug_line    0x0000000000010bc8      0x2ec /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
- .debug_line    0x0000000000010eb4      0x315 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
- .debug_line    0x00000000000111c9      0x2c7 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
- .debug_line    0x0000000000011490     0x2e07 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
- .debug_line    0x0000000000014297     0x2539 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
- .debug_line    0x00000000000167d0     0x2fc4 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
- .debug_line    0x0000000000019794      0x275 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
- .debug_line    0x0000000000019a09      0xfde /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
- .debug_line    0x000000000001a9e7      0x234 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
- .debug_line    0x000000000001ac1b      0xdbc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
- .debug_line    0x000000000001b9d7      0x1e6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
- .debug_line    0x000000000001bbbd     0x244f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
- .debug_line    0x000000000001e00c      0x179 /home/z/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
- .debug_line    0x000000000001e185      0x507 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
- .debug_line    0x000000000001e68c      0x260 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
- .debug_line    0x000000000001e8ec      0x1e9 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
- .debug_line    0x000000000001ead5      0x142 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
- .debug_line    0x000000000001ec17      0x3ae /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
- .debug_line    0x000000000001efc5      0xb70 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
- .debug_line    0x000000000001fb35      0x49f /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
- .debug_line    0x000000000001ffd4      0x16c /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(cpu_util.o)
- .debug_line    0x0000000000020140      0x177 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
- .debug_line    0x00000000000202b7      0x449 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_init.o)
- .debug_line    0x0000000000020700      0x366 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_time.o)
- .debug_line    0x0000000000020a66      0xce3 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x0000000000021749      0x5dc /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
- .debug_line    0x0000000000021d25      0x9ce /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
- .debug_line    0x00000000000226f3      0x97e /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
- .debug_line    0x0000000000023071      0xaf6 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x0000000000023b67      0x789 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
- .debug_line    0x00000000000242f0      0xe91 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
- .debug_line    0x0000000000025181      0x6b7 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
- .debug_line    0x0000000000025838      0x4a8 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
- .debug_line    0x0000000000025ce0      0x4c5 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
- .debug_line    0x00000000000261a5      0x3a5 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
- .debug_line    0x000000000002654a      0x11d /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
- .debug_line    0x0000000000026667       0xff /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
- .debug_line    0x0000000000026766      0x18e /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .debug_line    0x00000000000268f4      0x1db /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
- .debug_line    0x0000000000026acf      0xadf /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
- .debug_line    0x00000000000275ae      0x990 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000027f3e      0x285 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x00000000000281c3      0x375 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000028538     0x2344 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(uart.o)
- .debug_line    0x000000000002a87c      0x50c /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
- .debug_line    0x000000000002ad88      0xf94 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
- .debug_line    0x000000000002bd1c      0x98c /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
- .debug_line    0x000000000002c6a8     0x2d54 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
- .debug_line    0x000000000002f3fc       0x92 /home/z/esp/esp-idf/components/esp32/libhal.a(clock.o)
- .debug_line    0x000000000002f48e      0x2ef /home/z/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
- .debug_line    0x000000000002f77d       0x50 /home/z/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
- .debug_line    0x000000000002f7cd       0x66 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
- .debug_line    0x000000000002f833       0x66 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
- .debug_line    0x000000000002f899      0xcd2 /home/z/esp/winmas/WROOM/blink/build/freertos/libfreertos.a(ringbuf.o)
- .debug_line    0x000000000003056b      0x675 /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
- .debug_line    0x0000000000030be0       0xcc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
- .debug_line    0x0000000000030cac      0x250 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
- .debug_line    0x0000000000030efc      0x2e1 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
- .debug_line    0x00000000000311dd      0x760 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
- .debug_line    0x000000000003193d      0x18f /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
+ .debug_line    0x000000000000f2b6      0x22c /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
+ .debug_line    0x000000000000f4e2      0x150 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+ .debug_line    0x000000000000f632      0x25c /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
+ .debug_line    0x000000000000f88e      0x2d6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fopen.o)
+ .debug_line    0x000000000000fb64      0x301 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fputs.o)
+ .debug_line    0x000000000000fe65      0x216 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseek.o)
+ .debug_line    0x000000000001007b      0x5e6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fseeko.o)
+ .debug_line    0x0000000000010661      0x2b0 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-printf.o)
+ .debug_line    0x0000000000010911      0x2dc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+ .debug_line    0x0000000000010bed      0x2ec /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-reent.o)
+ .debug_line    0x0000000000010ed9      0x315 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-snprintf.o)
+ .debug_line    0x00000000000111ee      0x2c7 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-sprintf.o)
+ .debug_line    0x00000000000114b5     0x2e07 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ .debug_line    0x00000000000142bc     0x2539 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .debug_line    0x00000000000167f5     0x2fc4 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+ .debug_line    0x00000000000197b9      0x275 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vprintf.o)
+ .debug_line    0x0000000000019a2e      0xfde /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+ .debug_line    0x000000000001aa0c      0x234 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-flags.o)
+ .debug_line    0x000000000001ac40      0xdbc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
+ .debug_line    0x000000000001b9fc      0x1e6 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-s_frexp.o)
+ .debug_line    0x000000000001bbe2     0x244f /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfiprintf.o)
+ .debug_line    0x000000000001e031      0x179 /home/z/esp/esp-idf/components/newlib/lib/libm.a(lib_a-s_fpclassify.o)
+ .debug_line    0x000000000001e1aa      0x507 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(time.o)
+ .debug_line    0x000000000001e6b1      0x260 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscalls.o)
+ .debug_line    0x000000000001e911      0x1e9 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(syscall_table.o)
+ .debug_line    0x000000000001eafa      0x142 /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(reent_init.o)
+ .debug_line    0x000000000001ec3c      0x3ae /home/z/esp/winmas/WROOM/blink/build/newlib/libnewlib.a(locks.o)
+ .debug_line    0x000000000001efea      0xb70 /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread.o)
+ .debug_line    0x000000000001fb5a      0x49f /home/z/esp/winmas/WROOM/blink/build/pthread/libpthread.a(pthread_local_storage.o)
+ .debug_line    0x000000000001fff9      0x16c /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(cpu_util.o)
+ .debug_line    0x0000000000020165      0x177 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(soc_memory_layout.o)
+ .debug_line    0x00000000000202dc      0x449 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_init.o)
+ .debug_line    0x0000000000020725      0x366 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x0000000000020a8b      0xce3 /home/z/esp/winmas/WROOM/blink/build/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x000000000002176e      0x5dc /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(cache_utils.o)
+ .debug_line    0x0000000000021d4a      0x9ce /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_ops.o)
+ .debug_line    0x0000000000022718      0x97e /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(flash_mmap.o)
+ .debug_line    0x0000000000023096      0xaf6 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x0000000000023b8c      0x789 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs_uart.o)
+ .debug_line    0x0000000000024315      0xe91 /home/z/esp/winmas/WROOM/blink/build/vfs/libvfs.a(vfs.o)
+ .debug_line    0x00000000000251a6      0x6b7 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_addsubdf3.o)
+ .debug_line    0x000000000002585d      0x4a8 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_muldf3.o)
+ .debug_line    0x0000000000025d05      0x4c5 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_divdf3.o)
+ .debug_line    0x00000000000261ca      0x3a5 /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_cmpdf2.o)
+ .debug_line    0x000000000002656f      0x11d /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_fixdfsi.o)
+ .debug_line    0x000000000002668c       0xff /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatsidf.o)
+ .debug_line    0x000000000002678b      0x18e /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_line    0x0000000000026919      0x1db /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_umoddi3.o)
+ .debug_line    0x0000000000026af4      0xadf /home/z/esp/winmas/WROOM/blink/build/app_update/libapp_update.a(esp_ota_ops.o)
+ .debug_line    0x00000000000275d3      0x990 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000027f63      0x285 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x00000000000281e8      0x375 /home/z/esp/winmas/WROOM/blink/build/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x000000000002855d     0x2344 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(uart.o)
+ .debug_line    0x000000000002a8a1      0x50c /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(periph_ctrl.o)
+ .debug_line    0x000000000002adad      0xf94 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(gpio.o)
+ .debug_line    0x000000000002bd41      0x98c /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(timer.o)
+ .debug_line    0x000000000002c6cd     0x2d54 /home/z/esp/winmas/WROOM/blink/build/driver/libdriver.a(rtc_module.o)
+ .debug_line    0x000000000002f421       0x92 /home/z/esp/esp-idf/components/esp32/libhal.a(clock.o)
+ .debug_line    0x000000000002f4b3      0x2ef /home/z/esp/esp-idf/components/esp32/libhal.a(windowspill_asm.o)
+ .debug_line    0x000000000002f7a2       0x50 /home/z/esp/esp-idf/components/esp32/libhal.a(interrupts--intlevel.o)
+ .debug_line    0x000000000002f7f2       0x66 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--restore_extra_nw.o)
+ .debug_line    0x000000000002f858       0x66 /home/z/esp/esp-idf/components/esp32/libhal.a(state_asm--save_extra_nw.o)
+ .debug_line    0x000000000002f8be      0xcd2 /home/z/esp/winmas/WROOM/blink/build/freertos/libfreertos.a(ringbuf.o)
+ .debug_line    0x0000000000030590      0x675 /home/z/esp/winmas/WROOM/blink/build/mbedtls/libmbedtls.a(sha256.o)
+ .debug_line    0x0000000000030c05       0xcc /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-errno.o)
+ .debug_line    0x0000000000030cd1      0x250 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putchar.o)
+ .debug_line    0x0000000000030f21      0x2e1 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-putc.o)
+ .debug_line    0x0000000000031202      0x760 /home/z/esp/winmas/WROOM/blink/build/spi_flash/libspi_flash.a(partition.o)
+ .debug_line    0x0000000000031962      0x18f /home/z/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_floatdidf.o)
 
 .debug_str      0x0000000000000000    0x11c0b
  .debug_str     0x0000000000000000     0x23aa /home/z/esp/winmas/WROOM/blink/build/cxx/libcxx.a(cxx_guards.o)
@@ -9720,7 +9723,7 @@ OUTPUT(/home/z/esp/winmas/WROOM/blink/build/blink.elf elf32-xtensa-le)
  .debug_str     0x000000000000770f      0x338 /home/z/esp/winmas/WROOM/blink/build/log/liblog.a(log.o)
                                         0x688 (size before relaxing)
  .debug_str     0x0000000000007a47       0xfd /home/z/esp/winmas/WROOM/blink/build/main/libmain.a(blink.o)
-                                        0x2f2 (size before relaxing)
+                                        0x2f9 (size before relaxing)
  .debug_str     0x0000000000007b44       0xce /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
                                         0x1a3 (size before relaxing)
  .debug_str     0x0000000000007c12       0xa1 /home/z/esp/esp-idf/components/newlib/lib/libc.a(lib_a-fiprintf.o)
