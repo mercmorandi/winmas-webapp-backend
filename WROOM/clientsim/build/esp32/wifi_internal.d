@@ -22,7 +22,7 @@ wifi_internal.o: /home/z/esp/esp-idf/components/esp32/wifi_internal.c \
  /home/z/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/alloca.h \
  /home/z/esp/esp-idf/components/heap/include/multi_heap.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -163,7 +163,7 @@ wifi_internal.o: /home/z/esp/esp-idf/components/esp32/wifi_internal.c \
 
 /home/z/esp/esp-idf/components/heap/include/multi_heap.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

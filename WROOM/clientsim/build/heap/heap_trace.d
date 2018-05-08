@@ -18,7 +18,7 @@ heap_trace.o: /home/z/esp/esp-idf/components/heap/heap_trace.c \
  /home/z/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/heap/include/esp_heap_trace.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -125,7 +125,7 @@ heap_trace.o: /home/z/esp/esp-idf/components/heap/heap_trace.c \
 
 /home/z/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/heap/include/esp_heap_trace.h:
 

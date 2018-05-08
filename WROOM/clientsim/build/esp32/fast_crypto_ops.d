@@ -31,7 +31,7 @@ fast_crypto_ops.o: /home/z/esp/esp-idf/components/esp32/fast_crypto_ops.c \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_assert.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/z/esp/esp-idf/components/wpa_supplicant/include/crypto/aes_wrap.h \
@@ -103,7 +103,7 @@ fast_crypto_ops.o: /home/z/esp/esp-idf/components/esp32/fast_crypto_ops.c \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

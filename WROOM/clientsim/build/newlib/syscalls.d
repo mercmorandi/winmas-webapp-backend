@@ -29,7 +29,7 @@ syscalls.o: /home/z/esp/esp-idf/components/newlib/syscalls.c \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/z/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/z/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -141,7 +141,7 @@ syscalls.o: /home/z/esp/esp-idf/components/newlib/syscalls.c \
 
 /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

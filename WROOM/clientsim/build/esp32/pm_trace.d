@@ -1,6 +1,6 @@
 pm_trace.o: /home/z/esp/esp-idf/components/esp32/pm_trace.c \
  /home/z/esp/esp-idf/components/esp32/pm_trace.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/driver/include/driver/gpio.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
@@ -42,7 +42,7 @@ pm_trace.o: /home/z/esp/esp-idf/components/esp32/pm_trace.c \
 
 /home/z/esp/esp-idf/components/esp32/pm_trace.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/driver/include/driver/gpio.h:
 

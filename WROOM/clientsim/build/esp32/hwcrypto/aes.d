@@ -16,7 +16,7 @@ hwcrypto/aes.o: /home/z/esp/esp-idf/components/esp32/hwcrypto/aes.c \
  /home/z/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/z/esp/esp-idf/components/mbedtls/include/mbedtls/aes.h \
  /home/z/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
  /home/z/esp/esp-idf/components/newlib/include/limits.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
@@ -123,7 +123,7 @@ hwcrypto/aes.o: /home/z/esp/esp-idf/components/esp32/hwcrypto/aes.c \
 
 /home/z/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
 

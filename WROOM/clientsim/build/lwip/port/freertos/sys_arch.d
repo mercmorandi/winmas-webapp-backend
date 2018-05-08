@@ -29,7 +29,7 @@ port/freertos/sys_arch.o: \
  /home/z/esp/esp-idf/components/newlib/include/errno.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/alloca.h \
@@ -170,7 +170,7 @@ port/freertos/sys_arch.o: \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/stdlib.h:
 

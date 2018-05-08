@@ -41,7 +41,7 @@ nghttp2/lib/nghttp2_stream.o: \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h \
@@ -130,7 +130,7 @@ nghttp2/lib/nghttp2_stream.o: \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

@@ -17,7 +17,7 @@ timer.o: /home/z/esp/esp-idf/components/driver/timer.c \
  /home/z/esp/esp-idf/components/log/include/esp_log.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -122,7 +122,7 @@ timer.o: /home/z/esp/esp-idf/components/driver/timer.c \
 
 /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

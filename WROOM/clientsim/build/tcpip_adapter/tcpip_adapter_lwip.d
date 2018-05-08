@@ -28,7 +28,7 @@ tcpip_adapter_lwip.o: \
  /home/z/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/alloca.h \
@@ -200,7 +200,7 @@ tcpip_adapter_lwip.o: \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/stdlib.h:
 

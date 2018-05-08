@@ -36,7 +36,7 @@ nghttp2/lib/nghttp2_hd.o: \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h \
  /home/z/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.h
@@ -113,7 +113,7 @@ nghttp2/lib/nghttp2_hd.o: \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

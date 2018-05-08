@@ -22,7 +22,7 @@ src/bootloader_sha.o: \
  /home/z/esp/esp-idf/components/newlib/include/string.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/param.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/syslimits.h \
@@ -77,7 +77,7 @@ src/bootloader_sha.o: \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

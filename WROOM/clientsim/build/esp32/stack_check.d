@@ -1,5 +1,5 @@
 stack_check.o: /home/z/esp/esp-idf/components/esp32/stack_check.c \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -56,7 +56,7 @@ stack_check.o: /home/z/esp/esp-idf/components/esp32/stack_check.c \
  /home/z/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/esp32/include/esp_system.h:
 

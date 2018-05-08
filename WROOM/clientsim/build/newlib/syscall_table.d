@@ -38,7 +38,7 @@ syscall_table.o: /home/z/esp/esp-idf/components/newlib/syscall_table.c \
  /home/z/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/newlib/include/dirent.h \
  /home/z/esp/esp-idf/components/vfs/include/sys/dirent.h \
@@ -122,7 +122,7 @@ syscall_table.o: /home/z/esp/esp-idf/components/newlib/syscall_table.c \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

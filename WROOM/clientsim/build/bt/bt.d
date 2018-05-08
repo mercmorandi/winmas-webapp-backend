@@ -22,7 +22,7 @@ bt.o: /home/z/esp/esp-idf/components/bt/bt.c \
  /home/z/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/z/esp/esp-idf/components/newlib/include/string.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -145,7 +145,7 @@ bt.o: /home/z/esp/esp-idf/components/bt/bt.c \
 
 /home/z/esp/esp-idf/components/newlib/include/sys/string.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/heap/include/esp_heap_caps.h:
 

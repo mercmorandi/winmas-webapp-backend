@@ -13,7 +13,7 @@ portasm.o: /home/z/esp/esp-idf/components/freertos/portasm.S \
  /home/z/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
  /home/z/esp/esp-idf/components/esp32/include/xtensa/simcall.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/z/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
@@ -48,7 +48,7 @@ portasm.o: /home/z/esp/esp-idf/components/freertos/portasm.S \
 
 /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

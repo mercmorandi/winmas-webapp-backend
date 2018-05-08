@@ -23,7 +23,7 @@ app_trace.o: /home/z/esp/esp-idf/components/app_trace/app_trace.c \
  /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_assert.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/alloca.h \
@@ -140,7 +140,7 @@ app_trace.o: /home/z/esp/esp-idf/components/app_trace/app_trace.c \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/stdlib.h:
 

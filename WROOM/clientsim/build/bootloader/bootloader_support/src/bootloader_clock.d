@@ -13,7 +13,7 @@ src/bootloader_clock.o: \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h
 
@@ -43,7 +43,7 @@ src/bootloader_clock.o: \
 
 /home/z/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 

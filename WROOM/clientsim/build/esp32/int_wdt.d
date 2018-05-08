@@ -1,5 +1,5 @@
 int_wdt.o: /home/z/esp/esp-idf/components/esp32/int_wdt.c \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -87,7 +87,7 @@ int_wdt.o: /home/z/esp/esp-idf/components/esp32/int_wdt.c \
  /home/z/esp/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_int_wdt.h
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/stdint.h:
 

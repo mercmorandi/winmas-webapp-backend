@@ -23,7 +23,7 @@ rtc_module.o: /home/z/esp/esp-idf/components/driver/rtc_module.c \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_assert.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/log/include/esp_log.h \
  /home/z/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -149,7 +149,7 @@ rtc_module.o: /home/z/esp/esp-idf/components/driver/rtc_module.c \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

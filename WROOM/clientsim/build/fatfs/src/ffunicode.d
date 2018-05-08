@@ -10,7 +10,7 @@ src/ffunicode.o: /home/z/esp/esp-idf/components/fatfs/src/ffunicode.c \
  /home/z/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/z/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -106,7 +106,7 @@ src/ffunicode.o: /home/z/esp/esp-idf/components/fatfs/src/ffunicode.c \
 
 /home/z/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

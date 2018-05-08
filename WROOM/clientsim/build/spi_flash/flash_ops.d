@@ -16,7 +16,7 @@ flash_ops.o: /home/z/esp/esp-idf/components/spi_flash/flash_ops.c \
  /home/z/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/alloca.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/assert.h \
  /home/z/esp/esp-idf/components/newlib/include/string.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/string.h \
@@ -138,7 +138,7 @@ flash_ops.o: /home/z/esp/esp-idf/components/spi_flash/flash_ops.c \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/assert.h:
 

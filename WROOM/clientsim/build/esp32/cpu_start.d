@@ -24,7 +24,7 @@ cpu_start.o: /home/z/esp/esp-idf/components/esp32/cpu_start.c \
  /home/z/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/z/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/z/esp/esp-idf/components/newlib/include/alloca.h \
@@ -212,7 +212,7 @@ cpu_start.o: /home/z/esp/esp-idf/components/esp32/cpu_start.c \
 
 /home/z/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/stdlib.h:
 

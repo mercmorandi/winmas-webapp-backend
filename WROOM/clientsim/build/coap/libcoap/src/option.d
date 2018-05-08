@@ -35,7 +35,7 @@ libcoap/src/option.o: \
  /home/z/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/z/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_task.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -192,7 +192,7 @@ libcoap/src/option.o: \
 
 /home/z/esp/esp-idf/components/esp32/include/esp_task.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/esp32/include/esp_system.h:
 

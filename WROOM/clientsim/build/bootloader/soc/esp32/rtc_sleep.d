@@ -8,7 +8,7 @@ esp32/rtc_sleep.o: /home/z/esp/esp-idf/components/soc/esp32/rtc_sleep.c \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/i2s_reg.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/bb_reg.h \
@@ -34,7 +34,7 @@ esp32/rtc_sleep.o: /home/z/esp/esp-idf/components/soc/esp32/rtc_sleep.c \
 
 /home/z/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/soc/esp32/include/soc/i2s_reg.h:
 

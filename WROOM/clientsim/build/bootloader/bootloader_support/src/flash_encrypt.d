@@ -3,7 +3,7 @@ src/flash_encrypt.o: \
  /home/z/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/z/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h \
  /home/z/esp/esp-idf/components/bootloader_support/include_priv/bootloader_random.h \
  /home/z/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /home/z/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
@@ -33,7 +33,7 @@ src/flash_encrypt.o: \
 
 /home/z/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/bootloader_support/include_priv/bootloader_random.h:
 

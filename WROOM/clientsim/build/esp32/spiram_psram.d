@@ -1,5 +1,5 @@
 spiram_psram.o: /home/z/esp/esp-idf/components/esp32/spiram_psram.c \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/newlib/include/string.h \
  /home/z/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/z/esp/esp-idf/components/newlib/include/newlib.h \
@@ -59,7 +59,7 @@ spiram_psram.o: /home/z/esp/esp-idf/components/esp32/spiram_psram.c \
  /home/z/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/z/esp/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/newlib/include/string.h:
 

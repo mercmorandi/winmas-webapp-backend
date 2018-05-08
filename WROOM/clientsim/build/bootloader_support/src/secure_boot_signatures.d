@@ -1,6 +1,6 @@
 src/secure_boot_signatures.o: \
  /home/z/esp/esp-idf/components/bootloader_support/src/secure_boot_signatures.c \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/z/esp/esp-idf/components/newlib/include/stdint.h \
  /home/z/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -46,7 +46,7 @@ src/secure_boot_signatures.o: \
  /home/z/esp/esp-idf/components/esp32/include/rom/sha.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_types.h
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
 

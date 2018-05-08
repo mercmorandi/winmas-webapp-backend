@@ -9,7 +9,7 @@ spi_flash_rom_patch.o: \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/z/esp/esp-idf/components/esp32/include/rom/spi_flash.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h
+ /home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h
 
 /home/z/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -29,5 +29,5 @@ spi_flash_rom_patch.o: \
 
 /home/z/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h:
 /home/z/esp/esp-idf/components/spi_flash/./spi_flash_rom_patch.c:

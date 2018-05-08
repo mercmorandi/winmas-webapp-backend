@@ -4,7 +4,7 @@ src/flash_partitions.o: \
  /home/z/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
  /home/z/esp/esp-idf/components/log/include/esp_log.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h \
  /home/z/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/z/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -23,7 +23,7 @@ src/flash_partitions.o: \
 
 /home/z/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/bootloader/../include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/bootloader/../include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

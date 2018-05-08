@@ -1,6 +1,6 @@
 library/aesni.o: /home/z/esp/esp-idf/components/mbedtls/library/aesni.c \
  /home/z/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h \
  /home/z/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
  /home/z/esp/esp-idf/components/newlib/include/limits.h \
  /home/z/esp/esp-idf/components/newlib/include/newlib.h \
@@ -29,7 +29,7 @@ library/aesni.o: /home/z/esp/esp-idf/components/mbedtls/library/aesni.c \
 
 /home/z/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/z/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/home/z/esp/winmas/WROOM/clientsim/build/include/sdkconfig.h:
 
 /home/z/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
 
