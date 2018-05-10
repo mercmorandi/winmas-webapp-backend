@@ -3,6 +3,9 @@
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="cdt.managedbuild.toolchain.gnu.cross.base.711695771">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.toolchain.gnu.cross.base.711695771" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<macros>
+					<stringMacro name="IDF_PATH" type="VALUE_PATH_ANY" value="/home/z/esp/esp-idf"/>
+				</macros>
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -52,6 +55,16 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.toolchain.gnu.cross.base.711695771.2094064093" name="ConnectionManager.cpp" rcbsApplicability="disable" resourcePath="main/ConnectionManager.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1206394111.1135650831">
+						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1206394111.1135650831" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1206394111">
+							<option id="gnu.cpp.compiler.option.include.paths.1213653757" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="&quot;${IDF_PATH}/components/freertos/include/freertos&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${IDF_PATH}/components/esp32/include&quot;"/>
+								<listOptionValue builtIn="false" value="&quot;${IDF_PATH}&quot;"/>
+							</option>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.922096904" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<fileInfo id="cdt.managedbuild.toolchain.gnu.cross.base.711695771.1992766482" name="clientsim.c" rcbsApplicability="disable" resourcePath="main/clientsim.c" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.c.compiler.1522152681.118645137">
 						<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1522152681.118645137" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.1522152681">
 							<option id="gnu.c.compiler.option.include.paths.890721467" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths"/>

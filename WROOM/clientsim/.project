@@ -25,4 +25,10 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>IDF_PATH</name>
+			<value>file:/home/z/esp/esp-idf</value>
+		</variable>
+	</variableList>
 </projectDescription>
