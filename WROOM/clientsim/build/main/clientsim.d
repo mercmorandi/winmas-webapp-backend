@@ -123,11 +123,14 @@ clientsim.o: /home/z/esp/winmas/WROOM/clientsim/main/clientsim.c \
  /home/z/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/z/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
+ /home/z/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
  /home/z/esp/esp-idf/components/log/include/esp_log.h \
  /home/z/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/z/esp/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/z/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
- /home/z/esp/esp-idf/components/nvs_flash/include/nvs.h
+ /home/z/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/z/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/z/esp/winmas/WROOM/clientsim/main/structs.h
 
 /home/z/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -377,6 +380,8 @@ clientsim.o: /home/z/esp/winmas/WROOM/clientsim/main/clientsim.c \
 
 /home/z/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
 
+/home/z/esp/esp-idf/components/esp32/include/esp_wifi_internal.h:
+
 /home/z/esp/esp-idf/components/log/include/esp_log.h:
 
 /home/z/esp/esp-idf/components/log/include/esp_log_internal.h:
@@ -386,4 +391,8 @@ clientsim.o: /home/z/esp/winmas/WROOM/clientsim/main/clientsim.c \
 /home/z/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
 
 /home/z/esp/esp-idf/components/nvs_flash/include/nvs.h:
+
+/home/z/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/home/z/esp/winmas/WROOM/clientsim/main/structs.h:
 /home/z/esp/winmas/WROOM/clientsim/main/./clientsim.c:
