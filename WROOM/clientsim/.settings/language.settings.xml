@@ -76,6 +76,76 @@
 						<entry kind="macro" name="MBEDTLS_CONFIG_FILE" value="&quot;mbedtls/esp_config.h&quot;"/>
 						<entry kind="macro" name="WITH_POSIX" value=""/>
 					</resource>
+					<resource project-relative-path="main/queue.c">
+						<entry kind="includePath" name="/${ProjName}/main/include">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/app_trace/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/app_update/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/bootloader_support/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/bt/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/coap/port/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/coap/port/include/coap"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/coap/libcoap/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/coap/libcoap/include/coap"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/console"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/cxx/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/driver/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/esp-tls"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/esp32/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/esp_adc_cal/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/ethernet/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/expat/port/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/expat/include/expat"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/fatfs/src"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/freertos/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/heap/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/idf_test/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/jsmn/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/json/cJSON"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/libsodium/port_include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/log/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/lwip/include/lwip"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/lwip/include/lwip/port"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/lwip/include/lwip/posix"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/lwip/apps/ping"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/mbedtls/port/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/mbedtls/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/mdns/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/micro-ecc/micro-ecc"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/newlib/platform_include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/newlib/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/nghttp/port/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/nghttp/nghttp2/lib/includes"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/nvs_flash/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/openssl/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/pthread/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/sdmmc/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/smartconfig/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/soc/esp32/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/soc/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/spi_flash/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/spiffs/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/tcpip_adapter/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/ulp/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/vfs/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/wear_levelling/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/wpa_supplicant/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/wpa_supplicant/port/include"/>
+						<entry kind="includePath" name="/home/z/esp/esp-idf/components/xtensa-debug-module/include"/>
+						<entry kind="includePath" name="/${ProjName}/build/include">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="ESP_PLATFORM" value=""/>
+						<entry kind="macro" name="HAVE_CONFIG_H" value=""/>
+						<entry kind="macro" name="IDF_VER" value="&quot;v3.1-dev-945-g73ec743-dirty&quot;"/>
+						<entry kind="macro" name="MBEDTLS_CONFIG_FILE" value="&quot;mbedtls/esp_config.h&quot;"/>
+						<entry kind="macro" name="WITH_POSIX" value=""/>
+					</resource>
 				</language>
 			</provider>
 			<provider class="org.eclipse.cdt.internal.build.crossgcc.CrossGCCBuiltinSpecsDetector" console="false" env-hash="-869523196274566404" id="org.eclipse.cdt.build.crossgcc.CrossGCCBuiltinSpecsDetector" keep-relative-paths="false" name="CDT Cross GCC Built-in Compiler Settings" parameter="xtensa-esp32-elf-gcc ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot;" prefer-non-shared="true" store-entries-with-project="true">
