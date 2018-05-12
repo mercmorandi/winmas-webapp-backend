@@ -32,4 +32,5 @@
 *.app
 
 # Build folder
-WROOM/clientsim/build/
+WROOM/clientsim/build/*
+
