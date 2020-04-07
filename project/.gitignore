@@ -1,0 +1,6 @@
+*.pyc
+.venv
+.flaskenv
+venv/
+.vscode/
+.env
