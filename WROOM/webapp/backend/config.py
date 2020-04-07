@@ -1,6 +1,6 @@
 import os
 
-class Config:
-
-    DEBUG = os.environ["FLASK_DEBUG"]
+#this file is not yet used 
+#https://exploreflask.com/en/latest/configuration.html
+DEBUG = os.environ["FLASK_DEBUG"]
    

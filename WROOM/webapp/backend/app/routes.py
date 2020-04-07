@@ -2,6 +2,7 @@
 
 from flask import current_app as app
 from . import db_connection
+from flask import request
 
 @app.route('/', methods=['GET'])
 def index():
@@ -19,3 +20,11 @@ def database_info():
             'ContentType': 'text/plain'
         }
     return db.get_database_info(), 200, {'ContentType': 'application/json'}
+
+@app.route('/add_req', methods=['POST'])
+def add_req():
+    data = request.json
+    print(data)
+    return "ciao", 200, {
+            'ContentType': 'text/plain'
+        }
