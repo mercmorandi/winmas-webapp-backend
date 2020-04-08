@@ -7,6 +7,10 @@ import time
 import random
 import json
 
+from flask import current_app as app
+
+
+#https://github.com/mukul-rathi/CleanCycle/blob/tutorial/src/db_connection.py
 
 class Database:
 
@@ -55,8 +59,8 @@ class DBConnection:
     """
 
     def __init__(self,
-                 db_user=os.environ['POSTGRES_USER'],
-                 db_password=os.environ['POSTGRES_PASSWORD'],
+                 db_user=app.config['POSTGRES_USER'],
+                 db_password=app.config['POSTGRES_PASSWORD'],
                  host_addr="localhost:5432",
                  max_num_tries=20):
         """
