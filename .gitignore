@@ -1,5 +1,4 @@
 *.pyc
-.venv
-.flaskenv
+venv
 .vscode/
-.project/.env
+project/.env
