@@ -1,6 +1,15 @@
 import os
+from dotenv import load_dotenv
 
-#this file is not yet used 
+load_dotenv()
+
 #https://exploreflask.com/en/latest/configuration.html
-DEBUG = os.environ["FLASK_DEBUG"]
+class Config(object):
+    DEBUG = os.getenv("FLASK_DEBUG")
+    DEVELOPMENT=os.getenv("DEVELOPMENT")
+    FLASK_DEBUG=os.getenv("FLASK_DEBUG")
+    FLASK_ENV=os.getenv("FLASK_ENV")
+    POSTGRES_USER=os.getenv("POSTGRES_USER")
+    POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD")
+    POSTGRES_DB=os.getenv("POSTGRES_DB")
    
