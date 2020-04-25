@@ -30,7 +30,8 @@ def schema_upgrades():
         sa.Column("last_update", sa.DateTime(), nullable=False),
         sa.Column("occurrences", sa.Integer(), nullable=False),
         sa.Column("MAC", sa.String(length=255), nullable=False),
-        sa.PrimaryKeyConstraint("id"),
+        sa.PrimaryKeyConstraint("id", "MAC"),
+        sa.UniqueConstraint("MAC", name="fk_locations")
     )
 
 def schema_downgrades():
