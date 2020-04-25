@@ -2,3 +2,4 @@
 venv
 .vscode/
 project/.env
+alembic.ini
