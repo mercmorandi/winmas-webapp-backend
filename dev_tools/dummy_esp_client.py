@@ -1,6 +1,11 @@
 import requests
 import random
 import time
+import os
+
+import click
+
+from urllib.parse import urljoin
 
 data_seed = {
         "data":[
@@ -37,10 +42,11 @@ data_seed = {
     "captured_device":3
 }
 
+
 def random_generator(data, device_id):
     out = {}
     out['captured_device'] = data['captured_device']
-    out['device_id'] = 'EspWroom0'+str(device_id)
+    out['device_id'] = device_id
     out['data'] = []
 
     for probe in data['data']:
@@ -51,20 +57,33 @@ def random_generator(data, device_id):
 
     return out
 
+def devices_ids(n_devices):
+    device_id = 1
+    while n_devices:
+        yield f"EspWroom0{device_id}"
+        device_id += 1
+        n_devices -= 1
 
 
+@click.command()
+@click.option('--n_devices', default=3, help='Number of devices sending data.')
+@click.option('--minutes', default=None, help='Number minutes to stay alive. Default value does not stop.')
+def send_data(n_devices, minutes):
+    """ESP Client mocker.
+    Sends requests to flask with probe data
+    """
+    base_url = os.getenv("FLASK_URL", "http://localhost:5000/")
+    endless = True if minutes is None else False
+    while endless or minutes:
+        for device_id in devices_ids(n_devices):
+            data = random_generator(data_seed, device_id)
+            requests.post(urljoin(base_url, "add_req"), json=data)
+            time.sleep(1)
+        time.sleep(60)
+        if minutes:
+            minutes -= 1
 
-while(True):
-
-    for i in range(1,4):
-        data = random_generator(data_seed, i)
-        requests.post('http://localhost:5000/add_req', json=data)
-        time.sleep(1)
-
-    time.sleep(60)
-
-
-
-
+if __name__ == '__main__':
+    send_data()
 
 
