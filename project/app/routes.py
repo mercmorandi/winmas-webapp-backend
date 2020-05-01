@@ -1,5 +1,3 @@
-
-
 from flask import current_app as app
 from . import db_connection
 from flask import request
@@ -21,19 +19,26 @@ def database_info():
         }
     return db.get_database_info(), 200, {'ContentType': 'application/json'}
 
+esp_data, devices_id = [], []
+
 @app.route('/add_req', methods=['POST'])
 def add_req():
     data = request.json
-    esp_data, devices_id = [], []
+
+    global esp_data
+    global devices_id
 
     if data['device_id'] not in devices_id:
         devices_id.append(data['device_id'])
         esp_data.append(data)
 
-        #TODO: len(esp_data) is never 3: we need some global variables and then a thread that call get_valid_packet
-        #if len(esp_data) is 3:
-        #    v = get_valid_packets(esp_data)
-        #    esp_data, devices_id = [], []
+        #TODO: substitute the '3' with config parameters num_esp
+        if len(esp_data) is 3:
+            print('3 packets found')
+            v = get_valid_packets(esp_data)
+            print('clean up variables')
+            esp_data, devices_id = [], []
+            print(v)
 
 def get_valid_packets(data):
     valid_packets = []
