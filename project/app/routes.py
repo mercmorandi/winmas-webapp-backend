@@ -32,11 +32,10 @@ def add_req():
         devices_id.append(data['device_id'])
         esp_data.append(data)
 
-        #TODO: substitute the '3' with config parameters num_esp
-        if len(esp_data) is 3:
-            print('3 packets found')
+        if len(esp_data) is app.config['NUMESP']:
+            print('%d packets found' % (app.config['NUMESP']))
             v = get_valid_packets(esp_data)
-            print('clean up variables')
+            print('Cleaning up variables')
             esp_data, devices_id = [], []
             print(v)
 
