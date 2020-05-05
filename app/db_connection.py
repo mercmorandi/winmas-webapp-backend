@@ -10,26 +10,28 @@ import json
 from flask import current_app as app
 
 
-#https://github.com/mukul-rathi/CleanCycle/blob/tutorial/src/db_connection.py
+# https://github.com/mukul-rathi/CleanCycle/blob/tutorial/src/db_connection.py
+
 
 class Database:
 
     _columns = {
         "requests": [
-            "uuid", "timestamp", "destination", "source", "bssid", "ssid", "signal_strength_wroom",
+            "uuid",
+            "timestamp",
+            "destination",
+            "source",
+            "bssid",
+            "ssid",
+            "signal_strength_wroom",
             "signal_strength_rt",
         ],
-        "stations": [
-            "uuid", "x", "y", "name", 
-        ],
+        "stations": ["uuid", "x", "y", "name",],
     }
-    
+
     _schemas = {
-        "requests":
-        "(uuid TEXT PRIMARY KEY, timestamp TEXT, destination TEXT , source TEXT,bssid TEXT, ssid TEXT, signal_strength_wroom TEXT)",
-        "stations":
-        "(uuid TEXT PRIMARY KEY, x INTEGER, y INTEGER, name TEXT)", 
-        
+        "requests": "(uuid TEXT PRIMARY KEY, timestamp TEXT, destination TEXT , source TEXT,bssid TEXT, ssid TEXT, signal_strength_wroom TEXT)",
+        "stations": "(uuid TEXT PRIMARY KEY, x INTEGER, y INTEGER, name TEXT)",
     }
 
     @classmethod
@@ -46,6 +48,7 @@ class Database:
         """
         return cls._schemas
 
+
 class DBConnection:
     """
     This class is responsible for initiating the connection with the 
@@ -58,11 +61,13 @@ class DBConnection:
         _cur:  cursor object to execute PostgreSQl commands
     """
 
-    def __init__(self,
-                 db_user=app.config['POSTGRES_USER'],
-                 db_password=app.config['POSTGRES_PASSWORD'],
-                 host_addr="localhost:5432",
-                 max_num_tries=20):
+    def __init__(
+        self,
+        db_user=app.config["POSTGRES_USER"],
+        db_password=app.config["POSTGRES_PASSWORD"],
+        host_addr="localhost:5432",
+        max_num_tries=20,
+    ):
         """
         Initiates a connection with the PostgreSQL database as the given user 
         on the given port.
@@ -88,10 +93,11 @@ class DBConnection:
             Raised if after the max number of tries the connection still hasn't
             been established.
         """
-        db_name = os.environ['POSTGRES_DB']
+        db_name = os.environ["POSTGRES_DB"]
 
-        engine_params = (f'postgresql+psycopg2://{db_user}:{db_password}@'
-                         f'{host_addr}/{db_name}')
+        engine_params = (
+            f"postgresql+psycopg2://{db_user}:{db_password}@" f"{host_addr}/{db_name}"
+        )
         num_tries = 1
 
         while True:
@@ -100,12 +106,11 @@ class DBConnection:
                 self._conn = self._engine.raw_connection()
                 self._cur = self._conn.cursor()
                 break
-            except (sqlalchemy.exc.OperationalError,
-                    psycopg2.OperationalError):
+            except (sqlalchemy.exc.OperationalError, psycopg2.OperationalError):
                 # Use binary exponential backoff
-                #- i.e. sample a wait between [0..2^n]
-                #when n = number of tries.
-                time.sleep(random.randint(0, 2**num_tries))
+                # - i.e. sample a wait between [0..2^n]
+                # when n = number of tries.
+                time.sleep(random.randint(0, 2 ** num_tries))
                 if num_tries > max_num_tries:
                     raise IOError("Database unavailable")
                 num_tries += 1
@@ -122,9 +127,11 @@ class DBConnection:
         for table, schema in Database.get_schemas().items():
             self._cur.execute(
                 sql.SQL("CREATE TABLE IF NOT EXISTS {} {}").format(
-                    sql.Identifier(table), sql.SQL(schema)))
+                    sql.Identifier(table), sql.SQL(schema)
+                )
+            )
         self._conn.commit()
-    
+
     def get_database_info(self):
         """
         Returns the data stored in the database, indexed by table.
@@ -147,7 +154,7 @@ class DBConnection:
             )  # note sql module used for safe dynamic SQL queries
             tables[table[0]] = cur2.fetchall()
         return json.dumps(tables)
-    
+
     def clear_data(self):
         """
         Clears the data stored in the database.
