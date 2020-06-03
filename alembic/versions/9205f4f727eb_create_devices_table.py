@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '9205f4f727eb'
+revision = "9205f4f727eb"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,6 +23,7 @@ def upgrade():
 def downgrade():
     schema_downgrades()
 
+
 def schema_upgrades():
     op.create_table(
         "devices",
@@ -31,8 +32,9 @@ def schema_upgrades():
         sa.Column("occurrences", sa.Integer(), nullable=False),
         sa.Column("MAC", sa.String(length=255), nullable=False),
         sa.PrimaryKeyConstraint("id", "MAC"),
-        sa.UniqueConstraint("MAC", name="fk_locations")
+        sa.UniqueConstraint("MAC", name="fk_locations"),
     )
+
 
 def schema_downgrades():
     op.drop_table("devices")
