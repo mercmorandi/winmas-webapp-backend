@@ -2,6 +2,11 @@ from flask import current_app as app
 from . import db_connection
 from flask import request
 
+from .models import probes
+
+from hashlib import md5
+
+from app import db
 
 @app.route("/", methods=["GET"])
 def index():
@@ -20,63 +25,96 @@ def database_info():
     return db.get_database_info(), 200, {"ContentType": "application/json"}
 
 
-esp_data, devices_id = [], []
-
 
 @app.route("/add_req", methods=["POST"])
 def add_req():
-    data = request.json
 
-    global esp_data
-    global devices_id
+    if not request.json:
+        return "no data", 400
 
-    if data["device_id"] not in devices_id:
-        devices_id.append(data["device_id"])
-        esp_data.append(data)
+    print(str(request.json))
+    req = request.json
+    device_id = req['device_id']
+    #captured_device = req['captured_device']
+    data = req['data']
 
-        if len(esp_data) is app.config["NUMESP"]:
-            print("%d packets found" % (app.config["NUMESP"]))
-            v = get_valid_packets(esp_data)
-            print("Cleaning up variables")
-            esp_data, devices_id = [], []
-            print(v)
+    for probe in data:
 
-
-def get_valid_packets(data):
-    valid_packets = []
-
-    for datum in data[0]["data"]:
-
-        valid_packet = {}
-        valid_packet["MAC"] = datum["source"]
-        valid_packet["SSID"] = datum["ssid"]
-        valid_packet["time"] = datum["timestamp"]
-        valid_packet["signals"] = []
-
-        valid_packet["signals"].append(
-            {data[0]["device_id"]: datum["signal_strength_wroom"]}
-        )
-
-        cont = 1
-
-        timestamp = datum["timestamp"]
-        MAC = datum["source"]
-
-        for esp in data[1:]:
-            packet = [
-                p
-                for p in esp["data"]
-                if p["timestamp"] is timestamp and p["source"] is MAC
-            ][0]
-
-            if not packet:
-                break
-
-            valid_packet["signals"].append(
-                {esp["device_id"]: packet["signal_strength_wroom"]}
+        to_encode = probe['destination']+''+probe['source']+''+str(probe['timestamp'])
+        h = md5(to_encode.encode('utf-8')).hexdigest()
+        print('HASSSSSSSSH: '+str(h))
+        probe = probes.Probe(
+            probe['destination'],
+            probe['source'],
+            probe['bssid'],
+            probe['ssid'],
+            probe['signal_strength_wroom'],
+            probe['signal_strength_rt'],
+            str(h),
+            probe['timestamp'],
+            device_id
             )
-            cont += 1
-            if cont is len(data):
-                valid_packets.append(valid_packet)
+        
+        db.session.add(probe)
+        db.session.commit()
+    
+    return "ok", 200
 
-    return valid_packets
+
+
+
+
+#esp_data, devices_id = [], []
+    #global esp_data
+    #global devices_id
+#
+    #if data["device_id"] not in devices_id:
+    #    devices_id.append(data["device_id"])
+    #    esp_data.append(data)
+#
+    #    if len(esp_data) is app.config["NUMESP"]:
+    #        print("%d packets found" % (app.config["NUMESP"]))
+    #        v = get_valid_packets(esp_data)
+    #        print("Cleaning up variables")
+    #        esp_data, devices_id = [], []
+    #        print(v)
+
+
+#def get_valid_packets(data):
+#    valid_packets = []
+#
+#    for datum in data[0]["data"]:
+#
+#        valid_packet = {}
+#        valid_packet["MAC"] = datum["source"]
+#        valid_packet["SSID"] = datum["ssid"]
+#        valid_packet["time"] = datum["timestamp"]
+#        valid_packet["signals"] = []
+#
+#        valid_packet["signals"].append(
+#            {data[0]["device_id"]: datum["signal_strength_wroom"]}
+#        )
+#
+#        cont = 1
+#
+#        timestamp = datum["timestamp"]
+#        MAC = datum["source"]
+#
+#        for esp in data[1:]:
+#            packet = [
+#                p
+#                for p in esp["data"]
+#                if p["timestamp"] is timestamp and p["source"] is MAC
+#            ][0]
+#
+#            if not packet:
+#                break
+#
+#            valid_packet["signals"].append(
+#                {esp["device_id"]: packet["signal_strength_wroom"]}
+#            )
+#            cont += 1
+#            if cont is len(data):
+#                valid_packets.append(valid_packet)
+#
+#    return valid_packets
