@@ -5,10 +5,10 @@ from flask_migrate import Migrate
 from config import Config
 from celery import Celery
 from .celery_utils import init_celery
+from celery.schedules import crontab
 
 db = SQLAlchemy()
 migrate = Migrate()
-
 celery = Celery(__name__, broker=Config.CELERY_BROKER_URL)
 
 
@@ -21,6 +21,14 @@ def create_app():
     migrate.init_app(app, db)
 
     # CELERY
+    app.config['CELERYBEAT_SCHEDULE'] = {
+        # Executes every minute
+        'periodic_task-every-minute': {
+            'task': 'periodic_task',
+            'schedule': crontab(minute="*")
+        }
+    }
+
     init_celery(celery, app)
 
     with app.app_context():
