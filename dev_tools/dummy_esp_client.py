@@ -39,6 +39,8 @@ data_seed = {
     ],
     "device_id": "EspWroom01",
     "captured_device": 3,
+    "unix_timestamp_on": 1591549215
+    # "unix_timestamp_on": 1591549145
 }
 
 
@@ -46,15 +48,19 @@ def random_generator(data, device_id):
     out = {}
     out["captured_device"] = data["captured_device"]
     out["device_id"] = device_id
+    out["unix_timestamp_on"] = data["unix_timestamp_on"]
     out["data"] = []
 
     for probe in data["data"]:
-        temp_prob = probe
+        temp_prob = probe.copy()
         temp_prob["signal_strength_wroom"] = str(
             int(temp_prob["signal_strength_wroom"]) + random.randint(1, 30)
         )
         temp_prob["signal_strength_rt"] = str(
             int(temp_prob["signal_strength_wroom"]) + random.randint(1, 30)
+        )
+        temp_prob["timestamp"] = out["unix_timestamp_on"] + int(
+            int(probe["timestamp"]) / 1000
         )
         out["data"].append(temp_prob)
 

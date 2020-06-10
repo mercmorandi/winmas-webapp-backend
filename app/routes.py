@@ -1,3 +1,5 @@
+import time
+
 from flask import current_app as app
 from . import db_connection
 from flask import request
@@ -35,30 +37,42 @@ def add_req():
 
     print(str(request.json))
     req = request.json
-    device_id = req['device_id']
+    device_id = req["device_id"]
     # captured_device = req['captured_device']
-    data = req['data']
-
+    data = req["data"]
+    on_since = int(req["on_since"])
     for probe in data:
-        to_encode = probe['destination'] + '' + probe['source'] + '' + str(probe['timestamp'])
-        h = md5(to_encode.encode('utf-8')).hexdigest()
-        print('HASSSSSSSSH: ' + str(h))
+        ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
+        minutes_ts = int(ts / 1000 / 60)
+        to_encode = (
+            probe["destination"]
+            + ""
+            + probe["source"]
+            + ""
+            + str(minutes_ts)
+            + ""
+            + probe["seq_number"]
+        )
+        h = md5(to_encode.encode("utf-8")).hexdigest()
+        print("HASSSSSSSSH: " + str(h))
         probe = probes.Probe(
-            probe['destination'],
-            probe['source'],
-            probe['bssid'],
-            probe['ssid'],
-            probe['signal_strength_wroom'],
-            probe['signal_strength_rt'],
-            str(h),
-            probe['timestamp'],
-            device_id
+            destination=probe["destination"],
+            source=probe["source"],
+            bssid=probe["bssid"],
+            ssid=probe["ssid"],
+            signal_strength_wroom=probe["signal_strength_wroom"],
+            signal_strength_rt=probe["signal_strength_rt"],
+            hash=str(h),
+            timestamp=ts,
+            device_id=device_id,
+            status="unchecked",
         )
 
         db.session.add(probe)
         db.session.commit()
 
     return "ok", 200
+
 
 # esp_data, devices_id = [], []
 # global esp_data

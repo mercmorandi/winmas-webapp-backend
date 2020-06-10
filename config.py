@@ -16,4 +16,4 @@ class Config(object):
     POSTGRES_DB = os.getenv("POSTGRES_DB")
     NUMESP = os.getenv("N_ESP")
     SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
-    CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+    CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")

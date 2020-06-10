@@ -21,11 +21,11 @@ def create_app():
     migrate.init_app(app, db)
 
     # CELERY
-    app.config['CELERYBEAT_SCHEDULE'] = {
+    app.config["CELERYBEAT_SCHEDULE"] = {
         # Executes every minute
-        'periodic_task-every-minute': {
-            'task': 'periodic_task',
-            'schedule': crontab(minute="*")
+        "periodic_task-every-minute": {
+            "task": "filter_task",
+            "schedule": crontab(minute="*"),
         }
     }
 
@@ -35,13 +35,7 @@ def create_app():
         # Imports
         from . import routes
         from . import db_connection
-        # from .models import probes, locations, devices
 
-        # db = db_connection.DBConnection()
-        # print("Established connection to db...")  #for debugging
-        # db.create_tables()
-        # print("Created database tables")  #for debugging
-        ##clear any lingering data and start afresh
-        # db.clear_data()
+        # Da usare in shell: flask_app.app_context().push()
 
     return app

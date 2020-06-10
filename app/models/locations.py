@@ -1,8 +1,10 @@
 from sqlalchemy.orm import relationship
-#from flask import current_app as app
 
-#db = app.db
+# from flask import current_app as app
+
+# db = app.db
 from app import db
+
 
 class Location(db.Model):
 
