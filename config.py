@@ -18,6 +18,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
     CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
     ESP_MES_POWER = os.getenv("ESP_MES_POWER")
+    ENV_FACTOR = os.getenv("ENV_FACTOR")
     X1 = os.getenv("X1")
     Y1 = os.getenv("Y1")
     X2 = os.getenv("X2")

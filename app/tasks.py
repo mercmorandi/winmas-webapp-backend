@@ -69,22 +69,22 @@ def trilaterator(rssi_dict):
     data_dict = {
         device_id: (
             compute_distance(rssi),
-            app.config["X" + device_id[-1:]],
-            app.config["Y" + device_id[-1:]],
+            int(app.config["X" + device_id[-1:]]),
+            int(app.config["Y" + device_id[-1:]]),
         )
         for device_id, rssi in rssi_dict.items()
     }
     data_list = list(data_dict.values())
     v_a = (
-                  (data_list[2][1] ^ 2 - data_list[1][1] ^ 2)
-                  + (data_list[2][2] ^ 2 - data_list[1][2] ^ 2)
-                  + (data_list[1][0] ^ 2 - data_list[2][0] ^ 2)
+                  (data_list[2][1] ** 2 - data_list[1][1] ** 2)
+                  + (data_list[2][2] ** 2 - data_list[1][2] ** 2)
+                  + (data_list[1][0] ** 2 - data_list[2][0] ** 2)
           ) / 2
 
     v_b = (
-                  (data_list[0][1] ^ 2 - data_list[1][1] ^ 2)
-                  + (data_list[0][2] ^ 2 - data_list[1][2] ^ 2)
-                  + (data_list[1][0] ^ 2 - data_list[0][1] ^ 2)
+                  (data_list[0][1] ** 2 - data_list[1][1] ** 2)
+                  + (data_list[0][2] ** 2 - data_list[1][2] ** 2)
+                  + (data_list[1][0] ** 2 - data_list[0][1] ** 2)
           ) / 2
 
     y = (
@@ -103,7 +103,7 @@ def trilaterator(rssi_dict):
 
 
 def compute_distance(rssi):
-    distance = 10 ^ (
-            (app.config["ESP_MES_POWER"] - rssi) / 10 * app.config["ENV_FACTOR"]
+    distance = 10 ** (
+            (int(app.config["ESP_MES_POWER"]) - rssi) / 10 * int(app.config["ENV_FACTOR"])
     )
     return distance
