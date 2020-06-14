@@ -56,3 +56,6 @@ class Probe(db.Model):
     # "ssid":"pib1",
     # "signal_strength_wroom":"-88",
     # "signal_strength_rt":"109"
+
+#p = Probe.query.filter(Probe.hash == '0a6fe86e018738b08db53b545e348f8c')
+#rssi_dict = {'EspWroom01': -83, 'EspWroom02': -72, 'EspWroom03': -74}

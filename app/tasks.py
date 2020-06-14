@@ -103,7 +103,10 @@ def trilaterator(rssi_dict):
 
 
 def compute_distance(rssi):
-    distance = 10 ** (
-            (int(app.config["ESP_MES_POWER"]) - rssi) / 10 * int(app.config["ENV_FACTOR"])
-    )
+    #distance = 10 ** (
+    #        (int(app.config["ESP_MES_POWER"]) - rssi) / 10 * int(app.config["ENV_FACTOR"])
+    #)
+    a = int(app.config["ESP_MES_POWER"])
+    n = int(app.config["ENV_FACTOR"])
+    distance = 10 ** ((a - rssi) / (n * 10))
     return distance
