@@ -7,7 +7,6 @@ from app import db
 
 
 class Location(db.Model):
-
     __tablename__ = "locations"
 
     id = db.Column(
@@ -19,4 +18,20 @@ class Location(db.Model):
     x = db.Column("x", db.Integer(), nullable=False)
     y = db.Column("y", db.Integer(), nullable=False)
     mac_id = db.Column("MAC_id", db.String(length=255), nullable=False)
-    device = relationship("Devices", backref="devices")
+    device_id = db.Column(db.Integer, db.ForeignKey('devices.id'))
+    device = db.relationship('Device', back_populates='locations')
+
+    def __repr__(self):
+        return (
+                str(self.id)
+                + " - "
+                + self.hash
+                + " - "
+                + str(self.x)
+                + " - "
+                + str(self.y)
+                + " - "
+                + str(self.insertion_date)
+                + " - "
+                + str(self.device)
+        )
