@@ -32,6 +32,8 @@ class Probe(db.Model):
         db.Enum("unchecked", "pending", "tracked", "discarded", name="probe_status"),
         nullable=False,
     )
+    __table_args__ = (db.UniqueConstraint('HASH', 'esp_id', name='_hash_esp_id_uc'),
+                      )
 
     def __repr__(self):
         return (
