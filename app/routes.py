@@ -119,10 +119,10 @@ def add_req():
         # constraint failed
 
 
-@app.route("/get_stats", methods=["GET"])
+@app.route("/stats", methods=["GET"])
 def get_stats():
-    if not request.json:
-        return "no data", 400
+    if not request:
+        return "error", 400
 
     start_date = request.args.get("start_date")
 
