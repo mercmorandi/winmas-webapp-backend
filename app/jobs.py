@@ -32,6 +32,7 @@ def trilateration_job(p_hash):
         )
     else:
         print("device gia recorded")
+        # maybe use session
         device = Device.query.filter(Device.mac == current_mac).all()[0]
         device.set_last_update(probes[0].timestamp)
 
@@ -59,13 +60,13 @@ def trilateration_job(p_hash):
 def trilaterable_check_job(p_hash):
     qs = db.session.query(Probe).filter(Probe.hash == p_hash)
     if len(qs.all()) == int(app.config["NUMESP"]):
-        print('trilaterable probe found')
+        print("trilaterable probe found")
         for p in qs.all():
             p.status = "pending"
         db.session.commit()
         tasks.trilateration_task.delay(p_hash)
     else:
-        print('not trilaterable probe')
+        print("not trilaterable probe")
 
     db.session.close()
 
@@ -73,11 +74,11 @@ def trilaterable_check_job(p_hash):
 def discardable_check_job():
     qs = (
         db.session.query(Probe)
-            .filter(Probe.status == "unchecked")
-            .filter(time.time() - (Probe.timestamp / 1000) > 2)
+        .filter(Probe.status == "unchecked")
+        .filter(time.time() - (Probe.timestamp / 1000) > 2)
     )
 
     for p in qs.all():
-        p.status = 'discarded'
+        p.status = "discarded"
 
     db.session.commit()
