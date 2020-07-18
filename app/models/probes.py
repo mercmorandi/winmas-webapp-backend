@@ -15,6 +15,7 @@ class Probe(db.Model):
     timestamp = db.Column(
         "timestamp", db.BigInteger(), nullable=False
     )  # unix timestamp (utc in millisecond)
+    seqnum = db.Column("seqnum", db.Integer())
     destination = db.Column("destination", db.String(length=255), nullable=False)
     source = db.Column("source", db.String(length=255), nullable=False)
     bssid = db.Column("bssid", db.String(length=255))
@@ -26,14 +27,13 @@ class Probe(db.Model):
     hash = db.Column(
         "HASH", db.String(length=255), nullable=False
     )  # calcolato sul minuto approssimato da timestamp
-    device_id = db.Column("device_id", db.String(length=255), nullable=False)
-    # status = db.Column('status', db.Enum(StatusEnum), nullable = False)
-    # status = db.Enum('unchecked', 'tracked', 'discarded', name='probe_status')
+    esp_id = db.Column("esp_id", db.String(length=255), nullable=False)
     status = db.Column(
         "probe_status",
         db.Enum("unchecked", "pending", "tracked", "discarded", name="probe_status"),
         nullable=False,
     )
+    __table_args__ = (db.UniqueConstraint("HASH", "esp_id", name="_hash_esp_id_uc"),)
 
     def __repr__(self):
         return (
@@ -41,7 +41,7 @@ class Probe(db.Model):
             + " - "
             + self.source
             + " - "
-            + self.device_id
+            + self.esp_id
             + " - "
             + str(self.timestamp)
             + " - "
@@ -57,5 +57,6 @@ class Probe(db.Model):
     # "signal_strength_wroom":"-88",
     # "signal_strength_rt":"109"
 
-#p = Probe.query.filter(Probe.hash == '0a6fe86e018738b08db53b545e348f8c')
-#rssi_dict = {'EspWroom01': -83, 'EspWroom02': -72, 'EspWroom03': -74}
+
+# p = Probe.query.filter(Probe.hash == '0a6fe86e018738b08db53b545e348f8c')
+# rssi_dict = {'EspWroom01': -83, 'EspWroom02': -72, 'EspWroom03': -74}
