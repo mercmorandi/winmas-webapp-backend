@@ -30,6 +30,7 @@ def trilaterator(rssi_dict):
     y = (v_b * (x_b - x_c) - v_a * (x_b - x_a)) / (
         (y_a - y_b) * (x_b - x_c) - (y_c - y_b) * (x_b - x_c)
     )
+    #fondamentale che y_a sia diverso da y_c
 
     x = (y * (y_a - y_b) - v_b) / (x_b - x_c)
     print("x: " + str(x) + " y: " + str(y))
