@@ -10,7 +10,7 @@ from app.tasks import trilaterable_check_task
 
 from hashlib import md5
 
-from app import db, tasks
+from app import db, tasks, statistic
 from . import tasks
 
 
@@ -34,7 +34,7 @@ def database_info():
 
 @app.route("/test_task", methods=["GET"])
 def test_task():
-    tasks.test_task1.delay('porcodio')
+    tasks.test_task1.delay("porcodio")
     return "test task done", 200
 
 
@@ -52,13 +52,13 @@ def add_req_test():
     ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
     minutes_ts = int(ts / 1000 / 60)
     to_encode = (
-            probe["destination"]
-            + ""
-            + probe["source"]
-            + ""
-            + str(minutes_ts)
-            + ""
-            + probe["seq_number"]
+        probe["destination"]
+        + ""
+        + probe["source"]
+        + ""
+        + str(minutes_ts)
+        + ""
+        + probe["seq_number"]
     )
     h = md5(to_encode.encode("utf-8")).hexdigest()
     print("HASSSSSSSSH: " + str(h))
@@ -79,13 +79,13 @@ def add_req():
     ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
     minutes_ts = int(ts / 1000 / 60)
     to_encode = (
-            probe["destination"]
-            + ""
-            + probe["source"]
-            + ""
-            + str(minutes_ts)
-            + ""
-            + probe["seq_number"]
+        probe["destination"]
+        + ""
+        + probe["source"]
+        + ""
+        + str(minutes_ts)
+        + ""
+        + probe["seq_number"]
     )
     h = md5(to_encode.encode("utf-8")).hexdigest()
     print("HASSSSSSSSH: " + str(h))
@@ -98,7 +98,7 @@ def add_req():
         signal_strength_rt=probe["signal_strength_rt"],
         hash=str(h),
         timestamp=ts,
-        seqnum=probe['seq_number'],
+        seqnum=probe["seq_number"],
         esp_id=device_id,
         status="unchecked",
     )
@@ -117,3 +117,13 @@ def add_req():
         )
         # error, there already is a probe using this hash and esp_id
         # constraint failed
+
+
+@app.route("/stats", methods=["GET"])
+def get_stats():
+    if not request:
+        return "error", 400
+
+    start_date = request.args.get("start_date")
+
+    return statistic.serve_stats(start_date), 200

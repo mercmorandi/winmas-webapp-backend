@@ -16,15 +16,15 @@ def periodic_task():
     return "ciao"
 
 
-@celery.task(name='test_task1')
+@celery.task(name="test_task1")
 def test_task1(test):
-    logger.info("Hello! from test task1: "+test)
-    test_task2.delay('porcodio2')
+    logger.info("Hello! from test task1: " + test)
+    test_task2.delay("porcodio2")
 
 
-@celery.task(name='test_task2')
+@celery.task(name="test_task2")
 def test_task2(test2):
-    logger.info("Hello! from test task2: "+test2)
+    logger.info("Hello! from test task2: " + test2)
 
 
 @celery.task(name="discardable_check_task")
@@ -40,6 +40,6 @@ def trilateration_task(p_hash):
 
 @celery.task(name="trilaterable_check_task")
 def trilaterable_check_task(p_hash):
-    print('into check task')
-    logger.info("trilateration check: "+p_hash)
+    print("into check task")
+    logger.info("trilateration check: " + p_hash)
     jobs.trilaterable_check_job(p_hash)
