@@ -1,6 +1,8 @@
 import time
 
 from flask import current_app as app
+from flask_cors import cross_origin
+
 from . import db_connection
 from flask import request
 from sqlalchemy.exc import IntegrityError
@@ -120,6 +122,7 @@ def add_req():
 
 
 @app.route("/stats", methods=["GET"])
+@cross_origin()
 def get_stats():
     if not request:
         return "error", 400
