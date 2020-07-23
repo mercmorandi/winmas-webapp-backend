@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from config import Config
@@ -14,6 +15,7 @@ celery = Celery(__name__, broker=Config.CELERY_BROKER_URL)
 
 def create_app():
     app = Flask(__name__)
+    CORS(app)
     app.config.from_object("config.Config")
     print("config loaded")
     # print(str(app.config))
