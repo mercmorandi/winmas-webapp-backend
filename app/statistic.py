@@ -38,7 +38,6 @@ def serve_stats(start_date):
         .order_by("m")
     )
     start_date_dt_h = start_date_dt.replace(minute=0)
-    print(qs2[0].m)
     data = {
         (start_date_dt_h + timedelta(minutes=int(line.m))).isoformat(): line[1]
         for line in qs2.all()
