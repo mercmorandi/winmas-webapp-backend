@@ -8,6 +8,9 @@ from celery import Celery
 from .celery_utils import init_celery
 from celery.schedules import crontab
 
+import yaml
+from yaml import CLoader
+
 db = SQLAlchemy()
 migrate = Migrate()
 celery = Celery(__name__, broker=Config.CELERY_BROKER_URL)
@@ -18,7 +21,7 @@ def create_app():
     CORS(app)
     app.config.from_object("config.Config")
     print("config loaded")
-    # print(str(app.config))
+    #print(str(app.config))
     db.init_app(app)
     migrate.init_app(app, db)
 
@@ -30,6 +33,13 @@ def create_app():
             "schedule": crontab(minute="*"),
         }
     }
+
+    try:
+        with open('esp_config.yaml', 'r') as f:
+            app.config['ESP_CONFIG'] = yaml.load(f, Loader=CLoader)
+    except Exception as e:
+        print(e)
+        exit(-1)
 
     init_celery(celery, app)
 
