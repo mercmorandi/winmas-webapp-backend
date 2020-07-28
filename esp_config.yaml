@@ -1,0 +1,11 @@
+num_esp: 3
+esp_list:
+  'EspWroom01':
+    X: 3
+    Y: 0
+  'EspWroom02':
+    X: 2
+    Y: 2
+  'EspWroom03':
+    X: -2
+    Y: 2

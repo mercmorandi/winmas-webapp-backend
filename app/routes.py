@@ -12,7 +12,7 @@ from app.tasks import trilaterable_check_task
 
 from hashlib import md5
 
-from app import db, tasks, statistic
+from app import db, tasks, statistic, positions
 from . import tasks
 
 
@@ -130,3 +130,10 @@ def get_stats():
     start_date = request.args.get("start_date")
 
     return statistic.serve_stats(start_date), 200
+
+
+#TODO: manage possible errors
+@app.route("/get_esps", methods=["GET"])
+@cross_origin()
+def get_esps():
+    return positions.PosDto().get_esps(), 200
