@@ -1,9 +1,11 @@
 from sqlalchemy.orm import relationship
-
+import  time
 # from flask import current_app as app
 
 # db = app.db
 from app import db
+
+from hashlib import md5
 
 
 class Probe(db.Model):
@@ -37,15 +39,15 @@ class Probe(db.Model):
 
     def __repr__(self):
         return (
-            str(self.id)
-            + " - "
-            + self.source
-            + " - "
-            + self.esp_id
-            + " - "
-            + str(self.timestamp)
-            + " - "
-            + str(self.status)
+                str(self.id)
+                + " - "
+                + self.source
+                + " - "
+                + self.esp_id
+                + " - "
+                + str(self.timestamp)
+                + " - "
+                + str(self.status)
         )
 
     # mocked probe
@@ -60,3 +62,35 @@ class Probe(db.Model):
 
 # p = Probe.query.filter(Probe.hash == '0a6fe86e018738b08db53b545e348f8c')
 # rssi_dict = {'EspWroom01': -83, 'EspWroom02': -72, 'EspWroom03': -74}
+
+def probe_parser(req):
+    device_id = req["device_id"]
+    on_since = int(req["on_since"])
+    probe = req["probe"]
+
+    ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
+    minutes_ts = int(ts / 1000 / 60)
+    to_encode = (
+            probe["destination"]
+            + ""
+            + probe["source"]
+            + ""
+            + str(minutes_ts)
+            + ""
+            + probe["seq_number"]
+    )
+    h = md5(to_encode.encode("utf-8")).hexdigest()
+    print("HASSSSSSSSH: " + str(h))
+    probe = Probe(
+        destination=probe["destination"],
+        source=probe["source"],
+        bssid=probe["bssid"],
+        ssid=probe["ssid"],
+        signal_strength_wroom=probe["signal_strength_wroom"],
+        signal_strength_rt=probe["signal_strength_rt"],
+        hash=str(h),
+        timestamp=ts,
+        seqnum=probe["seq_number"],
+        esp_id=device_id,
+        status="unchecked",
+    )
