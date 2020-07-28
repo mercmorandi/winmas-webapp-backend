@@ -1,5 +1,9 @@
+import time
+
 from flask import current_app as app
 from flask_cors import cross_origin
+
+from . import db_connection
 from flask import request
 from sqlalchemy.exc import IntegrityError
 
@@ -9,14 +13,53 @@ from app.models import probes
 
 @app.route("/", methods=["GET"])
 def index():
-    # tasks.add.delay(11, 22)
+    tasks.add.delay(11, 22)
     return "hello world"
+
+
+@app.route("/info", methods=["GET"])
+def database_info():
+    """
+        Returns the all data stored in the database.
+    """
+    try:
+        db = db_connection.DBConnection()
+    except IOError:
+        return "Database connection not possible", 504, {"ContentType": "text/plain"}
+    return db.get_database_info(), 200, {"ContentType": "application/json"}
 
 
 @app.route("/test_task", methods=["GET"])
 def test_task():
     tasks.test_task1.delay("porcodio")
     return "test task done", 200
+
+
+@app.route("/add_req_test", methods=["POST"])
+def add_req_test():
+    if not request.json:
+        return "no data", 400
+
+    print(str(request.json))
+    req = request.json
+    device_id = req["device_id"]
+    on_since = int(req["on_since"])
+    probe = req["probe"]
+
+    ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
+    minutes_ts = int(ts / 1000 / 60)
+    to_encode = (
+        probe["destination"]
+        + ""
+        + probe["source"]
+        + ""
+        + str(minutes_ts)
+        + ""
+        + probe["seq_number"]
+    )
+    h = md5(to_encode.encode("utf-8")).hexdigest()
+    print("HASSSSSSSSH: " + str(h))
+    return "ok", 200
 
 
 @app.route("/add_req", methods=["POST"])
