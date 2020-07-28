@@ -59,3 +59,19 @@ def get_stats():
 @cross_origin()
 def get_esps():
     return positions.PosDto().get_esps(), 200
+
+@app.route("/lastPosition", methods=["GET"])
+@cross_origin()
+def get_last_positions():
+    if not request:
+        return "error", 400
+    start_date = request.args.get("start_date")
+    end_date = request.args.get("end_date")
+
+
+@app.route("/activePosition", methods=["GET"])
+@cross_origin()
+def get_active_positions():
+    if not request:
+        return "error", 400
+
