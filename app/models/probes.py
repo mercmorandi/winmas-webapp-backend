@@ -1,5 +1,6 @@
 from sqlalchemy.orm import relationship
-import  time
+import time
+
 # from flask import current_app as app
 
 # db = app.db
@@ -39,15 +40,15 @@ class Probe(db.Model):
 
     def __repr__(self):
         return (
-                str(self.id)
-                + " - "
-                + self.source
-                + " - "
-                + self.esp_id
-                + " - "
-                + str(self.timestamp)
-                + " - "
-                + str(self.status)
+            str(self.id)
+            + " - "
+            + self.source
+            + " - "
+            + self.esp_id
+            + " - "
+            + str(self.timestamp)
+            + " - "
+            + str(self.status)
         )
 
     # mocked probe
@@ -63,6 +64,7 @@ class Probe(db.Model):
 # p = Probe.query.filter(Probe.hash == '0a6fe86e018738b08db53b545e348f8c')
 # rssi_dict = {'EspWroom01': -83, 'EspWroom02': -72, 'EspWroom03': -74}
 
+
 def probe_parser(req):
     device_id = req["device_id"]
     on_since = int(req["on_since"])
@@ -71,13 +73,13 @@ def probe_parser(req):
     ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
     minutes_ts = int(ts / 1000 / 60)
     to_encode = (
-            probe["destination"]
-            + ""
-            + probe["source"]
-            + ""
-            + str(minutes_ts)
-            + ""
-            + probe["seq_number"]
+        probe["destination"]
+        + ""
+        + probe["source"]
+        + ""
+        + str(minutes_ts)
+        + ""
+        + probe["seq_number"]
     )
     h = md5(to_encode.encode("utf-8")).hexdigest()
     print("HASSSSSSSSH: " + str(h))

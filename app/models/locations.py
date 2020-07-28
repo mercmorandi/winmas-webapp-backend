@@ -1,9 +1,7 @@
-from sqlalchemy.orm import relationship
+from datetime import datetime
 
-# from flask import current_app as app
-
-# db = app.db
 from app import db
+from app.utils import date_parser
 
 
 class Location(db.Model):
@@ -23,15 +21,25 @@ class Location(db.Model):
 
     def __repr__(self):
         return (
-            str(self.id)
-            + " - "
-            + self.hash
-            + " - "
-            + str(self.x)
-            + " - "
-            + str(self.y)
-            + " - "
-            + str(self.insertion_date)
-            + " - "
-            + str(self.device)
+                str(self.id)
+                + " - "
+                + self.hash
+                + " - "
+                + str(self.x)
+                + " - "
+                + str(self.y)
+                + " - "
+                + str(self.insertion_date)
+                + " - "
+                + str(self.device)
         )
+
+
+def serve_last_locations(request):
+    start_date = date_parser(request.args.get("start_date"))
+    end_date = date_parser(request.args.get("end_date"))
+
+
+def serve_active_locations(request):
+    start_date = date_parser(request.args.get("start_date"))
+    end_date = date_parser(request.args.get("end_date"))

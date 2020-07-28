@@ -1,5 +1,3 @@
-import time
-
 from flask import current_app as app
 from flask_cors import cross_origin
 
@@ -8,7 +6,7 @@ from flask import request
 from sqlalchemy.exc import IntegrityError
 
 from app import db, tasks, statistic, positions
-from app.models import probes
+from app.models import probes, locations
 
 
 @app.route("/", methods=["GET"])
@@ -52,7 +50,11 @@ def add_req():
     except IntegrityError:
         db.session.rollback()
         return (
-            "hash: " + str(probe.hash) + " and esp_id: " + probe.esp_id + " already exists",
+            "hash: "
+            + str(probe.hash)
+            + " and esp_id: "
+            + probe.esp_id
+            + " already exists",
             409,
         )
         # error, there already is a probe using this hash and esp_id
@@ -77,17 +79,19 @@ def get_esps():
     return positions.PosDto().get_esps(), 200
 
 
-@app.route("/lastPosition", methods=["GET"])
+@app.route("/lastLocation", methods=["GET"])
 @cross_origin()
-def get_last_positions():
+def get_last_locations():
     if not request:
         return "error", 400
-    start_date = request.args.get("start_date")
-    end_date = request.args.get("end_date")
+    status, res = locations.serve_last_locations(request)
+    return res, status
 
 
-@app.route("/activePosition", methods=["GET"])
+@app.route("/activeLocation", methods=["GET"])
 @cross_origin()
-def get_active_positions():
+def get_active_locations():
     if not request:
         return "error", 400
+    status, res = locations.serve_active_locations(request)
+    return res, status

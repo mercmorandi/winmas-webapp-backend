@@ -1,8 +1,6 @@
 import os
 from dotenv import load_dotenv
 
-import yaml
-from yaml import CLoader
 
 # env var are into a .env file ih this folder (create it if not exists )
 load_dotenv()
