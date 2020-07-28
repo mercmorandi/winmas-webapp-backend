@@ -59,10 +59,9 @@ def trilateration_job(p_hash):
 
 def trilaterable_check_job(p_hash):
     qs = db.session.query(Probe).filter(Probe.hash == p_hash)
-    if len(qs.all()) == int(app.config["NUMESP"]):
+    if qs.count() == int(app.config["NUMESP"]):
         print("trilaterable probe found")
-        for p in qs.all():
-            p.status = "pending"
+        qs.update({Probe.status: "pending"})
         db.session.commit()
         tasks.trilateration_task.delay(p_hash)
     else:
@@ -72,13 +71,11 @@ def trilaterable_check_job(p_hash):
 
 
 def discardable_check_job():
-    qs = (
+    for probe in (
         db.session.query(Probe)
         .filter(Probe.status == "unchecked")
         .filter(time.time() - (Probe.timestamp / 1000) > 2)
-    )
-
-    for p in qs.all():
-        p.status = "discarded"
+    ):
+        probe.status = "discarded"
 
     db.session.commit()

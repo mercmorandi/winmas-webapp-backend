@@ -47,6 +47,6 @@ def serve_stats(start_date):
 
     db.session.close()
 
-    #dtoRes = [StatsDto(k, v) for k, v in data.items()]
-    #print(str(dtoRes))
+    # dtoRes = [StatsDto(k, v) for k, v in data.items()]
+    # print(str(dtoRes))
     return res
