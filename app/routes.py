@@ -49,13 +49,13 @@ def add_req_test():
     ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
     minutes_ts = int(ts / 1000 / 60)
     to_encode = (
-        probe["destination"]
-        + ""
-        + probe["source"]
-        + ""
-        + str(minutes_ts)
-        + ""
-        + probe["seq_number"]
+            probe["destination"]
+            + ""
+            + probe["source"]
+            + ""
+            + str(minutes_ts)
+            + ""
+            + probe["seq_number"]
     )
     h = md5(to_encode.encode("utf-8")).hexdigest()
     print("HASSSSSSSSH: " + str(h))
@@ -97,11 +97,12 @@ def get_stats():
     return statistic.serve_stats(start_date), 200
 
 
-#TODO: manage possible errors
+# TODO: manage possible errors
 @app.route("/get_esps", methods=["GET"])
 @cross_origin()
 def get_esps():
     return positions.PosDto().get_esps(), 200
+
 
 @app.route("/lastPosition", methods=["GET"])
 @cross_origin()
@@ -117,4 +118,3 @@ def get_last_positions():
 def get_active_positions():
     if not request:
         return "error", 400
-
