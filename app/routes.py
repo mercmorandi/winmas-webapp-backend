@@ -35,33 +35,6 @@ def test_task():
     return "test task done", 200
 
 
-@app.route("/add_req_test", methods=["POST"])
-def add_req_test():
-    if not request.json:
-        return "no data", 400
-
-    print(str(request.json))
-    req = request.json
-    device_id = req["device_id"]
-    on_since = int(req["on_since"])
-    probe = req["probe"]
-
-    ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
-    minutes_ts = int(ts / 1000 / 60)
-    to_encode = (
-            probe["destination"]
-            + ""
-            + probe["source"]
-            + ""
-            + str(minutes_ts)
-            + ""
-            + probe["seq_number"]
-    )
-    h = md5(to_encode.encode("utf-8")).hexdigest()
-    print("HASSSSSSSSH: " + str(h))
-    return "ok", 200
-
-
 @app.route("/add_req", methods=["POST"])
 def add_req():
     if not request.json:
