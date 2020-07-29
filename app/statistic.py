@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 from sqlalchemy import func, extract
 
 from app import db
@@ -23,19 +23,19 @@ def serve_stats(start_date):
         res[key.isoformat()] = 0
     qs1 = (
         db.session.query(Location.id)
-            .filter(Location.insertion_date >= start_date_dt)
-            .filter(Location.insertion_date < start_date_dt + timedelta(minutes=5))
-            .distinct(Location.mac_id)
-            .subquery()
+        .filter(Location.insertion_date >= start_date_dt)
+        .filter(Location.insertion_date < start_date_dt + timedelta(minutes=5))
+        .distinct(Location.mac_id)
+        .subquery()
     )
 
     qs2 = (
         db.session.query(
             extract("minutes", Location.insertion_date).label("m"), func.count("m")
         )
-            .join(qs1, Location.id == qs1.c.id)
-            .group_by("m")
-            .order_by("m")
+        .join(qs1, Location.id == qs1.c.id)
+        .group_by("m")
+        .order_by("m")
     )
     start_date_dt_h = start_date_dt.replace(minute=0)
     data = {

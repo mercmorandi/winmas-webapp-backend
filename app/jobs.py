@@ -1,10 +1,8 @@
-import itertools
 import time
 import datetime
 
 from app import db, tasks
 from celery.utils.log import get_task_logger
-from sqlalchemy import func
 from .models.probes import Probe
 from .models.locations import Location
 from .models.devices import Device

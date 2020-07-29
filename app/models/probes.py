@@ -5,7 +5,7 @@ import time
 
 # db = app.db
 from app import db
-
+from app.utils import md5_encoder, esp_ts_minutes_seconds
 from hashlib import md5
 
 
@@ -70,18 +70,12 @@ def probe_parser(req):
     on_since = int(req["on_since"])
     probe = req["probe"]
 
-    ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
-    minutes_ts = int(ts / 1000 / 60)
-    to_encode = (
-        probe["destination"]
-        + ""
-        + probe["source"]
-        + ""
-        + str(minutes_ts)
-        + ""
-        + probe["seq_number"]
+    minutes_ts, ts = esp_ts_minutes_seconds(int(probe["timestamp"]), on_since)
+
+    h = md5_encoder(
+        probe["destination"], probe["source"], str(minutes_ts), probe["seq_number"]
     )
-    h = md5(to_encode.encode("utf-8")).hexdigest()
+
     print("HASSSSSSSSH: " + str(h))
     probe = Probe(
         destination=probe["destination"],
