@@ -2,7 +2,7 @@ from flask import current_app as app
 from flask_cors import cross_origin
 
 from . import db_connection
-from flask import request
+from flask import request, jsonify
 from sqlalchemy.exc import IntegrityError
 
 from app import db, tasks, statistic, positions
@@ -11,20 +11,8 @@ from app.models import probes, locations
 
 @app.route("/", methods=["GET"])
 def index():
-    tasks.add.delay(11, 22)
+    # tasks.add.delay(11, 22)
     return "hello world"
-
-
-@app.route("/info", methods=["GET"])
-def database_info():
-    """
-        Returns the all data stored in the database.
-    """
-    try:
-        db = db_connection.DBConnection()
-    except IOError:
-        return "Database connection not possible", 504, {"ContentType": "text/plain"}
-    return db.get_database_info(), 200, {"ContentType": "application/json"}
 
 
 @app.route("/test_task", methods=["GET"])
@@ -84,8 +72,8 @@ def get_esps():
 def get_last_locations():
     if not request:
         return "error", 400
-    status, res = locations.serve_last_locations(request)
-    return res, status
+    res = locations.serve_last_locations(request)
+    return jsonify(res)
 
 
 @app.route("/activeLocation", methods=["GET"])
@@ -93,5 +81,5 @@ def get_last_locations():
 def get_active_locations():
     if not request:
         return "error", 400
-    status, res = locations.serve_active_locations(request)
-    return res, status
+    res = locations.serve_active_locations(request)
+    return jsonify(res)
