@@ -1,37 +1,18 @@
-import time
-
 from flask import current_app as app
 from flask_cors import cross_origin
 
 from . import db_connection
-from flask import request
+from flask import request, jsonify
 from sqlalchemy.exc import IntegrityError
 
-from .models import probes
-from app.tasks import trilaterable_check_task
-
-from hashlib import md5
-
 from app import db, tasks, statistic, positions
-from . import tasks
+from app.models import probes, locations
 
 
 @app.route("/", methods=["GET"])
 def index():
-    tasks.add.delay(11, 22)
+    # tasks.add.delay(11, 22)
     return "hello world"
-
-
-@app.route("/info", methods=["GET"])
-def database_info():
-    """
-        Returns the all data stored in the database.
-    """
-    try:
-        db = db_connection.DBConnection()
-    except IOError:
-        return "Database connection not possible", 504, {"ContentType": "text/plain"}
-    return db.get_database_info(), 200, {"ContentType": "application/json"}
 
 
 @app.route("/test_task", methods=["GET"])
@@ -40,81 +21,28 @@ def test_task():
     return "test task done", 200
 
 
-@app.route("/add_req_test", methods=["POST"])
-def add_req_test():
-    if not request.json:
-        return "no data", 400
-
-    print(str(request.json))
-    req = request.json
-    device_id = req["device_id"]
-    on_since = int(req["on_since"])
-    probe = req["probe"]
-
-    ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
-    minutes_ts = int(ts / 1000 / 60)
-    to_encode = (
-        probe["destination"]
-        + ""
-        + probe["source"]
-        + ""
-        + str(minutes_ts)
-        + ""
-        + probe["seq_number"]
-    )
-    h = md5(to_encode.encode("utf-8")).hexdigest()
-    print("HASSSSSSSSH: " + str(h))
-    return "ok", 200
-
-
 @app.route("/add_req", methods=["POST"])
 def add_req():
     if not request.json:
         return "no data", 400
 
     print(str(request.json))
-    req = request.json
-    device_id = req["device_id"]
-    on_since = int(req["on_since"])
-    probe = req["probe"]
-
-    ts = int(round(time.time() * 1000)) - (on_since - int(probe["timestamp"]))
-    minutes_ts = int(ts / 1000 / 60)
-    to_encode = (
-        probe["destination"]
-        + ""
-        + probe["source"]
-        + ""
-        + str(minutes_ts)
-        + ""
-        + probe["seq_number"]
-    )
-    h = md5(to_encode.encode("utf-8")).hexdigest()
-    print("HASSSSSSSSH: " + str(h))
-    probe = probes.Probe(
-        destination=probe["destination"],
-        source=probe["source"],
-        bssid=probe["bssid"],
-        ssid=probe["ssid"],
-        signal_strength_wroom=probe["signal_strength_wroom"],
-        signal_strength_rt=probe["signal_strength_rt"],
-        hash=str(h),
-        timestamp=ts,
-        seqnum=probe["seq_number"],
-        esp_id=device_id,
-        status="unchecked",
-    )
+    probe = probes.probe_parser(request.json)
 
     db.session.add(probe)
     try:
         db.session.commit()
         db.session.close()
-        tasks.trilaterable_check_task.delay(str(h))
+        tasks.trilaterable_check_task.delay(str(probe.hash))
         return "ok", 200
     except IntegrityError:
         db.session.rollback()
         return (
-            "hash: " + str(h) + " and esp_id: " + probe.esp_id + " already exists",
+            "hash: "
+            + str(probe.hash)
+            + " and esp_id: "
+            + probe.esp_id
+            + " already exists",
             409,
         )
         # error, there already is a probe using this hash and esp_id
@@ -132,8 +60,26 @@ def get_stats():
     return statistic.serve_stats(start_date), 200
 
 
-#TODO: manage possible errors
+# TODO: manage possible errors
 @app.route("/get_esps", methods=["GET"])
 @cross_origin()
 def get_esps():
     return positions.PosDto().get_esps(), 200
+
+
+@app.route("/lastLocation", methods=["GET"])
+@cross_origin()
+def get_last_locations():
+    if not request:
+        return "error", 400
+    res = locations.serve_last_locations(request)
+    return jsonify(res)
+
+
+@app.route("/activeLocation", methods=["GET"])
+@cross_origin()
+def get_active_locations():
+    if not request:
+        return "error", 400
+    res = locations.serve_active_locations(request)
+    return jsonify(res)

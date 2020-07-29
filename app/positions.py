@@ -6,7 +6,7 @@ from flask import current_app as app
 from app import db
 from app.models.locations import Location
 
-class PosDto():
 
+class PosDto:
     def get_esps(self):
-        return app.config['ESP_CONFIG']['esp_list']
+        return app.config["ESP_CONFIG"]["esp_list"]

@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
@@ -9,7 +8,6 @@ from .celery_utils import init_celery
 from celery.schedules import crontab
 
 import yaml
-from yaml import CLoader
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -21,7 +19,7 @@ def create_app():
     CORS(app)
     app.config.from_object("config.Config")
     print("config loaded")
-    #print(str(app.config))
+    # print(str(app.config))
     db.init_app(app)
     migrate.init_app(app, db)
 
@@ -35,8 +33,8 @@ def create_app():
     }
 
     try:
-        with open('esp_config.yaml', 'r') as f:
-            app.config['ESP_CONFIG'] = yaml.load(f, Loader=CLoader)
+        with open("esp_config.yaml", "r") as f:
+            app.config["ESP_CONFIG"] = yaml.load(f)
     except Exception as e:
         print(e)
         exit(-1)

@@ -1,9 +1,12 @@
 from sqlalchemy.orm import relationship
+import time
 
 # from flask import current_app as app
 
 # db = app.db
 from app import db
+from app.utils import md5_encoder, esp_ts_minutes_seconds
+from hashlib import md5
 
 
 class Probe(db.Model):
@@ -60,3 +63,30 @@ class Probe(db.Model):
 
 # p = Probe.query.filter(Probe.hash == '0a6fe86e018738b08db53b545e348f8c')
 # rssi_dict = {'EspWroom01': -83, 'EspWroom02': -72, 'EspWroom03': -74}
+
+
+def probe_parser(req):
+    device_id = req["device_id"]
+    on_since = int(req["on_since"])
+    probe = req["probe"]
+
+    minutes_ts, ts = esp_ts_minutes_seconds(int(probe["timestamp"]), on_since)
+
+    h = md5_encoder(
+        probe["destination"], probe["source"], str(minutes_ts), probe["seq_number"]
+    )
+
+    print("HASSSSSSSSH: " + str(h))
+    probe = Probe(
+        destination=probe["destination"],
+        source=probe["source"],
+        bssid=probe["bssid"],
+        ssid=probe["ssid"],
+        signal_strength_wroom=probe["signal_strength_wroom"],
+        signal_strength_rt=probe["signal_strength_rt"],
+        hash=str(h),
+        timestamp=ts,
+        seqnum=probe["seq_number"],
+        esp_id=device_id,
+        status="unchecked",
+    )

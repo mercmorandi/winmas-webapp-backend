@@ -1,8 +1,9 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 from sqlalchemy import func, extract
 
 from app import db
 from app.models.locations import Location
+from app.utils import date_parser
 
 
 class StatsDto:
@@ -15,8 +16,7 @@ class StatsDto:
 
 
 def serve_stats(start_date):
-    start_date_dt = datetime.fromtimestamp(int(start_date))
-    start_date_dt = start_date_dt.replace(second=0, microsecond=0)
+    start_date_dt = date_parser(start_date)
     res = {}
     for minute in range(5):
         key = start_date_dt + timedelta(minutes=minute)
@@ -47,6 +47,6 @@ def serve_stats(start_date):
 
     db.session.close()
 
-    #dtoRes = [StatsDto(k, v) for k, v in data.items()]
-    #print(str(dtoRes))
+    # dtoRes = [StatsDto(k, v) for k, v in data.items()]
+    # print(str(dtoRes))
     return res

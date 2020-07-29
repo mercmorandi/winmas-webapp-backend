@@ -1,9 +1,8 @@
-from sqlalchemy.orm import relationship
+from collections import namedtuple
+from sqlalchemy import func
 
-# from flask import current_app as app
-
-# db = app.db
 from app import db
+from app.utils import date_parser
 
 
 class Location(db.Model):
@@ -35,3 +34,63 @@ class Location(db.Model):
             + " - "
             + str(self.device)
         )
+
+
+LocationDTO = namedtuple(
+    "LocationDTO", "id, ssid, insertion_date, x, y, mac, device_id"
+)
+
+
+def to_locationDTO_dict(qs):
+    res = [
+        dict(
+            LocationDTO(
+                id=loc.id,
+                ssid=loc.ssid,
+                insertion_date=loc.insertion_date.replace(microsecond=0).isoformat(),
+                x=loc.x,
+                y=loc.y,
+                mac=loc.mac_id,
+                device_id=loc.device_id,
+            )._asdict()
+        )
+        for loc in qs
+    ]
+
+    return res
+
+
+def serve_last_locations(request):
+    start_date = date_parser(request.args.get("start_date"))
+    end_date = date_parser(request.args.get("end_date"))
+    qs1 = (
+        db.session.query(
+            Location.id, func.max(Location.insertion_date).label("max_date")
+        )
+        .filter(Location.insertion_date >= start_date)
+        .filter(Location.insertion_date < end_date)
+        .group_by(Location.id)
+        .distinct(Location.mac_id)
+        .subquery()
+    )
+
+    qs = db.session.query(Location).join(qs1, Location.id == qs1.c.id).order_by(Location.device_id)
+
+    res = to_locationDTO_dict(qs)
+    db.session.close()
+
+    return res
+
+
+def serve_active_locations(request):
+    start_date = date_parser(request.args.get("start_date"))
+    end_date = date_parser(request.args.get("end_date"))
+    qs = (
+        db.session.query(Location)
+        .filter(Location.insertion_date >= start_date)
+        .filter(Location.insertion_date < end_date)
+    )
+    res = to_locationDTO_dict(qs)
+    db.session.close()
+
+    return res
