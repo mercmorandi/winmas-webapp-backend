@@ -1,12 +1,5 @@
-from sqlalchemy.orm import relationship
-import time
-
-# from flask import current_app as app
-
-# db = app.db
 from app import db
 from app.utils import md5_encoder, esp_ts_minutes_seconds
-from hashlib import md5
 
 
 class Probe(db.Model):
