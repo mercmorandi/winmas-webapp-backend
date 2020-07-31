@@ -7,6 +7,7 @@ from sqlalchemy.exc import IntegrityError
 
 from app import db, tasks, statistic, positions
 from app.models import probes, locations
+from app.utils import date_parser
 
 
 @app.route("/", methods=["GET"])
@@ -60,11 +61,13 @@ def get_stats():
     return statistic.serve_stats(start_date), 200
 
 
-# TODO: manage possible errors
 @app.route("/get_esps", methods=["GET"])
 @cross_origin()
-def get_esps():
-    return positions.PosDto().get_esps(), 200
+def get_esps_new():
+    if not request:
+        return "error", 400
+    res = positions.serve_esp_pos()
+    return jsonify(res)
 
 
 @app.route("/lastLocation", methods=["GET"])
@@ -72,7 +75,9 @@ def get_esps():
 def get_last_locations():
     if not request:
         return "error", 400
-    res = locations.serve_last_locations(request)
+    start_date = date_parser(request.args.get("start_date"))
+    end_date = date_parser(request.args.get("end_date"))
+    res = locations.serve_last_locations(start_date, end_date)
     return jsonify(res)
 
 
@@ -81,5 +86,7 @@ def get_last_locations():
 def get_active_locations():
     if not request:
         return "error", 400
-    res = locations.serve_active_locations(request)
+    start_date = date_parser(request.args.get("start_date"))
+    end_date = date_parser(request.args.get("end_date"))
+    res = locations.serve_active_locations(start_date, end_date)
     return jsonify(res)

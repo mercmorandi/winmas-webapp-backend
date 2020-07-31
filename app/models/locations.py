@@ -55,9 +55,8 @@ def to_locationDTOdict(loc):
     )
 
 
-def serve_last_locations(request):
-    start_date = date_parser(request.args.get("start_date"))
-    end_date = date_parser(request.args.get("end_date"))
+def serve_last_locations(start_date, end_date):
+
     qs1 = (
         db.session.query(
             func.max(Location.insertion_date).label("max_date"),
@@ -83,9 +82,8 @@ def serve_last_locations(request):
     return res
 
 
-def serve_active_locations(request):
-    start_date = date_parser(request.args.get("start_date"))
-    end_date = date_parser(request.args.get("end_date"))
+def serve_active_locations(start_date, end_date):
+
     qs = (
         db.session.query(Location)
             .filter(Location.insertion_date >= start_date)
