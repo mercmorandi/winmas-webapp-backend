@@ -41,56 +41,55 @@ LocationDTO = namedtuple(
 )
 
 
-def to_locationDTO_dict(qs):
-    res = [
-        dict(
-            LocationDTO(
-                id=loc.id,
-                ssid=loc.ssid,
-                insertion_date=loc.insertion_date.replace(microsecond=0).isoformat(),
-                x=loc.x,
-                y=loc.y,
-                mac=loc.mac_id,
-                device_id=loc.device_id,
-            )._asdict()
-        )
-        for loc in qs
-    ]
-
-    return res
+def to_locationDTOdict(loc):
+    return dict(
+        LocationDTO(
+            id=loc.id,
+            ssid=loc.ssid,
+            insertion_date=loc.insertion_date.replace(microsecond=0).isoformat(),
+            x=loc.x,
+            y=loc.y,
+            mac=loc.mac_id,
+            device_id=loc.device_id,
+        )._asdict()
+    )
 
 
-def serve_last_locations(request):
-    start_date = date_parser(request.args.get("start_date"))
-    end_date = date_parser(request.args.get("end_date"))
+def serve_last_locations(start_date, end_date):
+
     qs1 = (
         db.session.query(
-            Location.id, func.max(Location.insertion_date).label("max_date")
+            func.max(Location.insertion_date).label("max_date"),
+            Location.mac_id.label("mac"),
         )
         .filter(Location.insertion_date >= start_date)
         .filter(Location.insertion_date < end_date)
-        .group_by(Location.id)
-        .distinct(Location.mac_id)
+        .group_by(Location.mac_id)
         .subquery()
     )
 
-    qs = db.session.query(Location).join(qs1, Location.id == qs1.c.id).order_by(Location.device_id)
-
-    res = to_locationDTO_dict(qs)
+    qs = (
+        db.session.query(Location)
+        .join(
+            qs1,
+            (Location.mac_id == qs1.c.mac)
+            & (Location.insertion_date == qs1.c.max_date),
+        )
+        .order_by(Location.device_id)
+    )
+    res = [to_locationDTOdict(loc) for loc in qs]
     db.session.close()
-
     return res
 
 
-def serve_active_locations(request):
-    start_date = date_parser(request.args.get("start_date"))
-    end_date = date_parser(request.args.get("end_date"))
+def serve_active_locations(start_date, end_date):
+
     qs = (
         db.session.query(Location)
         .filter(Location.insertion_date >= start_date)
         .filter(Location.insertion_date < end_date)
     )
-    res = to_locationDTO_dict(qs)
+    res = [to_locationDTOdict(loc) for loc in qs]
     db.session.close()
 
     return res

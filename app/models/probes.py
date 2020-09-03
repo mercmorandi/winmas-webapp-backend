@@ -1,12 +1,6 @@
-from sqlalchemy.orm import relationship
-import time
-
-# from flask import current_app as app
-
-# db = app.db
-from app import db
+from app import db, tasks
 from app.utils import md5_encoder, esp_ts_minutes_seconds
-from hashlib import md5
+from sqlalchemy.exc import IntegrityError
 
 
 class Probe(db.Model):
@@ -77,7 +71,7 @@ def probe_parser(req):
     )
 
     print("HASSSSSSSSH: " + str(h))
-    probe = Probe(
+    new_prob = Probe(
         destination=probe["destination"],
         source=probe["source"],
         bssid=probe["bssid"],
@@ -90,3 +84,23 @@ def probe_parser(req):
         esp_id=device_id,
         status="unchecked",
     )
+    print('PROBE PARSED: '+str(new_prob))
+
+    db.session.add(new_prob)
+    try:
+        db.session.commit()
+        tasks.trilaterable_check_task.delay(str(new_prob.hash))
+        db.session.close()
+        return "ok", 200
+    except IntegrityError:
+        db.session.rollback()
+        return (
+            "hash: "
+            + str(new_prob.hash)
+            + " and esp_id: "
+            + new_prob.esp_id
+            + " already exists",
+            409,
+        )
+        # error, there already is a probe using this hash and esp_id
+        # constraint failed

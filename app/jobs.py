@@ -24,7 +24,7 @@ def trilateration_job(p_hash):
     if not db.session.query(Device).filter(Device.mac == current_mac).all():
         print("nuovo device")
         device = Device(
-            last_update=datetime.datetime.fromtimestamp(probes[0].timestamp / 1000),
+            last_update=datetime.datetime.fromtimestamp(probes[0].timestamp),
             occurences=0,
             mac=current_mac,
         )
@@ -37,7 +37,7 @@ def trilateration_job(p_hash):
     location = Location(
         hash=p_hash,
         ssid=probes[0].ssid,
-        insertion_date=datetime.datetime.fromtimestamp(probes[0].timestamp / 1000),
+        insertion_date=datetime.datetime.fromtimestamp(probes[0].timestamp),
         x=x,
         y=y,
         mac_id=current_mac,
@@ -72,7 +72,7 @@ def discardable_check_job():
     for probe in (
         db.session.query(Probe)
         .filter(Probe.status == "unchecked")
-        .filter(time.time() - (Probe.timestamp / 1000) > 2)
+        .filter(time.time() - Probe.timestamp > 120)
     ):
         probe.status = "discarded"
 

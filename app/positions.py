@@ -1,12 +1,15 @@
-from datetime import datetime, timedelta
-from sqlalchemy import func, extract
-
+from collections import namedtuple
 from flask import current_app as app
 
-from app import db
-from app.models.locations import Location
+PosDTO = namedtuple("PosDTO", "name, x, y")
 
 
-class PosDto:
-    def get_esps(self):
-        return app.config["ESP_CONFIG"]["esp_list"]
+def toPosDTOdict(name, pos):
+    return dict(PosDTO(name=name, x=pos["X"], y=pos["Y"])._asdict())
+
+
+def serve_esp_pos():
+    esp_dict = app.config["ESP_CONFIG"]["esp_list"]
+    res = [toPosDTOdict(name, pos) for name, pos in esp_dict.items()]
+
+    return res
