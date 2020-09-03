@@ -5,7 +5,7 @@ PosDTO = namedtuple("PosDTO", "name, x, y")
 
 
 def toPosDTOdict(name, pos):
-    return dict(PosDTO(name=name, x=pos['X'], y=pos['Y'])._asdict())
+    return dict(PosDTO(name=name, x=pos["X"], y=pos["Y"])._asdict())
 
 
 def serve_esp_pos():

@@ -1,8 +1,6 @@
 import datetime
+from collections import namedtuple
 
-# from flask import current_app as app
-
-# db = app.db
 from app import db
 
 
@@ -30,4 +28,27 @@ class Device(db.Model):
         return str(self.id) + " - " + self.mac + " - " + str(self.last_update)
 
     def set_last_update(self, probe_ts):
-        self.last_update = datetime.datetime.fromtimestamp(probe_ts / 1000)
+        self.last_update = datetime.datetime.fromtimestamp(probe_ts)
+
+
+DeviceDTO = namedtuple("DeviceDTO", "id, mac, last_update, occurences, locations")
+
+
+def toDeviceDTO(device):
+    pos = [
+        {"x": loc.x, "y": loc.y, "date": loc.insertion_date} for loc in device.locations
+    ]
+    return dict(
+        DeviceDTO(
+            id=device.id,
+            mac=device.mac,
+            last_update=device.last_update,
+            occurences=device.occurences,
+            locations=pos,
+        )._asdict()
+    )
+
+
+def serve_device_info(device_id):
+    qs = db.session.query(Device).filter(Device.id == device_id)
+    return toDeviceDTO(qs.first()) if qs.first() else {}

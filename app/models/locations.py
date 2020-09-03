@@ -22,17 +22,17 @@ class Location(db.Model):
 
     def __repr__(self):
         return (
-                str(self.id)
-                + " - "
-                + self.hash
-                + " - "
-                + str(self.x)
-                + " - "
-                + str(self.y)
-                + " - "
-                + str(self.insertion_date)
-                + " - "
-                + str(self.device)
+            str(self.id)
+            + " - "
+            + self.hash
+            + " - "
+            + str(self.x)
+            + " - "
+            + str(self.y)
+            + " - "
+            + str(self.insertion_date)
+            + " - "
+            + str(self.device)
         )
 
 
@@ -62,20 +62,20 @@ def serve_last_locations(start_date, end_date):
             func.max(Location.insertion_date).label("max_date"),
             Location.mac_id.label("mac"),
         )
-            .filter(Location.insertion_date >= start_date)
-            .filter(Location.insertion_date < end_date)
-            .group_by(Location.mac_id)
-            .subquery()
+        .filter(Location.insertion_date >= start_date)
+        .filter(Location.insertion_date < end_date)
+        .group_by(Location.mac_id)
+        .subquery()
     )
 
     qs = (
         db.session.query(Location)
-            .join(
+        .join(
             qs1,
             (Location.mac_id == qs1.c.mac)
             & (Location.insertion_date == qs1.c.max_date),
         )
-            .order_by(Location.device_id)
+        .order_by(Location.device_id)
     )
     res = [to_locationDTOdict(loc) for loc in qs]
     db.session.close()
@@ -86,8 +86,8 @@ def serve_active_locations(start_date, end_date):
 
     qs = (
         db.session.query(Location)
-            .filter(Location.insertion_date >= start_date)
-            .filter(Location.insertion_date < end_date)
+        .filter(Location.insertion_date >= start_date)
+        .filter(Location.insertion_date < end_date)
     )
     res = [to_locationDTOdict(loc) for loc in qs]
     db.session.close()

@@ -4,27 +4,22 @@ from celery.utils.log import get_task_logger
 logger = get_task_logger(__name__)
 
 
-@celery.task
-def add(a, b):
-    return a + b
+#@celery.task(name="periodic_task")
+#def periodic_task():
+#    print("Hi! from periodic_task")
+#    logger.info("Hello! from periodic task")
+#    return "ciao"
 
 
-@celery.task(name="periodic_task")
-def periodic_task():
-    print("Hi! from periodic_task")
-    logger.info("Hello! from periodic task")
-    return "ciao"
+#@celery.task(name="test_task1")
+#def test_task1(test):
+#    logger.info("Hello! from test task1: " + test)
+#    test_task2.delay("porcodio2")
 
 
-@celery.task(name="test_task1")
-def test_task1(test):
-    logger.info("Hello! from test task1: " + test)
-    test_task2.delay("porcodio2")
-
-
-@celery.task(name="test_task2")
-def test_task2(test2):
-    logger.info("Hello! from test task2: " + test2)
+#@celery.task(name="test_task2")
+#def test_task2(test2):
+#    logger.info("Hello! from test task2: " + test2)
 
 
 @celery.task(name="discardable_check_task")

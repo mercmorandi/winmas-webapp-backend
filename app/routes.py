@@ -6,7 +6,7 @@ from flask import request, jsonify
 from sqlalchemy.exc import IntegrityError
 
 from app import db, tasks, statistic, positions
-from app.models import probes, locations
+from app.models import probes, locations, devices
 from app.utils import date_parser
 
 
@@ -16,10 +16,10 @@ def index():
     return "hello world"
 
 
-@app.route("/test_task", methods=["GET"])
-def test_task():
-    tasks.test_task1.delay("porcodio")
-    return "test task done", 200
+#@app.route("/test_task", methods=["GET"])
+#def test_task():
+#    tasks.test_task1.delay("porcodio")
+#    return "test task done", 200
 
 
 @app.route("/add_req", methods=["POST"])
@@ -28,26 +28,7 @@ def add_req():
         return "no data", 400
 
     print(str(request.json))
-    probe = probes.probe_parser(request.json)
-
-    db.session.add(probe)
-    try:
-        db.session.commit()
-        db.session.close()
-        tasks.trilaterable_check_task.delay(str(probe.hash))
-        return "ok", 200
-    except IntegrityError:
-        db.session.rollback()
-        return (
-            "hash: "
-            + str(probe.hash)
-            + " and esp_id: "
-            + probe.esp_id
-            + " already exists",
-            409,
-        )
-        # error, there already is a probe using this hash and esp_id
-        # constraint failed
+    return probes.probe_parser(request.json)
 
 
 @app.route("/stats", methods=["GET"])
@@ -90,3 +71,15 @@ def get_active_locations():
     end_date = date_parser(request.args.get("end_date"))
     res = locations.serve_active_locations(start_date, end_date)
     return jsonify(res)
+
+
+@app.route("/device/<int:device_id>")
+@cross_origin()
+def get_device(device_id):
+    if not request:
+        return "error", 400
+    res = devices.serve_device_info(device_id)
+    if res:
+        return jsonify(res)
+    else:
+        return "resource not found", 404
