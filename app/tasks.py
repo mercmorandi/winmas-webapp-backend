@@ -1,4 +1,4 @@
-from app import celery, jobs
+from app import celery, jobs, utils, proxy
 from celery.utils.log import get_task_logger
 
 logger = get_task_logger(__name__)
@@ -41,5 +41,10 @@ def trilaterable_check_task(p_hash):
 
 
 @celery.task(name="start_passive_socket")
-def start_passive_socket():
-    pass
+def start_passive_socket(host, port):
+    proxy.init_socket(host, port)
+
+
+@celery.task(name="parse_proxy_data")
+def parse_proxy_data(data):
+    utils.proxy_data_parser(data)
