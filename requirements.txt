@@ -15,6 +15,7 @@ Flask==1.1.2
 Flask-Cors==3.0.8
 Flask-Migrate==2.5.3
 Flask-Script==2.0.6
+Flask-SocketIO==4.3.1
 Flask-SQLAlchemy==2.4.1
 future==0.18.2
 idna==2.9
@@ -34,6 +35,7 @@ parso==0.7.0
 pathspec==0.8.0
 pexpect==4.8.0
 pickleshare==0.7.5
+pkg-resources==0.0.0
 prompt-toolkit==3.0.5
 psycopg2==2.8.5
 ptyprocess==0.6.0
@@ -42,7 +44,10 @@ pylint==2.4.4
 python-dateutil==2.8.1
 python-dotenv==0.12.0
 python-editor==1.0.4
+python-engineio==3.13.2
+python-socketio==4.6.0
 pytz==2020.1
+PyYAML==5.3.1
 regex==2020.4.4
 requests==2.23.0
 six==1.14.0
@@ -56,4 +61,3 @@ wcwidth==0.2.4
 Werkzeug==1.0.1
 wrapt==1.11.2
 zipp==3.1.0
-PyYAML

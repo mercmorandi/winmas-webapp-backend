@@ -3,10 +3,29 @@ import selectors
 import types
 import signal
 
-from app import tasks
+from flask_socketio import send, emit
+
+from app import tasks, socketio
 
 sel = selectors.DefaultSelector()
 running = True
+
+
+@socketio.on('start_proxy')
+def handle_proxy_conf(proxy_conf):
+    print('received conf: ' + str(proxy_conf))
+    socketio.emit('new-message', 'porcodio')
+
+
+@socketio.on('proxy_status')
+def notify_proxy_status(status):
+    send('proxy status: ' + str(status))
+
+
+@socketio.on('new-message')
+def notify_proxy_status(status):
+    print("into notify")
+    send(status)
 
 
 class Proxy:
@@ -26,7 +45,7 @@ class Proxy:
     def init_socket(self, host, port):
         self.lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         signal.signal(signal.SIGTERM, self.receiveSignal)
-        #signal.signal(signal.SIGKILL, self.receiveSignal)
+        # signal.signal(signal.SIGKILL, self.receiveSignal)
         self.lsock.bind((host, int(port)))
         self.lsock.listen()
         print('listening on', (host, port))
@@ -75,8 +94,8 @@ def service_connection(key, mask):
     if mask & selectors.EVENT_WRITE:
         if data.outb:
             # parse_data(data.outb.decode("utf-8"))
-            #tasks.parse_proxy_data.delay(data.outb.decode("utf-8"))
-            print("data outbuffer: "+data.outb.decode("utf-8"))
+            tasks.parse_proxy_data.delay(data.outb.decode("utf-8"))
+            # print("data outbuffer: "+data.outb.decode("utf-8"))
             data.outb = data.outb[len(str(data.outb)):]
             data.outb = []
 

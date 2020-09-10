@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_socketio import SocketIO
 from config import Config
 from celery import Celery
 from .celery_utils import init_celery
@@ -12,6 +13,7 @@ import yaml
 db = SQLAlchemy()
 migrate = Migrate()
 celery = Celery(__name__, broker=Config.CELERY_BROKER_URL)
+socketio = SocketIO()
 
 
 def create_app():
@@ -22,6 +24,8 @@ def create_app():
     # print(str(app.config))
     db.init_app(app)
     migrate.init_app(app, db)
+    socketio.init_app(app, cors_allowed_origins='*')
+
 
     # CELERY
     app.config["CELERYBEAT_SCHEDULE"] = {
