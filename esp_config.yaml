@@ -9,3 +9,4 @@ esp_list:
   'EspWroom03':
     X: -2
     Y: 2
+proxy_task_id: None

@@ -1,24 +1,24 @@
-from app import celery, jobs
+from app import celery, jobs, utils, proxy
 from celery.utils.log import get_task_logger
 
 logger = get_task_logger(__name__)
 
 
-#@celery.task(name="periodic_task")
-#def periodic_task():
+# @celery.task(name="periodic_task")
+# def periodic_task():
 #    print("Hi! from periodic_task")
 #    logger.info("Hello! from periodic task")
 #    return "ciao"
 
 
-#@celery.task(name="test_task1")
-#def test_task1(test):
+# @celery.task(name="test_task1")
+# def test_task1(test):
 #    logger.info("Hello! from test task1: " + test)
 #    test_task2.delay("porcodio2")
 
 
-#@celery.task(name="test_task2")
-#def test_task2(test2):
+# @celery.task(name="test_task2")
+# def test_task2(test2):
 #    logger.info("Hello! from test task2: " + test2)
 
 
@@ -38,3 +38,13 @@ def trilaterable_check_task(p_hash):
     print("into check task")
     logger.info("trilateration check: " + p_hash)
     jobs.trilaterable_check_job(p_hash)
+
+
+@celery.task(name="start_passive_socket")
+def start_passive_socket(host, port):
+    proxy.init_socket(host, port)
+
+
+@celery.task(name="parse_proxy_data")
+def parse_proxy_data(data):
+    utils.proxy_data_parser(data)

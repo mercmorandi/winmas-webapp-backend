@@ -5,7 +5,7 @@ from . import db_connection
 from flask import request, jsonify
 from sqlalchemy.exc import IntegrityError
 
-from app import db, tasks, statistic, positions
+from app import db, tasks, statistic, positions, celery
 from app.models import probes, locations, devices
 from app.utils import date_parser
 
@@ -16,8 +16,8 @@ def index():
     return "hello world"
 
 
-#@app.route("/test_task", methods=["GET"])
-#def test_task():
+# @app.route("/test_task", methods=["GET"])
+# def test_task():
 #    tasks.test_task1.delay("porcodio")
 #    return "test task done", 200
 
@@ -83,3 +83,29 @@ def get_device(device_id):
         return jsonify(res)
     else:
         return "resource not found", 404
+
+
+@app.route("/start_proxy/", methods=["POST"])
+@cross_origin()
+def start_proxy():
+    if not request:
+        return "error", 400
+    print(str(request.json))
+    host = request.json["host"]
+    port = request.json["port"]
+    task = tasks.start_passive_socket.delay(host, port)
+    app.config["ESP_CONFIG"]["proxy_task_id"] = task.id
+    print(app.config["ESP_CONFIG"]["proxy_task_id"])
+    return "ok", 200
+
+
+@app.route("/stop_proxy/")
+@cross_origin()
+def stop_proxy():
+    print("stopping proxy")
+    print(app.config["ESP_CONFIG"]["proxy_task_id"])
+    celery.control.revoke(app.config["ESP_CONFIG"]["proxy_task_id"], terminate= True)  # terminate= True
+    app.config["ESP_CONFIG"]["proxy_task_id"] = None
+    print("stopped proxy")
+    print(app.config["ESP_CONFIG"]["proxy_task_id"])
+    return "ok", 200
