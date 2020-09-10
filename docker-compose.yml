@@ -1,0 +1,41 @@
+
+version: '3.3'
+
+services:
+  backend:
+    build: .
+    #command: flask run --host=0.0.0.0
+    depends_on:
+      - db
+    environment:
+      TZ: "Europe/Rome"
+    env_file:
+      - .env
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/user/src/app
+    #  - ./migrations:/usr/src/app/migrations
+    working_dir: /user/src/app
+    command: >
+      sh -c "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &&
+      echo $TZ > /etc/timezone &&
+      flask run --host=0.0.0.0"
+    restart: always
+
+  db:
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: pippo
+      POSTGRES_DB: wroom_dev
+    image: postgres:latest
+    networks:
+      - default
+    #ports:
+    #  - 5430:5432
+    restart: always
+    volumes:
+      - ./db_dump/wroom_dev_bk.sql:/docker-entrypoint-initdb.d/wroom_dev.sql
+      #- ./postgres-data:/var/lib/postgresql/data

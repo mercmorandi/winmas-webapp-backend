@@ -27,6 +27,10 @@ create a ``.env`` file into project folder and set your vars requested in ``conf
 4. Run server
 
     ``flask run``
+    
+**To run dockerize app**
+``docker-compose build``
+``docker-compose up``
 
 **Links**
 

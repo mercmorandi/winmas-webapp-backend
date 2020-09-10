@@ -21,7 +21,7 @@ def create_app():
     CORS(app)
     app.config.from_object("config.Config")
     print("config loaded")
-    # print(str(app.config))
+    print(str(app.config))
     db.init_app(app)
     migrate.init_app(app, db)
     socketio.init_app(app, cors_allowed_origins='*')
