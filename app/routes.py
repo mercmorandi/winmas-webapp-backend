@@ -1,11 +1,9 @@
 from flask import current_app as app
 from flask_cors import cross_origin
 
-from . import db_connection
 from flask import request, jsonify
-from sqlalchemy.exc import IntegrityError
 
-from app import db, tasks, statistic, positions, celery
+from app import tasks, statistic, positions, celery, socketio
 from app.models import probes, locations, devices
 from app.utils import date_parser
 
@@ -85,27 +83,69 @@ def get_device(device_id):
         return "resource not found", 404
 
 
-@app.route("/start_proxy/", methods=["POST"])
+@app.route("/proxy_port/", methods=["GET"])
+@cross_origin()
+def get_proxy_port():
+    if not request:
+        return "error", 400
+
+    return app.config["PROXY_PORT"], 200
+
+
+@app.route("/start_proxy/", methods=["GET"])
 @cross_origin()
 def start_proxy():
     if not request:
         return "error", 400
-    print(str(request.json))
-    host = request.json["host"]
-    port = request.json["port"]
+
+    # host = request.json.get("host")
+    # port = request.json.get("port")
+    host = request.args.get("host")
+    port = request.args.get("port")
     task = tasks.start_passive_socket.delay(host, port)
+    socketio.emit("proxy_status", "starting")
     app.config["ESP_CONFIG"]["proxy_task_id"] = task.id
+    return jsonify("ok"), 200
+
+
+@app.route("/stop_proxy/", methods=["GET"])
+@cross_origin()
+def stop_proxy():
+    socketio.emit("proxy_status", "stopping")
+    print("stopping proxy")
+    print(app.config["ESP_CONFIG"]["proxy_task_id"])
+    celery.control.revoke(
+        app.config["ESP_CONFIG"]["proxy_task_id"], terminate=True
+    )  # terminate= True
+    app.config["ESP_CONFIG"]["proxy_task_id"] = "None"
+
+    print("stopped proxy")
     print(app.config["ESP_CONFIG"]["proxy_task_id"])
     return "ok", 200
 
 
-@app.route("/stop_proxy/")
+@app.route("/current_proxy_status/", methods=["GET"])
 @cross_origin()
-def stop_proxy():
-    print("stopping proxy")
+def get_proxy_status():
+    if not request:
+        return "error", 400
     print(app.config["ESP_CONFIG"]["proxy_task_id"])
-    celery.control.revoke(app.config["ESP_CONFIG"]["proxy_task_id"], terminate= True)  # terminate= True
-    app.config["ESP_CONFIG"]["proxy_task_id"] = None
-    print("stopped proxy")
-    print(app.config["ESP_CONFIG"]["proxy_task_id"])
+    res = {}
+    if app.config["ESP_CONFIG"]["proxy_task_id"] == "None":
+        res["status"] = "off"
+    else:
+        res["status"] = "on"
+
+    return jsonify(res)
+
+
+@app.route("/proxy_status/", methods=["POST"])
+@cross_origin()
+def set_proxy_status():
+    if not request:
+        return "error", 400
+
+    status = request.json.get("status")
+    print("proxy status: " + str(status))
+    socketio.emit("proxy_status", status)
     return "ok", 200

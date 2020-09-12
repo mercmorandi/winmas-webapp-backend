@@ -12,7 +12,9 @@ import yaml
 
 db = SQLAlchemy()
 migrate = Migrate()
-celery = Celery(__name__, broker=Config.CELERY_BROKER_URL)
+celery = Celery(
+    "__name__", broker=Config.CELERY_BROKER_URL, backend=Config.CELERY_BACKEND_URL
+)
 socketio = SocketIO()
 
 
@@ -21,11 +23,10 @@ def create_app():
     CORS(app)
     app.config.from_object("config.Config")
     print("config loaded")
-    # print(str(app.config))
+    print(str(app.config))
     db.init_app(app)
     migrate.init_app(app, db)
-    socketio.init_app(app, cors_allowed_origins='*')
-
+    socketio.init_app(app, cors_allowed_origins="*")
 
     # CELERY
     app.config["CELERYBEAT_SCHEDULE"] = {
@@ -43,7 +44,7 @@ def create_app():
         print(e)
         exit(-1)
 
-    init_celery(celery, app)
+    # init_celery(celery, app)
 
     with app.app_context():
         # Imports

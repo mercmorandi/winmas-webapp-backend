@@ -21,22 +21,22 @@ def md5_encoder(*args):
 
 def proxy_data_parser(data):
     req = {}
-    s = data.split('\n', 1)[1]
+    s = data.split("\n", 1)[1]
 
-    req['data'] = []
-    req['device_id'] = data.split(',', 1)[0]
-    req['on_since'] = data.split(',', 2)[2].split('\n', 1)[0]
-    cont = req['captured_device'] = int(data.split(',', 2)[1])
+    req["data"] = []
+    req["device_id"] = data.split(",", 1)[0]
+    req["on_since"] = data.split(",", 2)[2].split("\n", 1)[0]
+    cont = req["captured_device"] = int(data.split(",", 2)[1])
 
     get_next_req(req, s, cont)
 
-    print(req['device_id'] + " ----> all proxied to flask")
+    print(req["device_id"] + " ----> all proxied to flask")
     # r = requests.post('http://localhost:5000/add_req',json = req)
     # print('proxied to flask: '+str(r))
 
 
 def get_next_req(req, s, cont):
-    splitted = s.split('\n', 1)
+    splitted = s.split("\n", 1)
 
     if cont == 0:
         return
@@ -47,13 +47,25 @@ def get_next_req(req, s, cont):
 
 
 def add_req(req, packet):
-    values = packet.split(',', 7)
-    s = {'timestamp': values[0], 'destination': values[1], 'source': values[2], 'bssid': values[3], 'ssid': values[4],
-         'seq_number': values[5], 'signal_strength_wroom': values[6], 'signal_strength_rt': values[7]}
+    values = packet.split(",", 7)
+    s = {
+        "timestamp": values[0],
+        "destination": values[1],
+        "source": values[2],
+        "bssid": values[3],
+        "ssid": values[4],
+        "seq_number": values[5],
+        "signal_strength_wroom": values[6],
+        "signal_strength_rt": values[7],
+    }
 
-    req['data'].append(s)
-    pp = {'probe': s, 'on_since': req['on_since'], 'captured_device': req['captured_device'],
-          'device_id': req['device_id']}
+    req["data"].append(s)
+    pp = {
+        "probe": s,
+        "on_since": req["on_since"],
+        "captured_device": req["captured_device"],
+        "device_id": req["device_id"],
+    }
     # r = requests.post('http://localhost:5000/add_req',json = pp)
     probes.probe_parser(pp)
-    #print('req parsed: '+str(pp))
+    # print('req parsed: '+str(pp))

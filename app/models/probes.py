@@ -84,7 +84,7 @@ def probe_parser(req):
         esp_id=device_id,
         status="unchecked",
     )
-    print('PROBE PARSED: '+str(new_prob))
+    print("PROBE PARSED: " + str(new_prob))
 
     db.session.add(new_prob)
     try:
