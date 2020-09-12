@@ -7,6 +7,7 @@ services:
     #command: flask run --host=0.0.0.0
     depends_on:
       - db
+      - rabbit
     environment:
       TZ: "Europe/Rome"
     env_file:
@@ -22,7 +23,34 @@ services:
     command: >
       sh -c "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &&
       echo $TZ > /etc/timezone &&
-      flask run --host=0.0.0.0"
+      flask run --host=0.0.0.0
+      "
+    restart: always
+
+  worker:
+    build: .
+    #command: flask run --host=0.0.0.0
+    depends_on:
+      - db
+      - rabbit
+    environment:
+      TZ: "Europe/Rome"
+    env_file:
+      - .env
+    networks:
+      - default
+    volumes:
+      - .:/user/src/app
+    #  - ./migrations:/usr/src/app/migrations
+    working_dir: /user/src/app
+    ports:
+      - 9876:9876
+    command: >
+      sh -c "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &&
+      echo $TZ > /etc/timezone &&
+      ip addr &&
+      celery worker -A celery_worker.celery --loglevel=info
+      "
     restart: always
 
   db:
@@ -31,11 +59,37 @@ services:
       POSTGRES_PASSWORD: pippo
       POSTGRES_DB: wroom_dev
     image: postgres:latest
-    networks:
-      - default
     #ports:
     #  - 5430:5432
     restart: always
     volumes:
       - ./db_dump/wroom_dev_bk.sql:/docker-entrypoint-initdb.d/wroom_dev.sql
       #- ./postgres-data:/var/lib/postgresql/data
+
+  rabbit:
+    hostname: rabbit
+    image: rabbitmq:management
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=rabbitmq
+    ports:
+      - "5673:5672"
+      - "15672:15672"
+
+#  worker:
+#    build:
+#      context: .
+#    hostname: worker
+#    working_dir: /user/src/app
+#    #entrypoint: celery
+#    #command: celery worker -A celery_worker.celery --loglevel=info
+##    command: -A workerA worker --loglevel=info -Q workerA
+#    command: >
+#      sh -c "ls -la &&
+#      celery worker -A worker_a --loglevel=info"
+#    volumes:
+#      - .:/usr/src/app
+#    links:
+#      - rabbit
+#    depends_on:
+#      - rabbit
