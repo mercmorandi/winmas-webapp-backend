@@ -1,5 +1,7 @@
 import time
 import datetime
+import requests
+import json
 
 from app import db, tasks
 from celery.utils.log import get_task_logger
@@ -51,6 +53,14 @@ def trilateration_job(p_hash):
     print(str(device))
 
     db.session.commit()
+    res = {
+        "mac": location.mac_id,
+        "ssid": location.ssid,
+        "insertion_date": location.insertion_date.isoformat(),
+        "x": location.x,
+        "y": location.y,
+    }
+    requests.post("http://backend:5000/new_location_event", json=res)
     db.session.close()
     return "trilaterator task done"
 
