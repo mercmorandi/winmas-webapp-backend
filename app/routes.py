@@ -139,7 +139,7 @@ def get_proxy_status():
     return jsonify(res)
 
 
-@app.route("/proxy_status/", methods=["POST"])
+@app.route("/proxy_status", methods=["POST"])
 @cross_origin()
 def set_proxy_status():
     if not request:
@@ -148,4 +148,15 @@ def set_proxy_status():
     status = request.json.get("status")
     print("proxy status: " + str(status))
     socketio.emit("proxy_status", status)
+    return "ok", 200
+
+
+@app.route("/new_location_event", methods=["POST"])
+@cross_origin()
+def notify_new_location():
+    if not request:
+        return "error", 400
+
+    res = request.json
+    socketio.emit("new-location", res)
     return "ok", 200
