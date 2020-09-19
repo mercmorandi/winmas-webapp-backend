@@ -96,8 +96,9 @@ def start_proxy():
     host = app.config["PROXY_UID"]
     port = app.config["PROXY_PORT"]
     task = tasks.start_passive_socket.delay(host, port)
+    print(task)
     socketio.emit("proxy_status", "starting")
-    app.config["ESP_CONFIG"]["proxy_task_id"] = task.id
+    #app.config["ESP_CONFIG"]["proxy_task_id"] = task.id
     return jsonify("ok"), 200
 
 
@@ -140,7 +141,8 @@ def set_proxy_status():
     status = request.json.get("status")
     if status == "on" and app.config["ESP_CONFIG"]["proxy_task_id"] == "None":
         app.config["ESP_CONFIG"]["proxy_task_id"] = request.json.get("task_id")
-
+    else:
+        app.config["ESP_CONFIG"]["proxy_task_id"] = "None"
     print("proxy status: " + str(status))
     socketio.emit("proxy_status", status)
     return "ok", 200
