@@ -28,3 +28,4 @@ class Config(object):
     Y3 = os.getenv("Y3")
     PROXY_PORT = os.getenv("PROXY_PORT")
     CELERY_BACKEND_URL = os.getenv("CELERY_BACKEND_URL")
+    PROXY_UID = os.getenv("PROXY_UID")

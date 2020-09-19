@@ -3,21 +3,14 @@ from flask_cors import cross_origin
 
 from flask import request, jsonify
 
-from app import tasks, statistic, positions, celery, socketio
+from app import tasks, statistic, positions, celery, socketio, proxy
 from app.models import probes, locations, devices
 from app.utils import date_parser
 
 
 @app.route("/", methods=["GET"])
 def index():
-    # tasks.add.delay(11, 22)
     return "hello world"
-
-
-# @app.route("/test_task", methods=["GET"])
-# def test_task():
-#    tasks.test_task1.delay("porcodio")
-#    return "test task done", 200
 
 
 @app.route("/add_req", methods=["POST"])
@@ -97,30 +90,29 @@ def get_proxy_port():
 def start_proxy():
     if not request:
         return "error", 400
+    if app.config["ESP_CONFIG"]["proxy_task_id"] != "None":
+        return "proxy already up", 200
 
-    # host = request.json.get("host")
-    # port = request.json.get("port")
-    host = request.args.get("host")
-    port = request.args.get("port")
+    host = app.config["PROXY_UID"]
+    port = app.config["PROXY_PORT"]
     task = tasks.start_passive_socket.delay(host, port)
+    print(task)
     socketio.emit("proxy_status", "starting")
-    app.config["ESP_CONFIG"]["proxy_task_id"] = task.id
+    #app.config["ESP_CONFIG"]["proxy_task_id"] = task.id
     return jsonify("ok"), 200
 
 
 @app.route("/stop_proxy/", methods=["GET"])
 @cross_origin()
 def stop_proxy():
-    socketio.emit("proxy_status", "stopping")
-    print("stopping proxy")
-    print(app.config["ESP_CONFIG"]["proxy_task_id"])
-    celery.control.revoke(
-        app.config["ESP_CONFIG"]["proxy_task_id"], terminate=True
-    )  # terminate= True
-    app.config["ESP_CONFIG"]["proxy_task_id"] = "None"
+    if not request:
+        return "error", 400
+    if app.config["ESP_CONFIG"]["proxy_task_id"] == "None":
+        return "proxy already down", 200
 
-    print("stopped proxy")
-    print(app.config["ESP_CONFIG"]["proxy_task_id"])
+    socketio.emit("proxy_status", "stopping")
+    proxy.close_proxy_server(app.config["PROXY_UID"], int(app.config["PROXY_PORT"]))
+    app.config["ESP_CONFIG"]["proxy_task_id"] = "None"
     return "ok", 200
 
 
@@ -145,7 +137,12 @@ def set_proxy_status():
     if not request:
         return "error", 400
 
+    # edge case
     status = request.json.get("status")
+    if status == "on" and app.config["ESP_CONFIG"]["proxy_task_id"] == "None":
+        app.config["ESP_CONFIG"]["proxy_task_id"] = request.json.get("task_id")
+    else:
+        app.config["ESP_CONFIG"]["proxy_task_id"] = "None"
     print("proxy status: " + str(status))
     socketio.emit("proxy_status", status)
     return "ok", 200

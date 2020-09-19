@@ -18,17 +18,17 @@ logger = get_task_logger(__name__)
 #    test_task2.delay("porcodio2")
 
 
-@socketio.on("proxy_status")
-def notify_proxy_status(status):
-    print("into notify")
-    send(status)
+# @socketio.on("proxy_status")
+# def notify_proxy_status(status):
+#     print("into notify")
+#     send(status)
 
 
-@celery.task(name="test_task", bind=True)
-def test_task(self):
-    # socketio.emit("proxy_status", "ciaooooooooooo")
-    self.update_state(state="PROGRESS", meta={"host": "suca", "port": "coglione"})
-    # notify_proxy_status("porco il clero")
+# @celery.task(name="test_task", bind=True)
+# def test_task(self):
+#     # socketio.emit("proxy_status", "ciaooooooooooo")
+#     self.update_state(state="PROGRESS", meta={"host": "suca", "port": "coglione"})
+#     # notify_proxy_status("porco il clero")
 
 
 @celery.task(name="discardable_check_task")
