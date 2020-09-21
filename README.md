@@ -1,9 +1,5 @@
 ## Welcome to winmas flask backend
 
-**Configuration**
-
-create a ``.env`` file into project folder and set your vars requested in ``config.py``
-
 **To run server without docker**
     
 1. Create a virtual environment with
