@@ -1,9 +1,5 @@
 ## Welcome to winmas flask backend
 
-**Configuration**
-
-create a ``.env`` file into project folder and set your vars requested in ``config.py``
-
 **To run server without docker**
     
 1. Create a virtual environment with
@@ -35,13 +31,19 @@ create a ``.env`` file into project folder and set your vars requested in ``conf
     ``celery worker -A celery_worker.celery --loglevel=info``
  
 **To run dockerized app**
-``docker-compose build``
-``docker-compose up``
+
+1. ``docker-compose build``
+
+2. ``docker-compose up``
 
 **Links**
 
-https://flask.palletsprojects.com/en/1.1.x/tutorial/
-https://www.rabbitmq.com/
-https://docs.celeryproject.org/en/stable/getting-started/introduction.html
-https://www.postgresql.org/
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
+Flask: https://flask.palletsprojects.com/en/1.1.x/tutorial/
+
+RabbitMQ: https://www.rabbitmq.com/
+
+Celery: https://docs.celeryproject.org/en/stable/getting-started/introduction.html
+
+Postrges: https://www.postgresql.org/
+
+PostgresSetup: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
