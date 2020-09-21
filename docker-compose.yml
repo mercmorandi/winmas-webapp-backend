@@ -40,8 +40,8 @@ services:
     hostname: rabbit
     image: rabbitmq:management
     environment:
-      - RABBITMQ_DEFAULT_USER=rabbitmq
-      - RABBITMQ_DEFAULT_PASS=rabbitmq
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
     ports:
       - "5673:5672"
       - "15672:15672"

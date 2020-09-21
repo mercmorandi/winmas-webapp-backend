@@ -5,32 +5,6 @@ from flask_socketio import send
 logger = get_task_logger(__name__)
 
 
-# @celery.task(name="periodic_task")
-# def periodic_task():
-#     print("Hi! from periodic_task")
-#     logger.info("Hello! from periodic task")
-#     return "ciao"
-
-
-# @celery.task(name="test_task1")
-# def test_task1(test):
-#    logger.info("Hello! from test task1: " + test)
-#    test_task2.delay("porcodio2")
-
-
-# @socketio.on("proxy_status")
-# def notify_proxy_status(status):
-#     print("into notify")
-#     send(status)
-
-
-# @celery.task(name="test_task", bind=True)
-# def test_task(self):
-#     # socketio.emit("proxy_status", "ciaooooooooooo")
-#     self.update_state(state="PROGRESS", meta={"host": "suca", "port": "coglione"})
-#     # notify_proxy_status("porco il clero")
-
-
 @celery.task(name="discardable_check_task")
 def discardable_check_task():
     jobs.discardable_check_job()

@@ -28,6 +28,7 @@ class Proxy:
 
     def receiveSignal(self, signal_number, frame):
         print("Received:", signal_number)
+        self.lsock.shutdown(socket.SHUT_RDWR)
         self.lsock.close()
         requests.post("http://backend:5000/proxy_status", json={"status": "off"})
         print("socket chiuso")
