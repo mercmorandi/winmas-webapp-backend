@@ -4,7 +4,7 @@
 
 create a ``.env`` file into project folder and set your vars requested in ``config.py``
 
-**To run server**
+**To run server without docker**
     
 1. Create a virtual environment with
 
@@ -28,13 +28,20 @@ create a ``.env`` file into project folder and set your vars requested in ``conf
 
     ``flask run``
     
-**To run dockerize app**
+5. install Celery and rabbitMQ
+
+6. Run celery worker
+
+    ``celery worker -A celery_worker.celery --loglevel=info``
+ 
+**To run dockerized app**
 ``docker-compose build``
 ``docker-compose up``
 
 **Links**
 
 https://flask.palletsprojects.com/en/1.1.x/tutorial/
-
-
+https://www.rabbitmq.com/
+https://docs.celeryproject.org/en/stable/getting-started/introduction.html
+https://www.postgresql.org/
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
