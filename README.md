@@ -40,8 +40,12 @@ create a ``.env`` file into project folder and set your vars requested in ``conf
 
 **Links**
 
-https://flask.palletsprojects.com/en/1.1.x/tutorial/
-https://www.rabbitmq.com/
-https://docs.celeryproject.org/en/stable/getting-started/introduction.html
-https://www.postgresql.org/
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
+Flask: https://flask.palletsprojects.com/en/1.1.x/tutorial/
+
+RabbitMQ: https://www.rabbitmq.com/
+
+Celery: https://docs.celeryproject.org/en/stable/getting-started/introduction.html
+
+Postrges: https://www.postgresql.org/
+
+PostgresSetup: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
