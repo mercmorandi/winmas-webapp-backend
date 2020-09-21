@@ -36,13 +36,13 @@ DeviceDTO = namedtuple("DeviceDTO", "id, mac, last_update, occurences, locations
 
 def toDeviceDTO(device):
     pos = [
-        {"x": loc.x, "y": loc.y, "date": loc.insertion_date, "ssid": loc.ssid} for loc in device.locations
+        {"x": loc.x, "y": loc.y, "date": loc.insertion_date.isoformat(), "ssid": loc.ssid} for loc in device.locations
     ]
     return dict(
         DeviceDTO(
             id=device.id,
             mac=device.mac,
-            last_update=device.last_update,
+            last_update=device.last_update.isoformat(),
             occurences=device.occurences,
             locations=pos,
         )._asdict()

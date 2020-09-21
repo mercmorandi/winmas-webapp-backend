@@ -112,7 +112,14 @@ class Proxy:
 
         if mask & selectors.EVENT_WRITE:
             if data.outb:
-                tasks.parse_proxy_data.delay(data.outb.decode("utf-8"))
+                try:
+                    tasks.parse_proxy_data.delay(data.outb.decode("utf-8"))
+                except UnicodeDecodeError:
+                    print("utf-8 unicode decode error")
+                    try:
+                        tasks.parse_proxy_data.delay(data.outb.decode("latin-1"))
+                    except Exception:
+                        print("latin-1 unicode decode error")
                 data.outb = data.outb[len(str(data.outb)):]
                 data.outb = []
 
