@@ -35,8 +35,9 @@ create a ``.env`` file into project folder and set your vars requested in ``conf
     ``celery worker -A celery_worker.celery --loglevel=info``
  
 **To run dockerized app**
-``docker-compose build``
-``docker-compose up``
+1. ``docker-compose build``
+
+2. ``docker-compose up``
 
 **Links**
 
